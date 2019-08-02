@@ -1,10 +1,9 @@
 ---
 layout: page
-title: 3 Executing Deployments
+title: 3 Running Deployments
 ---
 
-
-# Deployment Execution
+# Running Deploys
 
 How to actually run deployments. Executors are docker containers that implement
 a specification and are executed to deliver your deployments.
