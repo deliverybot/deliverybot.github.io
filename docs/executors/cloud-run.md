@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "6 Integration: Cloud Run"
+title: "6 Executor: Cloud Run"
 ---
 
 # Cloud Run
@@ -19,7 +19,7 @@ title: "6 Integration: Cloud Run"
 mytarget:
   ...
   exec:
-    image: colinjfw/cloud-run:latest
+    image: cloud-run
     params:
       service: deliverybot # required, name of service
       image:
@@ -35,7 +35,7 @@ mytarget:
   ...
   environment: pr{{pr}}
   exec:
-    image: colinjfw/cloud-run:latest
+    image: cloud-run
     params:
       service: deliverybot-{{pr}} # dynamic service name
       image:

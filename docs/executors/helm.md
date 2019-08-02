@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "5 Integration: Kubernetes"
+title: "7 Executor: Kubernetes"
 ---
 
 # Helm
@@ -19,7 +19,7 @@ title: "5 Integration: Kubernetes"
 mytarget:
   ...
   exec:
-    image: colinjfw/cloud-run:latest
+    image: helm
     params:
       namespace: default # required, namespace
       chart: my-chart # chart name, defaults to "charts/default"
@@ -36,7 +36,7 @@ For a preview environment in a pull request:
 mytarget:
   ...
   exec:
-    image: colinjfw/cloud-run:latest
+    image: helm
     params:
       namespace: default
       release: my-release-{{pr}} # dynamic release name
