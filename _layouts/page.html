@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+<div class="mt-8">
+  <div class="content shadow border p-6 bg-white" style="position: relative;">
+    <aside class="border bg-white p-3" style="width: 200px; position: absolute; left: -260px;">
+      <h5 class="text-gray mb-2 pb-1 border-bottom">Menu</h5>
+      <nav class="SideNav">
+        {% assign pages = site.pages | sort: "title" %}
+        {% for page in pages %}
+          {% if page.layout == 'page' %}
+            <a class="SideNav-subItem" href="{{page.url}}">{{page.title}}</a>
+          {% endif %}
+        {% endfor %}
+      </nav>
+    </aside>
+    <div class="markdown-body overflow-x-hidden">
+      {{content}}
+    </div>
+  </div>
+</div>

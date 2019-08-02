@@ -1,0 +1,25 @@
+.navbar {
+  width: 100%;
+  padding: 5px 16px;
+  height: 64px;
+  background-color: #24292e;
+  color: hsla(0,0%,100%,.7);
+  display: flex;
+  align-items: center;
+}
+.navbar a {
+  color: hsla(0,0%,100%,.7);
+}
+.hidden { display: none; }
+
+.content {
+  max-width: 800px; width: 100%; margin: auto;
+}
+
+pre {
+  white-space: pre-wrap;
+}
+.text-blue { color: rgb(33, 136, 255); }
+.text-blue-light { color: rgb(200, 225, 255); }
+
+.mt-8 { margin-top: 8em; }
