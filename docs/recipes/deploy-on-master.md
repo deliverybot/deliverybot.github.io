@@ -33,3 +33,9 @@ View the below documents for examples with `exec` configuration:
 
 Since `deploy_on` is configured, a deployment will be kicked off every time
 there is a new push event on master.
+
+Alternatively, you may want to leave out the `deploy_on` configuration and kick
+off deployment from the deliverybot ui pictured below. This can be found at
+<{{site.deliverybot_url}}deploy/my-username/my-repo>.
+
+![On master deploy](/assets/images/deploy-list.jpg)

@@ -41,3 +41,7 @@ View the below documents for examples with `exec` configuration:
 As a comment in your PR, you can type the below command to kick off the pr.
 
     /deploy review
+
+An example of what a pr environment deploy looks like:
+
+![Deploy on pr environments](/assets/images/pr-deploy.jpg)
