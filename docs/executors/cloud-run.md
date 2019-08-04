@@ -5,7 +5,7 @@ title: "6 Executor: Cloud Run"
 
 # Cloud Run
 
-> Deploys services to Google Cloud run.
+Deploys services to Google Cloud run.
 
 ## Secrets
 

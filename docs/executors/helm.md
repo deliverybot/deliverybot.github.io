@@ -5,7 +5,7 @@ title: "7 Executor: Kubernetes"
 
 # Helm
 
-> Deploys services to Kubernetes.
+Deploys services to Kubernetes.
 
 ## Secrets
 

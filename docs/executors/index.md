@@ -5,10 +5,33 @@ title: 5 Executors
 
 # Executors
 
-> Individual containers that provide deployments.
+Executors are docker containers that implement a specification and are
+executed to deliver your deployments.
 
 - [Helm](helm)
 - [Cloud Run](cloud-run)
+
+## Overview
+
+An executor configuration looks as follows. The image name currently may only
+be one of two types:
+
+- `helm`
+- `cloud-run`
+
+```yaml
+# .github/deploy.yml
+production:
+  ...
+  exec:
+    # A docker image is required to execute.
+    image: <image>
+    # Paramters are passed to the executing image as arguments.
+    params:
+      image:
+        repository: "foo"
+        tag: "foo"
+```
 
 ## Creating a Builder
 
