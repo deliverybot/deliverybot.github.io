@@ -13,7 +13,7 @@
 .hidden { display: none; }
 
 .content {
-  max-width: 800px; width: 100%; margin: auto;
+  max-width: 800px; width: 100%; margin: auto; padding: 24px;
 }
 
 pre {
@@ -23,3 +23,20 @@ pre {
 .text-blue-light { color: rgb(200, 225, 255); }
 
 .mt-8 { margin-top: 8em; }
+
+
+.docs-menu {
+  width: 220px; position: absolute; top: 0; left: -230px;
+}
+
+@media screen and (max-width: 1300px) {
+  .docs-menu {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+}
+
+body {
+}

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 1 Getting Started
+title: Documentation
 ---
 
 # Getting Started
@@ -8,11 +8,8 @@ title: 1 Getting Started
 Deliverybot is a GitHub app. You can [deploy it yourself](self-hosting) or you
 can use the public paid tier to deploy your code.
 
-1. Sign up at {{deliverybot_url}} and setup your GitHub repository.
-
-    1. Install the GitHub application.
-
-    2. Connect your repositories.
+1. Sign up at <{{site.github_app_url}}> and connect the application to your
+   GitHub repository.
 
 2. Follow one of the recipes below to get started:
 

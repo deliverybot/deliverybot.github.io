@@ -1,9 +1,9 @@
 ---
 layout: page
-title: 2 Deployment
+title: Self Hosting
 ---
 
-# Deployment
+# Self Hosting
 
 Deliverybot can be deployed as a GitHub app on your own infrastructure.
 
@@ -24,11 +24,11 @@ services. The following cloud storage buckets are required:
 * `CLIENT_SECRET` (required) GitHub app oauth client secret.
 * `BASE_URL` (required) URL the application is hosted at.
 * `LOG_LEVEL` Log level.
-* `EXEC_CLIENT` Exec client to run docker containers. (gcb-build, none).
-* `SECRET_CLIENT` Secret storage client (gcb-storage, memory).
+* `EXEC_CLIENT` Exec client to run docker containers. (gcp-build, none).
+* `SECRET_CLIENT` Secret storage client (gcp-storage, memory).
 * `NODE_ENV` Node environment.
 
 ## Deployment
 
-Read up on https://probot.github.io/docs/deployment for available hosting
+Read up on <https://probot.github.io/docs/deployment> for available hosting
 providers.

@@ -1,9 +1,10 @@
 ---
 layout: page
-title: Deploy on Master
+title: Deploy a PR environment
+group: Recipes
 ---
 
-# Deploy a PR Environment
+# Deploy a PR environment
 
 PR specific environments are useful for testing behaviour for a specific app
 we can spin up a dedicated environment for every PR using configuration like

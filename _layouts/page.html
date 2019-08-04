@@ -4,17 +4,35 @@ layout: default
 
 <div class="mt-8">
   <div class="content shadow border p-6 bg-white" style="position: relative;">
-    <aside class="border bg-white p-3" style="width: 200px; position: absolute; left: -260px;">
+    <aside class="border bg-white p-3 docs-menu mb-5">
       <h5 class="text-gray mb-2 pb-1 border-bottom">Menu</h5>
       <nav class="SideNav">
         {% assign pages = site.pages | sort: "title" %}
+        {% assign groups = site.pages | group_by: "group" %}
+
         {% for page in pages %}
-          {% if page.layout == 'page' %}
+          {% if page.layout == 'page' and page.group == nil %}
             <a class="SideNav-subItem" href="{{page.url}}">{{page.title}}</a>
           {% endif %}
         {% endfor %}
+
+        {% for group in groups %}
+          {% if group.name != '' %}
+          {% assign index = site.pages | where: "title", group.name %}
+          <a class="SideNav-subItem" href="{{index[0].url}}">{{group.name}}</a>
+          <nav class="SideNav border-top py-2 pl-3">
+            {% for page in group.items %}
+              {% if page.layout == 'page' and page.title != group.name %}
+                <a class="SideNav-subItem" href="{{page.url}}">{{page.title}}</a>
+              {% endif %}
+            {% endfor %}
+          </nav>
+          {% endif %}
+        {% endfor %}
+
       </nav>
     </aside>
+
     <div class="markdown-body overflow-x-hidden">
       {{content}}
     </div>

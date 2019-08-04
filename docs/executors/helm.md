@@ -1,6 +1,7 @@
 ---
 layout: page
-title: "7 Executor: Kubernetes"
+title: Kubernetes
+group: Executors
 ---
 
 # Helm

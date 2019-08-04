@@ -1,24 +1,22 @@
 title: deliverybot
 email: your-email@example.com
 description: >-
-  Deployment automation for GitHub.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+  The missing deployment automation tool for GitHub. Build
+long_description: >-
+  The missing deployment automation tool for GitHub. Build
+
+deliverybot_url: https://deliverybot-ohzjlus46a-uc.a.run.app/
+github_app_url: https://github.com/apps/deliverybot
+baseurl: ""
+url: https://deliverybot.github.io
 markdown: kramdown
+permalink: pretty
 
 plugins:
   - jekyll-seo-tag
 
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
 exclude:
   - Gemfile
   - Gemfile.lock
   - node_modules
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
+  - vendor

@@ -1,9 +1,10 @@
 ---
 layout: page
-title: Deploy on Master
+title: Deploy on master
+group: Recipes
 ---
 
-# Deploy on Master
+# Deploy on master
 
 Deploy code that goes onto master automatically.
 

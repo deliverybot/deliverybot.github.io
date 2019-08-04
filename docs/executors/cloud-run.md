@@ -1,6 +1,7 @@
 ---
 layout: page
-title: "6 Executor: Cloud Run"
+title: Cloud Run
+group: Executors
 ---
 
 # Cloud Run
