@@ -15,10 +15,9 @@ Deploys services to Kubernetes.
 
 ## Parameters
 
-```yaml
+```yaml {% raw %}
 # .github/deploy.yml
 mytarget:
-  ...
   exec:
     image: helm
     params:
@@ -27,15 +26,15 @@ mytarget:
       release: my-release # required, helm release name
       image:
         repository: gcr.io/project/service # required, image name
-        tag: {{short_sha}} # required, image tag
+        tag: "{{short_sha}}" # required, image tag
+{% endraw %}
 ```
 
 For a preview environment in a pull request:
 
-```yaml
+```yaml {% raw %}
 # .github/deploy.yml
 mytarget:
-  ...
   exec:
     image: helm
     params:
@@ -43,10 +42,20 @@ mytarget:
       release: my-release-{{pr}} # dynamic release name
       image:
         repository: gcr.io/project/service
-        tag: {{short_sha}}
+        tag: "{{short_sha}}"
+{% endraw %}
 ```
 
-## Default Chart Parameters
+### Repository Chart
+
+You can load a chart from your apps repository by specifying a relative path to
+the  chart with the repository name included in the path.
+
+```yaml
+chart: "./<my-repo>/charts/<name>"
+```
+
+### Default Chart Parameters
 
 The default chart is selected if you do not specify the `exec.params.chart`
 field. This chart is stored at:

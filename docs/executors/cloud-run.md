@@ -15,25 +15,24 @@ Deploys services to Google Cloud run.
 
 ## Parameters
 
-```yaml
+```yaml {% raw %}
 # .github/deploy.yml
 mytarget:
-  ...
   exec:
     image: cloud-run
     params:
       service: deliverybot # required, name of service
       image:
         repository: gcr.io/project/service # required, image name
-        tag: {{short_sha}} # required, image tag
+        tag: "{{short_sha}}" # required, image tag
+{% endraw %}
 ```
 
 For a preview environment in a pull request:
 
-```yaml
+```yaml {% raw %}
 # .github/deploy.yml
 mytarget:
-  ...
   environment: pr{{pr}}
   exec:
     image: cloud-run
@@ -41,5 +40,6 @@ mytarget:
       service: deliverybot-{{pr}} # dynamic service name
       image:
         repository: gcr.io/project/service
-        tag: {{short_sha}}
+        tag: "{{short_sha}}"
+{% endraw %}
 ```

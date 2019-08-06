@@ -34,7 +34,7 @@ Alternatively, you may want to leave out the `deploy_on` configuration and kick
 off deployment from the deliverybot ui pictured below. This can be found at
 <{{site.deliverybot_url}}deploy/my-username/my-repo>.
 
-![On master deploy](/assets/images/deploy-list.jpg)
+![On master deploy](/assets/images/deploy-list.png)
 
 A common pattern is to combine a staging environment that deploys on master
 automatically with a manual step (clicking the list above) to deploy to
