@@ -1,9 +1,10 @@
 title: deliverybot
 email: your-email@example.com
 description: >-
-  The missing deployment automation tool for GitHub. Build
+  The missing deployment automation tool for GitHub.
 long_description: >-
-  The missing deployment automation tool for GitHub. Build
+  The missing deployment automation tool for GitHub. Deliverbot handles all of
+  your GitHub deployment automation needs.
 
 deliverybot_url: https://deliverybot-ohzjlus46a-uc.a.run.app/
 github_app_url: https://github.com/apps/deliverybot
