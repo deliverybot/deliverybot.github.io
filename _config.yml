@@ -7,6 +7,17 @@ long_description: >-
 
 deliverybot_url: https://deliverybot-ohzjlus46a-uc.a.run.app/
 github_app_url: https://github.com/apps/deliverybot
+github_org_url: https://github.com/deliverybot
+github_repo: deliverybot/deliverybot
+terms_url: /terms/terms
+privacy_url: /terms/privacy
+
+terms:
+  privacy_email: TODO
+  support_email: TODO
+  company: Deliverybot Software
+  service: Deliverybot
+
 baseurl: ""
 url: https://deliverybot.github.io
 markdown: kramdown
