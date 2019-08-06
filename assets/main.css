@@ -15,6 +15,9 @@
 .content {
   max-width: 800px; width: 100%; margin: auto; padding: 24px;
 }
+.content-lg {
+  max-width: 1024px; width: 100%; margin: auto; padding: 24px;
+}
 
 pre {
   white-space: pre-wrap;
@@ -36,4 +39,14 @@ pre {
     left: 0;
     width: 100%;
   }
+}
+
+.main-body { min-height: 60vh; }
+
+.h000-mktg { font-weight: 200 !important; }
+.h1-mktg { font-weight: 300 !important; }
+
+.marketing p {
+  font-size: 1.2em;
+  font-weight: 300;
 }

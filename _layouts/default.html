@@ -12,11 +12,30 @@
 
 <body class="height-full bg-gray-light">
   <nav class="box-shadow navbar">
-    <a href="/"><h3>{{site.title}}</h3></a>
+    <a href="/">
+      <h3>{{site.title}}</h3>
+    </a>
   </nav>
   {{ content }}
 
-  <footer style="height: 200px;">
+  <footer class="mt-8 bg-gray-dark">
+    <div class="d-flex flex-justify-center">
+      <div class="p-8">
+        <ul>
+          <li><a class="text-gray-light" href="{{site.deliverybot_url}}">App</a></li>
+          <li><a class="text-gray-light" href="{{site.github_app_url}}">GitHub App</a></li>
+          <li><a class="text-gray-light" href="/docs/">Docs</a></li>
+        </ul>
+
+        <ul class="mt-2">
+          <li><a class="text-gray-light" href="{{site.terms_url}}">Terms and conditions</a></li>
+          <li><a class="text-gray-light" href="{{site.privacy_url}}">Privacy policy</a></li>
+        </ul>
+      </div>
+      <div class="p-8 text-gray-light">
+        Created by <a class="text-gray-light" href="{{site.github_org_url}}">@deliverybot</a>
+      </div>
+    </div>
   </footer>
 </body>
 </html>
