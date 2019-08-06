@@ -2,34 +2,28 @@
 layout: default
 ---
 
-<div style="background-color: #24292e; padding-bottom: 64px;">
+<div class="bg-gray-dark pb-6">
   <div class="content">
-    <div class="flex">
-      <div>
-        <h1 class="h000-mktg text-blue">Deliverybot</h1>
-        <p class="lead-mktg text-blue-light">
-          {{site.long_description}}
-        </p>
+    <h1 class="h000-mktg text-blue">Deliverybot</h1>
+    <p class="lead-mktg text-blue-light">
+      {{site.long_description}}
+    </p>
+    <div class="text-center mt-6">
+      <div class="BtnGroup">
+        <a href="{{site.deliverybot_url}}" role="button" class="btn btn-large bg-gray-dark text-white btn-outline BtnGroup-item">App</a>
+        <a href="/docs/" role="button" class="btn btn-large bg-gray-dark btn-outline text-white BtnGroup-item">Documentation</a>
       </div>
     </div>
   </div>
 </div>
 
 <div class="content">
-
-  <div class="mt-8 text-center">
-    <div class="BtnGroup">
-      <a href="{{site.deliverybot_url}}" role="button" class="btn btn-large btn-outline BtnGroup-item">App</a>
-      <a href="/docs/" role="button" class="btn btn-large btn-outline BtnGroup-item">Documentation</a>
-    </div>
-  </div>
-
   <div class="d-flex flex-justify-between mt-8">
     <div style="width: 50%;" class="p-2">
       <img src="/assets/images/terminal.svg" width="32px" height="32px">
       <h3 class="h2-mktg" style="display: inline; margin-left: 1em;">Environment per pr</h3>
       <p class="h4-mktg">
-        Deploy environment per pull request.
+        Deploy an environment per pull request.
       </p>
     </div>
     <div style="width: 50%;" class="p-2">
@@ -53,7 +47,8 @@ layout: default
       <img src="/assets/images/terminal.svg" width="32px" height="32px">
       <h3 class="h2-mktg" style="display: inline; margin-left: 1em;">Custom integration</h3>
       <p class="h4-mktg">
-        Custom integrations allow deployments to any target.
+        Custom integrations allow deployments to any target. Just build a docker
+        container.
       </p>
     </div>
   </div>

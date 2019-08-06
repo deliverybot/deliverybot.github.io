@@ -3,15 +3,18 @@ email: your-email@example.com
 description: >-
   The missing deployment automation tool for GitHub.
 long_description: >-
-  The missing deployment automation tool for GitHub. Deliverbot handles all of
-  your GitHub deployment automation needs.
+  The missing deployment automation tool for GitHub.
 
 deliverybot_url: https://deliverybot-ohzjlus46a-uc.a.run.app/
 github_app_url: https://github.com/apps/deliverybot
 baseurl: ""
 url: https://deliverybot.github.io
 markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
 permalink: pretty
+highlighter: rouge
 
 plugins:
   - jekyll-seo-tag
