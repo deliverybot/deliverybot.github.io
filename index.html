@@ -2,34 +2,36 @@
 layout: default
 ---
 
-<div class="bg-gray-dark pb-6">
-  <div class="content">
-    <h1 class="h000-mktg text-blue">Deliverybot</h1>
+<header class="bg-gray-dark pb-6">
+  <div class="content-lg  text-center">
+    <h1 class="h00-mktg text-blue-light">
+      The missing GitHub deployment tool
+    </h1>
     <p class="lead-mktg text-blue-light">
-      {{site.long_description}}
+      GitHub native deployment tool for Kubernetes, Google Cloud and more.
     </p>
     <div class="text-center mt-6">
       <div class="BtnGroup">
-        <a href="{{site.deliverybot_url}}" role="button" class="btn btn-large bg-gray-dark text-white btn-outline BtnGroup-item">App</a>
-        <a href="/docs/" role="button" class="btn btn-large bg-gray-dark btn-outline text-white BtnGroup-item">Documentation</a>
+        <a href="{{site.github_app_url}}" role="button" class="btn btn-large bg-blue-light text-gray btn-outline BtnGroup-item">Get Started</a>
+        <a href="/docs/" role="button" class="btn btn-large bg-blue-light btn-outline text-gray BtnGroup-item">Documentation</a>
       </div>
     </div>
   </div>
-</div>
+</header>
 
-<div class="content">
+<main class="content marketing">
   <div class="d-flex flex-justify-between mt-8">
     <div style="width: 50%;" class="p-2">
       <img src="/assets/images/terminal.svg" width="32px" height="32px">
-      <h3 class="h2-mktg" style="display: inline; margin-left: 1em;">Environment per pr</h3>
-      <p class="h4-mktg">
+      <h3 class="h2-mktg text-mono" style="display: inline; margin-left: 1em;">Environment per pr</h3>
+      <p>
         Deploy an environment per pull request.
       </p>
     </div>
     <div style="width: 50%;" class="p-2">
       <img src="/assets/images/terminal.svg" width="32px" height="32px">
-      <h3 class="h2-mktg" style="display: inline; margin-left: 1em;">Automatic deploys</h3>
-      <p class="h4-mktg">
+      <h3 class="h2-mktg text-mono" style="display: inline; margin-left: 1em;">Automatic deploys</h3>
+      <p>
         Deploy automatically given a specific branch.
       </p>
     </div>
@@ -37,26 +39,27 @@ layout: default
   <div class="d-flex flex-justify-between mt-5">
     <div style="width: 50%;" class="p-2">
       <img src="/assets/images/terminal.svg" width="32px" height="32px">
-      <h3 class="h2-mktg" style="display: inline; margin-left: 1em;">CI integration</h3>
-      <p class="h4-mktg">
+      <h3 class="h2-mktg text-mono" style="display: inline; margin-left: 1em;">CI integration</h3>
+      <p>
         Integrates with your CI system to wait for builds to complete before
         deployment.
       </p>
     </div>
     <div style="width: 50%;" class="p-2">
       <img src="/assets/images/terminal.svg" width="32px" height="32px">
-      <h3 class="h2-mktg" style="display: inline; margin-left: 1em;">Custom integration</h3>
-      <p class="h4-mktg">
+      <h3 class="h2-mktg text-mono" style="display: inline; margin-left: 1em;">Custom integrations</h3>
+      <p>
         Custom integrations allow deployments to any target. Just build a docker
         container.
       </p>
     </div>
   </div>
 
-  <div class="mt-8">
-    <h2 class="h2-mktg">Deployment integrations</h2>
+  <section class="mt-8 text-center">
+    <h2 class="h1-mktg">Deployment integrations</h2>
+    <p>Provided out of the box configuration and guides for the following deployment targets.</p>
 
-    <div class="d-flex mt-5">
+    <div class="d-flex mt-5 flex-justify-center">
       <div class="text-center p-3">
         <img src="/assets/images/k8s.svg" width="64px" height="64px">
         <h4 class="h4-mktg">Kubernetes</h4>
@@ -66,5 +69,16 @@ layout: default
         <h4 class="h4-mktg">Cloud Run</h4>
       </div>
     </div>
-  </div>
-</div>
+  </section>
+
+  <section class="mt-8 text-center">
+    <h2 class="h1-mktg">Simplicity</h2>
+    <p>
+      The simplest possible solution, or more complex configurations.
+      Out of the box, click to deploy your project on master just works.
+    </p>
+    <div class="Box border">
+      <img src="/assets/images/deploy-list.png" width="100%">
+    </div>
+  </section>
+</main>
