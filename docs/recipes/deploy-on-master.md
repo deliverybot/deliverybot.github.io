@@ -23,12 +23,6 @@ production:
     ...
 ```
 
-View the below documents for examples with `exec` configuration:
-
-- [Cloud Run](/docs/executors/cloud-run)
-- [Helm](/docs/executors/helm)
-
-
 ## Deploying
 
 Since `deploy_on` is configured, a deployment will be kicked off every time
@@ -60,3 +54,6 @@ production:
   exec: ... # This is required.
 ```
 
+## Next
+
+[Learn about actually delivering your deployments.](/docs/executors)
