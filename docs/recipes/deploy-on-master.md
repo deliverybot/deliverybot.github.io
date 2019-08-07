@@ -4,7 +4,7 @@ title: Deploy on master
 group: Recipes
 ---
 
-# Deploy on master
+# Deploy on Master
 
 Deploy code that goes onto master automatically.
 

@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Deploy a PR environment
+title: Deploy a PR Environment
 group: Recipes
 ---
 
-# Deploy a PR environment
+# Deploy a PR Environment
 
 PR specific environments are useful for testing behaviour for a specific app
 we can spin up a dedicated environment for every PR using configuration like
@@ -44,7 +44,7 @@ As a comment in your PR, you can type the below command to kick off the pr.
 
 An example of what a pr environment deploy looks like:
 
-![Deploy on pr environments](/assets/images/pr-deploy.jpg)
+![Deploy on pr environments](/assets/images/pr-deploy.png)
 
 ## Next
 

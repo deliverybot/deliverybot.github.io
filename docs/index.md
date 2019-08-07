@@ -18,7 +18,7 @@ can use the [public paid tier]({{site.deliverybot_url}}) to deploy your code.
     2. [Deploy pr environments](/docs/recipes/deploy-pr-environments)
 
 
-### Full Examples
+## Full Examples
 
-Deliverybot's own full example:
-<https://github.com/deliverybot/deliverybot/blob/master/.github/deploy.yml>
+- [Kubernetes walkthrough](/docs/recipes/kubernetes)
+- [Deliverybot's own full example](https://github.com/deliverybot/deliverybot/blob/master/.github/deploy.yml)
