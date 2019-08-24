@@ -8,17 +8,19 @@ title: Documentation
 Deliverybot is a GitHub app. You can [deploy it yourself](self-hosting) or you
 can use the [public paid tier]({{site.deliverybot_url}}) to deploy your code.
 
+The best way to get started is by visiting the [example repository][example] and
+forking the repository. This example is all wired up with GitHub actions to
+deliver your deployments. After forking the repo you will need to:
+
 1. Sign up at <{{site.github_app_url}}> and connect the application to your
    GitHub repository.
 
-2. Follow one of the recipes below to get started:
+2. Push a commit to watch the workflows kick off!
 
-    1. [Deploy on master](/docs/recipes/deploy-on-master)
+Once you have a working example you can read more [recipes][recipes] to get you
+started. Read about [how it works][how] for a more in depth perspective on how
+Deliverybot deploys your code.
 
-    2. [Deploy pr environments](/docs/recipes/deploy-pr-environments)
-
-
-## Full Examples
-
-- [Kubernetes walkthrough](/docs/recipes/kubernetes)
-- [Deliverybot's own full example](https://github.com/deliverybot/deliverybot/blob/master/.github/deploy.yml)
+[how]: /docs/how-it-works
+[recipes]: /docs/deploying
+[example]: {{site.example_url}}
