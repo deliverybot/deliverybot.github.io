@@ -1,17 +1,21 @@
 ---
 layout: page
-title: Actions
-group: Actions
+title: Delivering
+group: Delivering
 ---
 
-# Actions
+# Delivering deployments
 
-Example action workflows for deliverying deployments:
+Deliverying deployments involves executing code in response to GitHub deployment
+events. Read up on [how it works](/docs/how-it-works) for more information.
+GitHub actions aren't the only way to deliver deployments, but they are the
+fastest to get you up and running. View action workflows below or read further
+about actions.
 
-- [Helm](helm)
-- [Firebase](firebase)
+- [Helm action](helm-action)
+- [Firebase action](firebase-action)
 
-## About actions
+## GitHub actions
 
 GitHub actions are one of the simplest ways to trigger your deployments. Actions
 run on GitHub infrastructure in response to GitHub events. The basic format for

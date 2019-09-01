@@ -40,7 +40,7 @@ deployment resource.
 The helm action in GitHub handls this logic for us, view examples and
 documentation for the action: https://github.com/deliverybot/helm.
 
-```yaml {% raw}
+```yaml {% raw %}
 canary:
   deployments:
   - environment: production
