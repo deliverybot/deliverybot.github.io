@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: basic
 title: Deliverybot | About
 ---
 
@@ -18,3 +18,6 @@ as a GitHub app.
 - Don't try and deliver deployments, automate when they happen.
 - Adopt and codify the best practices for deployments with Kubernetes, GitHub
   and more tools.
+- Be the simplest and safest solution to deploy to Kubernetes from GitHub.
+- Provide recipes and to manage complex workflows, don't prescribe or build in
+  specific workflows.
