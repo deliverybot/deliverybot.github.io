@@ -1,15 +1,14 @@
-title: deliverybot
-email: your-email@example.com
+title: Deliverybot
 description: >-
   The missing GitHub deployment tool
 long_description: >-
-  GitHub native deployment tool using GitHub actions.
+  Deliverybot is a deployment tool to automate deployments for developers and
+  designers who work together to build and deploy GitHub repos.
 
-deliverybot_url: https://deliverybot-ohzjlus46a-uc.a.run.app/
+deliverybot_url: https://deliverybot.web.app
 github_app_url: https://github.com/apps/deliverybot
 github_org_url: https://github.com/deliverybot
 github_repo: deliverybot/deliverybot
-example_url: https://github.com/deliverybot/example
 terms_url: /terms/terms
 privacy_url: /terms/privacy
 

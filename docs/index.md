@@ -23,4 +23,4 @@ Deliverybot deploys your code.
 
 [how]: /docs/how-it-works
 [recipes]: /docs/deploying
-[example]: {{site.example_url}}
+[example]: https://github.com/deliverybot/example
