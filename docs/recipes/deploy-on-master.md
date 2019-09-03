@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Deploy on master
-group: Deploying
+group: Recipes
 ---
 
 # Deploy on master

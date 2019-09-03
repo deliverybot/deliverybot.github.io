@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Build promotion
-group: Deploying
+group: Recipes
 ---
 
 # Build promotion

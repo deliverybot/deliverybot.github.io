@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Canary deployments
-group: Deploying
+group: Recipes
 ---
 
 # Canary deployments

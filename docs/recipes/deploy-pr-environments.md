@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Deploy a PR environment
-group: Deploying
+group: Recipes
 ---
 
 # Deploy a PR environment

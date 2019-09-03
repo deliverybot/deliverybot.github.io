@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Deploying
-group: Deploying
+title: Recipes
+group: Recipes
 ---
 
-# Deploying
+# Recipes
 
 Recipes for deploy configuration with Deliverybot are found here:
 
