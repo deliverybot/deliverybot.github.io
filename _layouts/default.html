@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -38,6 +39,7 @@
     </div>
   </footer>
 
+  {% if jekyll.environment == "production" %}
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-146941343-2"></script>
   <script>
@@ -47,5 +49,6 @@
 
     gtag('config', 'UA-146941343-2');
   </script>
+  {% endif %}
 </body>
 </html>
