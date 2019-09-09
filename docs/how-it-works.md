@@ -50,7 +50,7 @@ actions. [Deliverybot maintains a set of actions and recipes][3] for your to be
 able to work with these actions effectively.
 
 [1]: https://developer.github.com/v3/repos/deployments/
-[2]: /docs/deploying
+[2]: /docs/recipes
 [3]: /docs/actions
 
 ## Deployment events

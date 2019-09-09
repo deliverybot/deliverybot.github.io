@@ -22,5 +22,5 @@ started. Read about [how it works][how] for a more in depth perspective on how
 Deliverybot deploys your code.
 
 [how]: /docs/how-it-works
-[recipes]: /docs/deploying
+[recipes]: /docs/recipes
 [example]: https://github.com/deliverybot/example
