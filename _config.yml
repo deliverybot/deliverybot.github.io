@@ -5,7 +5,7 @@ long_description: >-
   Deliverybot is a deployment tool to automate deployments for developers and
   designers who work together to build and deploy GitHub repos.
 
-deliverybot_url: https://deliverybot.web.app
+deliverybot_url: https://app.deliverybot.dev
 github_app_url: https://github.com/apps/deliverybot
 github_org_url: https://github.com/deliverybot
 github_repo: deliverybot/deliverybot
@@ -19,7 +19,7 @@ terms:
   service: Deliverybot
 
 baseurl: ""
-url: https://deliverybot.github.io
+url: https://deliverybot.dev
 markdown: kramdown
 kramdown:
   input: GFM

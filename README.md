@@ -1,3 +1,3 @@
 # Deliverybot site
 
-https://deliverybot.github.io
+https://deliverybot.dev
