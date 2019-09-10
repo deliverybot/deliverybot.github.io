@@ -95,13 +95,18 @@ Default: true when environment is production and false otherwise.
 
 ## Variables
 
-The following variables are available using `{% raw %}{{ }}{% endraw %}` syntax
+The following variables are available using `{% raw %}${{ }}{% endraw %}` syntax
 when evaluating deployment targets:
 
 - `ref`: Deployment ref, ie: `master`.
 - `sha`: Full git sha.
 - `short_sha`: Short git sha.
 - `pr`: Pr number, if this deployment is kicked off in a PR.
+- `target`: Current target name.
+- `owner`: Owner name.
+- `repo`: Repo name.
+- `pull_request`: [GitHub pull request object.](pr)
+- `commit`: [GitHub commit object.](commit)
 
 An example usage of this:
 
@@ -110,5 +115,8 @@ An example usage of this:
 review:
   deployments:
   - # Dynamic environment name. The environment will look like pr123.
-    environment: pr{{ pr }} {% endraw %}
+    environment: pr${{ pr }} {% endraw %}
 ```
+
+[pr]: https://developer.github.com/v3/pulls/#response-1
+[commit]: https://developer.github.com/v3/git/commits/#response

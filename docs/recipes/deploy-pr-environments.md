@@ -15,7 +15,7 @@ below:
 review:
   deployments:
   - # Dynamic environment name. The environment will look like pr123.
-    environment: pr{{ pr }}
+    environment: pr${{ pr }}
 
     # Set the transient environment flag to let GitHub and deliverybot know that
     # this environment should be destroyed when the PR is closed.
