@@ -19,13 +19,11 @@ canary:
   deployments:
   - environment: production
     description: Deploy to production with %15 traffic.
-    required_contexts: ["ci/build"]
     payload:
       traffic: 15
 production:
   deployments:
   - environment: production
-    required_contexts: ["ci/build"]
 {% endraw %}
 ```
 

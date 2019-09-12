@@ -15,16 +15,16 @@ go out.
 # .github/deploy.yml
 production:
   auto_deploy_on: refs/heads/master
+  # Wait for builds to finish for auto deploys to kick in. Additionally wait
+  # for a "promoted" check to be applied from the commit.
+  required_contexts: ["ci/build", "promoted"]
   deployments:
   - environment: production
-    # Wait for builds to finish for auto deploys to kick in. Additionally wait
-    # for a "promoted" check to be applied from the commit.
-    required_contexts: ["ci/build", "promoted"]
 staging:
   auto_deploy_on: refs/heads/master
+  required_contexts: ["ci/build"]
   deployments:
   - environment: staging
-    required_contexts: ["ci/build"]
 {% endraw %}
 ```
 

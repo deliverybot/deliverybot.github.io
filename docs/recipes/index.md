@@ -35,13 +35,14 @@ production:
 ```
 
 - [`<target>.auto_deploy_on`](#targetauto_deploy_on)
+- [`<target>.transient_environment`](#targettransient_environment)
+- [`<target>.production_environment`](#targetproduction_environment)
+- [`<target>.required_contexts`](#targetrequired_contexts)
 - [`<target>.deployments`](#targetdeployments)
 - [`<target>.deployments[].environment`](#targetdeploymentsenvironment)
 - [`<target>.deployments[].task`](#targetdeploymentstask)
 - [`<target>.deployments[].auto_merge`](#targetdeploymentsauto_merge)
 - [`<target>.deployments[].payload`](#targetdeploymentspayload)
-- [`<target>.deployments[].transient_environment`](#targetdeploymentstransient_environment)
-- [`<target>.deployments[].production_environment`](#targetdeploymentsproduction_environment)
 
 ##### `<target>.auto_deploy_on`
 
@@ -53,6 +54,24 @@ detected on this event, the deployment will be triggered.
 production:
   auto_deploy_on: refs/heads/master {% endraw %}
 ```
+
+##### `<target>.transient_environment`
+
+Specifies if the given environment is specific to the deployment and will no
+longer exist at some point in the future. Default: false
+
+If this value is `true` all deployments triggered on a pr will be marked
+inactive and a removal deployment will be fired to clean up all unique
+environments.
+
+##### `<target>.production_environment`
+
+Specifies if the given environment is one that end-users directly interact with.
+Default: true when environment is production and false otherwise.
+
+##### `<target>.required_contexts`
+
+The status contexts to verify against commit status checks. Default: []
 
 ##### `<target>.deployments[].environment`
 
@@ -78,20 +97,6 @@ it's behind the default branch. Default: false
 ##### `<target>.deployments[].payload`
 
 Payload with extra information about the deployment. Default: {}
-
-##### `<target>.deployments[].transient_environment`
-
-Specifies if the given environment is specific to the deployment and will no
-longer exist at some point in the future. Default: false
-
-If this value is `true` all deployments triggered on a pr will be marked
-inactive and a removal deployment will be fired to clean up all unique
-environments.
-
-##### `<target>.deployments[].production_environment`
-
-Specifies if the given environment is one that end-users directly interact with.
-Default: true when environment is production and false otherwise.
 
 ## Variables
 

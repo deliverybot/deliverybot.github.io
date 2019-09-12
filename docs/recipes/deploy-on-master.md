@@ -12,11 +12,11 @@ Deploy code that goes onto master automatically.
 # .github/deploy.yml
 production:
   auto_deploy_on: refs/heads/master
+  # Include the required context here "ci/build" so that we don't deploy before
+  # our container is built.
+  required_contexts: ["ci/build"]
   deployments:
   - environment: production
-    # Include the required context here "ci/build" so that we don't deploy before
-    # our container is built.
-    required_contexts: ["ci/build"]
 {% endraw %}
 ```
 
@@ -44,11 +44,9 @@ staging:
   auto_deploy_on: refs/heads/master
   deployments:
   - environment: staging
-    required_contexts: ["ci/build"]
 production:
   deployments:
   - environment: production
-    required_contexts: ["ci/build"]
 {% endraw %}
 ```
 
