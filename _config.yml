@@ -1,14 +1,14 @@
 title: Deliverybot
 description: >-
-  The missing GitHub deployment tool
+  Automate your deployments
 long_description: >-
-  Deliverybot is a deployment tool to automate deployments for developers and
-  designers who work together to build and deploy GitHub repos.
+  Deliverybot automates simple and complex deployment workflows. Stop building
+  custom pipelines or figuring out deployment scripts. Pick community driven
+  recipes and get back to building.
 
 deliverybot_url: https://app.deliverybot.dev
 github_app_url: https://github.com/apps/deliverybot
 github_org_url: https://github.com/deliverybot
-github_repo: deliverybot/deliverybot
 terms_url: /terms/terms
 privacy_url: /terms/privacy
 

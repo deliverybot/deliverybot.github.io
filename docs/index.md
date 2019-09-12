@@ -5,22 +5,32 @@ title: Documentation
 
 # Getting Started
 
-Deliverybot is a GitHub app. You can [deploy it yourself](self-hosting) or you
-can use the [public paid tier]({{site.deliverybot_url}}) to deploy your code.
+Deliverybot is a GitHub app, to get started with deployments we need a
+repository and to install the Deliverybot app onto that repo. The below guide
+will walk you through getting an example repository setup.
 
-The best way to get started is by visiting the [example repository][example] and
-forking the repository. This example is all wired up with GitHub actions to
-deliver your deployments. After forking the repo you will need to:
+### 1. [Fork the example repository][example]
 
-1. Sign up at <{{site.github_app_url}}> and connect the application to your
-   GitHub repository.
+Visit the [example repository][example] and create a new fork.
 
-2. Push a commit to watch the workflows kick off!
+### 2. [Install the Deliverybot GitHub app][app]
+
+Sign up at <{{site.github_app_url}}> and connect the application to your GitHub
+repository.
+
+### 3. Push a commit to watch the workflows kick off!
+
+Check out the GitHub actions tab as well as the Deliverybot page.
+
+<hr>
 
 Once you have a working example you can read more [recipes][recipes] to get you
 started. Read about [how it works][how] for a more in depth perspective on how
-Deliverybot deploys your code.
+Deliverybot deploys your code. If you are trying to get deployments running for
+a specific platform, look at [our guides.](guides)
 
+[app]: {{site.github_app_url}}
 [how]: /docs/how-it-works
 [recipes]: /docs/recipes
+[recipes]: /docs/guides
 [example]: https://github.com/deliverybot/example
