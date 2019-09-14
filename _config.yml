@@ -1,10 +1,11 @@
 title: Deliverybot
 description: >-
-  Automate your deployments
+  Simple Deployment Automation
 long_description: >-
-  Deliverybot automates simple and complex deployment workflows. Stop building
-  custom pipelines or figuring out deployment scripts. Pick community driven
-  recipes and get back to building.
+  The easiest way to get started with deploying to Kubernetes, Google Cloud, AWS
+  and more using GitHub. Stop building custom pipelines or scripts and get back
+  to what matters.
+
 
 deliverybot_url: https://app.deliverybot.dev
 github_app_url: https://github.com/apps/deliverybot
@@ -34,4 +35,3 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - node_modules
-  - vendor
