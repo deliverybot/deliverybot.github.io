@@ -2,10 +2,7 @@ title: Deliverybot
 description: >-
   Simple Deployment Automation
 long_description: >-
-  The easiest way to get started with deploying to Kubernetes, Google Cloud, AWS
-  and more using GitHub. Stop building custom pipelines or scripts and get back
-  to what matters.
-
+  The easiest way to deploy your code from GitHub.
 
 deliverybot_url: https://app.deliverybot.dev
 github_app_url: https://github.com/apps/deliverybot
@@ -14,8 +11,8 @@ terms_url: /terms/terms
 privacy_url: /terms/privacy
 
 terms:
-  privacy_email: TODO
-  support_email: TODO
+  privacy_email: privacy@deliverybot.dev
+  support_email: support@deliverybot.dev
   company: Deliverybot Software
   service: Deliverybot
 

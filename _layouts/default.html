@@ -9,16 +9,18 @@
   {%- seo -%}
   <link rel="stylesheet" href="/assets/primer.css">
   <link rel="stylesheet" href="/assets/main.css">
+  <link rel="stylesheet" href="/assets/slider.css">
 </head>
 
 <body class="height-full bg-gray-light">
-  <nav class="box-shadow navbar d-flex flex-justify-between">
-    <a href="/">
+  <nav class="box-shadow navbar d-flex flex-justify-between bg-white">
+    <a class="text-gray-dark" href="/">
       <h3>{{site.title}}</h3>
     </a>
     <div>
-      <a href="/docs/" class="mr-3">Documentation</a>
-      <a href="/blog/">Blog</a>
+      <a class="text-gray-dark mr-3" href="/docs/">Documentation</a>
+      <a class="text-gray-dark mr-3" href="{{site.deliverybot_url}}">App</a>
+      <a class="text-gray-dark" href="/blog/">Blog</a>
     </div>
   </nav>
   {{ content }}
