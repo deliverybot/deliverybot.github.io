@@ -8,6 +8,8 @@ description: This tutorial will go through the basics of GitHub actions as well 
 
 {% raw %}
 
+*You will need to be part of the GitHub actions beta to complete this tutorial.*
+
 > Note, if you want to skip the intro and just look at an example repo head over to [github.com/deliverybot/example-helm](https://github.com/deliverybot/example-helm). Or fork the repository and follow along with the tutorial.
 
 GitHub actions are a new CI/CD service from GitHub. Actions are simple workflows configured as Yaml files which run configurable steps of code based on GitHub events. Since they are baked into GitHub, they reduce significantly the overhead in getting a CI/CD pipeline setup.
