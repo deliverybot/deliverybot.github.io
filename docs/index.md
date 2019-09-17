@@ -32,5 +32,5 @@ a specific platform, look at [our guides.](guides)
 [app]: {{site.github_app_url}}
 [how]: /docs/how-it-works
 [recipes]: /docs/recipes
-[recipes]: /docs/guides
+[guides]: /docs/delivering
 [example]: https://github.com/deliverybot/example

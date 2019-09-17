@@ -5,19 +5,14 @@ title: How it works
 
 # How it works
 
-Deliverybot uses the GitHub [deployments api][1].
-
-> Deployments are requests to deploy a specific ref (branch, SHA, tag). GitHub
-dispatches a deployment event that external services can listen for and act on
-when new deployments are created. Deployments enable developers and
-organizations to build loosely coupled tooling around deployments, without
-having to worry about the implementation details of delivering different types
-of applications (e.g., web, native).
+Deliverybot uses the GitHub [deployments api][1] to trigger deployments via
+GitHub. Your code responds to events from GitHub and runs the actual deployment.
+The diagram below details the steps involved:
 
 ```
-+---------+             +--------+            +-----------+        +-------------+
-| Tooling |             | GitHub |            | 3rd Party |        | Your Server |
-+---------+             +--------+            +-----------+        +-------------+
++-------------+         +--------+            +-----------+        +-------------+
+| Deliverybot |         | GitHub |            | 3rd Party |        | Your Server |
++-------------+         +--------+            +-----------+        +-------------+
      |                      |                       |                     |
      |  Create Deployment   |                       |                     |
      |--------------------->|                       |                     |
@@ -50,8 +45,8 @@ actions. [Deliverybot maintains a set of actions and recipes][3] for your to be
 able to work with these actions effectively.
 
 [1]: https://developer.github.com/v3/repos/deployments/
-[2]: /docs/recipes
-[3]: /docs/actions
+[2]: /docs/configuration
+[3]: /docs/delivering
 
 ## Deployment events
 

@@ -1,9 +1,9 @@
 ---
 layout: page
-title: Self Hosting
+title: Self hosting
 ---
 
-# Self Hosting
+# Self hosting
 
 Deliverybot can be deployed as a GitHub app on your own infrastructure.
 
