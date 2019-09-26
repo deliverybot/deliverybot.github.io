@@ -1,8 +1,10 @@
 title: Deliverybot
 description: >-
-  Simple Deployment Automation
+  Simple GitHub Deployment Automation
 long_description: >-
-  The easiest way to deploy your code from GitHub.
+  Deploy your code using GitHub API's. Automatic deployments, PR deployments
+  and integrations for any service. Powered by open source.
+
 
 deliverybot_url: https://app.deliverybot.dev
 github_app_url: https://github.com/apps/deliverybot
