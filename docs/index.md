@@ -27,7 +27,7 @@ Check out the GitHub actions tab as well as the Deliverybot page.
 Once you have a working example you can read more [recipes][recipes] to get you
 started. Read about [how it works][how] for a more in depth perspective on how
 Deliverybot deploys your code. If you are trying to get deployments running for
-a specific platform, look at [our guides.](guides)
+a specific platform, look at [our guides.][guides]
 
 [app]: {{site.github_app_url}}
 [how]: /docs/how-it-works
