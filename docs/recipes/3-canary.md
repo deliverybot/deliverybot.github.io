@@ -26,3 +26,8 @@ production:
   - environment: production
 {% endraw %}
 ```
+
+## Canary deployments with Helm
+
+Check out the [Helm documentation](/docs/delivering/helm-action/) to see how
+the Helm action allows for canary deployments.

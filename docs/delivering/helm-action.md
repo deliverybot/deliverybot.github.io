@@ -10,26 +10,55 @@ Deploys a helm chart using GitHub actions. Supports canary deployments and
 provides a built in helm chart for apps that listen over http to get your ramped
 up quickly.
 
-## Quickstart
+View an example repository using this action at
+[github.com/deliverybot/example-helm](https://github.com/deliverybot/example-helm).
 
-Read the [blog post][post] for a more in depth guide to how Deliverybot and Helm
-work best together or follow the steps below to get an example system running:
+## Parameters
 
-*Requires a Kubernetes cluster.*
+### Inputs
 
-1. Visit https://github.com/deliverybot/example-helm
+Inputs below are additionally loaded from the payload of the deployment event
+payload if the action was triggered by a deployment.
 
-1. Click the "Use this template" button to create a new fork of this repository.
+- `release`: Helm release name. Will be combined with track if set. (required)
+- `namespace`: Kubernetes namespace name. (required)
+- `chart`: Helm chart path. If set to "app" this will use the built in helm
+  chart found in this repository. (required)
+- `values`: Helm chart values, expected to be a YAML or JSON string.
+- `track`: Track for the deployment. If the track is not "stable" it activates
+  the canary workflow described below.
+- `task`: Task name. If the task is "remove" it will remove the configured helm
+  release.
+- `dry-run`: Helm dry-run option.
+- `token`: Github repository token. If included and the event is a deployment
+  then the deployment_status event will be fired.
+- `value-files`: Additional value files to apply to the helm chart. Expects a
+  JSON encoded array or a string.
+- `secrets`: Secret variables to include in value file interpolation. Expects a
+  JSON encoded map.
+- `helm`: Helm binary to execute, one of: [`helm`, `helm3`].
+- `version`: Version of the app, usually commit sha works here.
 
-1. Install [deliverybot](https://github.com/apps/deliverybot) on the new repo.
+Additional parameters: If the action is being triggered by a deployment event
+and the `task` parameter in the deployment event is set to `"remove"` then this
+action will execute a `helm delete $service`
 
-1. Add a `KUBECONFIG` secret into the secrets tab with your Kubernetes cluster.
+#### Versions
 
-1. Push a commit to your new fork and watch the example workflows kick off!
+- `helm`: v2.14.3
+- `helm3`: v3.0.0-beta.3
 
-1. Visit the [deliverybot app](https://app.deliverybot.dev) and manually deploy.
+### Environment
 
-[post]: /2019/09/15/deploying-to-kubernetes-with-helm-and-github-actions/
+- `KUBECONFIG_FILE`: Kubeconfig file for Kubernetes cluster access.
+
+### Value file interpolation
+
+The following syntax allows variables to be used in value files:
+
+- `${{ secrets.KEY }}`: References secret variables passed in the secrets input.
+- `${{ deployment }}`: References the deployment event that triggered this
+  action.
 
 ## Example
 
@@ -57,41 +86,9 @@ jobs:
         KUBECONFIG_FILE: '${{ secrets.KUBECONFIG }}'
 ```
 
-## Parameters
+## Example canary
 
-### Inputs
-
-Inputs labelled below with "(deployment)" are additionally loaded from the
-payload of the deployment resource.
-
-- `release`: Helm release name. Will be combined with track if set. (required)
-  (deployment)
-- `namespace`: Kubernetes namespace name. (required) (deployment)
-- `chart`: Helm chart path. If set to "app" this will use the built in helm
-  chart found in this repository. (required) (deployment)
-- `values`: Helm chart values, expected to be a YAML or JSON string.
-  (deployment)
-- `track`: Track for the deployment. If the track is not "stable" it activates
-  the canary workflow described below. (deployment)
-- `task`: Task name. If the task is "remove" it will remove the configured helm
-  release. (deployment)
-- `dry-run`: Helm dry-run option.
-- `token`: Github repository token. If included and the event is a deployment
-  then the deployment_status event will be fired.
-
-Additional parameters: If the action is being triggered by a deployment event
-and the `task` parameter in the deployment event is set to `"remove"` then this
-action will execute a `helm delete $service`
-
-### Environment
-
-- `KUBECONFIG_FILE`: Kubeconfig file for Kubernetes cluster access.
-
-## Examples
-
-### Canary deployments
-
-If a track is chosen that is not equal to stable, this updates the helm chart
+If a track is chosen that is equal to canary, this updates the helm chart
 in a few ways:
 
 1. Release name is changed to `{release}-{track}` (eg. myapp-canary).
