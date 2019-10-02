@@ -9,10 +9,12 @@ long_description: >-
 deliverybot_url: https://app.deliverybot.dev
 github_app_url: https://github.com/apps/deliverybot
 github_org_url: https://github.com/deliverybot
+spectrum_url: https://spectrum.chat/deliverybot/general
+
 terms_url: /terms/terms
 privacy_url: /terms/privacy
 
-privacy_email: support@deliverybot.dev
+privacy_email: privacy@deliverybot.dev
 support_email: support@deliverybot.dev
 corp_name: Deliverybot
 service_name: Deliverybot
