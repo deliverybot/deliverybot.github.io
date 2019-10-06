@@ -16,14 +16,12 @@ the percentage of traffic we would like to shift over.
 # .github/deploy.yml
 canary:
   auto_deploy_on: refs/heads/master
-  deployments:
-  - environment: production
-    description: Deploy to production with %15 traffic.
-    payload:
-      traffic: 15
+  environment: production
+  description: Deploy to production with %15 traffic.
+  payload:
+    traffic: 15
 production:
-  deployments:
-  - environment: production
+  environment: production
 {% endraw %}
 ```
 

@@ -15,8 +15,7 @@ production:
   # Include the required context here "ci/build" so that we don't deploy before
   # our container is built.
   required_contexts: ["ci/build"]
-  deployments:
-  - environment: production
+  environment: production
 {% endraw %}
 ```
 
@@ -42,11 +41,9 @@ production target doesn't have `auto_deploy_on` while staging does.
 # .github/deploy.yml
 staging:
   auto_deploy_on: refs/heads/master
-  deployments:
-  - environment: staging
+  environment: staging
 production:
-  deployments:
-  - environment: production
+  environment: production
 {% endraw %}
 ```
 

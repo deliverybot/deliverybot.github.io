@@ -18,13 +18,11 @@ production:
   # Wait for builds to finish for auto deploys to kick in. Additionally wait
   # for a "promoted" check to be applied from the commit.
   required_contexts: ["ci/build", "promoted"]
-  deployments:
-  - environment: production
+  environment: production
 staging:
   auto_deploy_on: refs/heads/master
   required_contexts: ["ci/build"]
-  deployments:
-  - environment: staging
+  environment: staging
 {% endraw %}
 ```
 
@@ -54,20 +52,17 @@ provide a directed acyclic graph.
 production:
   auto_deploy_on: refs/heads/master
   required_contexts: ["ci/build", "qa", "promoted"]
-  deployments:
-  - environment: production
+  environment: production
 
 staging:
   auto_deploy_on: refs/heads/master
   required_contexts: ["ci/build"]
-  deployments:
-  - environment: staging
+  environment: staging
 
 qa:
   auto_deploy_on: refs/heads/master
   required_contexts: ["ci/build"]
-  deployments:
-  - environment: staging {% endraw %}
+  environment: staging {% endraw %}
 ```
 
 The only missing piece here is to run your code on `deployment_status` events

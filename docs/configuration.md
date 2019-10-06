@@ -13,19 +13,17 @@ and fields is provided below.
 ```yaml {% raw %}
 # .github/deploy.yml
 production:
-  deployments:
-  - environment: name {% endraw %}
+  environment: name {% endraw %}
 ```
 
 - [`<target>.auto_deploy_on`](#targetauto_deploy_on)
 - [`<target>.transient_environment`](#targettransient_environment)
 - [`<target>.production_environment`](#targetproduction_environment)
 - [`<target>.required_contexts`](#targetrequired_contexts)
-- [`<target>.deployments`](#targetdeployments)
-- [`<target>.deployments[].environment`](#targetdeploymentsenvironment)
-- [`<target>.deployments[].task`](#targetdeploymentstask)
-- [`<target>.deployments[].auto_merge`](#targetdeploymentsauto_merge)
-- [`<target>.deployments[].payload`](#targetdeploymentspayload)
+- [`<target>.environment`](#targetdeploymentsenvironment)
+- [`<target>.task`](#targettask)
+- [`<target>.auto_merge`](#targetauto_merge)
+- [`<target>.payload`](#targetpayload)
 
 ##### `<target>.auto_deploy_on`
 
@@ -56,13 +54,13 @@ Default: true when environment is production and false otherwise.
 
 The status contexts to verify against commit status checks. Default: []
 
-##### `<target>.deployments[].environment`
+##### `<target>.environment`
 
 The name of the environment that was deployed to (e.g., staging or production).
 Default: none
 
 
-##### `<target>.deployments[].task`
+##### `<target>.task`
 
 The name of the task for the deployment (e.g., deploy or deploy:migrations).
 Default: none
@@ -72,12 +70,12 @@ deliverybot when a PR is closed and resources need to be cleaned up. This type
 of deployment can be detected because task will equal `remove` in this case.
 Use this as a hook to clean up resources not needed anymore.
 
-##### `<target>.deployments[].auto_merge`
+##### `<target>.auto_merge`
 
 Attempts to automatically merge the default branch into the requested ref, if
 it's behind the default branch. Default: false
 
-##### `<target>.deployments[].payload`
+##### `<target>.payload`
 
 Payload with extra information about the deployment. Default: {}
 
@@ -101,9 +99,8 @@ An example usage of this:
 ```yaml {% raw %}
 # .github/deploy.yml
 review:
-  deployments:
-  - # Dynamic environment name. The environment will look like pr123.
-    environment: pr${{ pr }} {% endraw %}
+  # Dynamic environment name. The environment will look like pr123.
+  environment: pr${{ pr }} {% endraw %}
 ```
 
 [pr]: https://developer.github.com/v3/pulls/#response-1

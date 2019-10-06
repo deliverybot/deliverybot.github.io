@@ -18,9 +18,8 @@ review:
   transient_environment: true
   production_environment: false
 
-  deployments:
-  - # Dynamic environment name. The environment will look like pr123.
-    environment: pr${{ pr }}
+  # Dynamic environment name. The environment will look like pr123.
+  environment: pr${{ pr }}
 {% endraw %}
 ```
 
