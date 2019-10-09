@@ -3,7 +3,7 @@ layout: page
 title: deploy.yml
 ---
 
-## Configuration (`.github/deploy.yml`)
+# Configuration (`.github/deploy.yml`)
 
 Deliverybot controls deployments based on a configuration file. Targets are the
 top level resource for this file which house configuration to trigger a list of

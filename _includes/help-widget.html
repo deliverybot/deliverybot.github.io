@@ -1,0 +1,23 @@
+<div id="help" style="display: none;" class="p-1 position-fixed bottom-0 left-0">
+  <div class="Toast Toast--animateIn Toast--loading">
+    <span class="Toast-icon bg-gray-light border text-gray-dark">
+      <svg fill="currentColor" width="14" height="16" class="octicon octicon-question" viewBox="0 0 14 16" version="1.1"
+        aria-hidden="true">
+        <path fill-rule="evenodd"
+          d="M6 10h2v2H6v-2zm4-3.5C10 8.64 8 9 8 9H6c0-.55.45-1 1-1h.5c.28 0 .5-.22.5-.5v-1c0-.28-.22-.5-.5-.5h-1c-.28 0-.5.22-.5.5V7H4c0-1.5 1.5-3 3-3s3 1 3 2.5zM7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7z">
+        </path>
+      </svg>
+    </span>
+    <span class="Toast-content">
+      Have a question? <a href="{{site.spectrum_url}}">Join the community</a>
+      or <a href="mailto:{{site.support_email}}">send us an email</a>. We're
+      happy to chat!
+    </span>
+    <button class="Toast-dismissButton" onclick="document.getElementById('help').remove()">
+      <svg width="12" height="16" viewBox="0 0 12 16" class="octicon octicon-x" aria-hidden="true">
+        <path fill-rule="evenodd"
+          d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z" />
+      </svg>
+    </button>
+  </div>
+</div>

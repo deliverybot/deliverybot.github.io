@@ -1,5 +1,6 @@
 ---
 layout: default
+help: true
 ---
 
 <header class="bg-white pb-6 box-shadow">
@@ -10,16 +11,7 @@ layout: default
     <p class="lead text-gray-dark">
       {{ site.long_description }}
     </p>
-    <div class="text-center mt-5">
-      <a href="{{site.deliverybot_url}}/login" role="button" class="btn btn-outline btn-large">
-        Get started for free
-      </a>
-    </div>
-    <div class="text-center mt-2">
-      <a target="_blank" href="{{site.spectrum_url}}" role="button" class="btn-link btn-large">
-        Join the community
-      </a>
-    </div>
+    {% include start.html %}
   </div>
 </header>
 
@@ -121,16 +113,7 @@ layout: default
       </div>
     </div>
 
-    <div class="mt-5">
-      <a href="{{site.deliverybot_url}}/login" role="button" class="btn btn-outline btn-large">
-        Get started for free
-      </a>
-    </div>
-    <div class="mt-2">
-      <a target="_blank" href="{{site.spectrum_url}}" role="button" class="btn-link btn-large">
-        Join the community
-      </a>
-    </div>
+    {% include start.html %}
 
   </section>
 </main>

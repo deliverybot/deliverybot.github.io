@@ -19,42 +19,16 @@
     <div>
       <a class="text-gray-dark mr-2" href="/docs/">Docs</a>
       <a class="text-gray-dark mr-2" href="/blog/">Blog</a>
+      <a target="_blank" class="text-gray-dark mr-2" href="{{site.github_app_url}}">GitHub</a>
       <a class="text-gray-dark mr-2" href="/pricing/">Pricing</a>
-      <a class="text-gray-dark mr-2" href="{{site.deliverybot_url}}">Login</a>
+      <a target="_blank" class="text-gray-dark mr-2" href="{{site.deliverybot_url}}">Login</a>
     </div>
   </nav>
 
   {{ content }}
 
-  <footer class="mt-8 bg-gray-dark">
-    <div class="d-flex flex-justify-center">
-      <div class="p-8">
-        <ul class="list-style-none">
-          <li><a class="text-gray-light" href="{{site.deliverybot_url}}">Login</a></li>
-          <li><a class="text-gray-light" href="{{site.github_app_url}}">Install</a></li>
-          <li><a class="text-gray-light" href="{{site.spectrum_url}}">Spectrum</a></li>
-          <li><a class="text-gray-light" href="/docs/">Docs</a></li>
-          <li><a class="text-gray-light" href="/pricing/">Pricing</a></li>
-          <li><a class="text-gray-light" href="/blog/">Blog</a></li>
-          <li><a class="text-gray-light" href="/status/">Status</a></li>
-        </ul>
-      </div>
-
-      <div class="p-8 text-gray-light">
-        <ul class="list-style-none">
-          <li>
-            Created by <a class="text-gray-light" href="{{site.github_org_url}}">@deliverybot</a>
-          </li>
-          <li><a class="text-gray-light" href="mailto:{{site.support_email}}">{{site.support_email}}</a></li>
-        </ul>
-
-        <ul class="mt-2 list-style-none">
-          <li><a class="text-gray-light" href="{{site.terms_url}}">Terms and conditions</a></li>
-          <li><a class="text-gray-light" href="{{site.privacy_url}}">Privacy policy</a></li>
-        </ul>
-      </div>
-    </div>
-  </footer>
+  {% include help-widget.html %}
+  {% include footer.html %}
 
   {% if jekyll.environment == "production" %}
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -66,17 +40,10 @@
 
     gtag('config', 'UA-146941343-2');
   </script>
+  {% endif %}
 
-  <!-- Freshchat widget -->
-  <script>
-    function initFreshChat() {
-      window.fcWidget.init({
-        token: "a26f7885-5082-4ea0-9385-4c03da261559",
-        host: "https://wchat.freshchat.com"
-      });
-    }
-    function initialize(i,t){var e;i.getElementById(t)?initFreshChat():((e=i.createElement("script")).id=t,e.async=!0,e.src="https://wchat.freshchat.com/js/widget.js",e.onload=initFreshChat,i.head.appendChild(e))}function initiateCall(){initialize(document,"freshchat-js-sdk")}window.addEventListener?window.addEventListener("load",initiateCall,!1):window.attachEvent("load",initiateCall,!1);
-  </script>
+  {% if page.help %}
+  {% include enable-help.html %}
   {% endif %}
 </body>
 </html>
