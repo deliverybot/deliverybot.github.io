@@ -1,13 +1,100 @@
 ---
-layout: basic
+layout: default
 title: Deliverybot | Status
 ---
 
-<h1 class="text-center">Deliverybot Status</h1>
-
-<div class="text-center">
-  <svg width="56" height="56" class="octicon octicon-check" viewBox="0 0 12 16" version="1.1" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path></svg>
-  <h3>
-    No active issues.
-  </h3>
+<div class="content p-6">
+  <div class="main-body overflow-x-hidden">
+    <div class="mb-5 text-center ">
+      <h1 class="text-gray-light">Deliverybot Status</h1>
+    </div>
+    <div id="issues-root">
+      <p class="text-center text-gray-light">Loading updates...</p>
+    </div>
+  </div>
 </div>
+
+{% raw %}
+<script id="issues-template" type="text/html">
+  <div class="Subhead mt-8">
+    <div class="Subhead-heading">Current incidents</div>
+  </div>
+  {{#each active}}
+    <div class="Toast Toast--error" style="width: 100%; max-width: 95%;">
+      <span class="Toast-icon">
+        <svg width="14" height="16" viewBox="0 0 14 16" class="octicon octicon-stop" aria-hidden="true">
+          <path
+            fill-rule="evenodd"
+            d="M10 1H4L0 5v6l4 4h6l4-4V5l-4-4zm3 9.5L9.5 14h-5L1 10.5v-5L4.5 2h5L13 5.5v5zM6 4h2v5H6V4zm0 6h2v2H6v-2z"
+          />
+        </svg>
+      </span>
+      <span class="Toast-content">
+        <strong>{{title}}</strong><br>
+        {{body}}<br>
+        <small>{{created_at}}</small>
+      </span>
+    </div>
+  {{else}}
+    <div class="Toast Toast--success" style="width: 100%; max-width: 95%;">
+      <span class="Toast-icon">
+        <svg width="12" height="16" viewBox="0 0 12 16" class="octicon octicon-check" aria-hidden="true">
+          <path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z" />
+        </svg>
+      </span>
+      <span class="Toast-content">Everything operating normally.</span>
+    </div>
+  {{/each}}
+
+  <div class="Subhead mt-10">
+    <div class="Subhead-heading">Past incidents</div>
+  </div>
+
+  {{#each past}}
+    <div class="Toast Toast--error" style="width: 100%; max-width: 95%;">
+      <span class="Toast-icon bg-gray-dark">
+        <svg fill="currentColor" width="14" height="16" viewBox="0 0 14 16" class="octicon octicon-stop" aria-hidden="true">
+          <path
+            fill-rule="evenodd"
+            d="M10 1H4L0 5v6l4 4h6l4-4V5l-4-4zm3 9.5L9.5 14h-5L1 10.5v-5L4.5 2h5L13 5.5v5zM6 4h2v5H6V4zm0 6h2v2H6v-2z"
+          />
+        </svg>
+      </span>
+      <span class="Toast-content">
+        <strong>{{title}}</strong><br>
+        {{body}}<br>
+        <small>{{closed_at}}</small>
+      </span>
+    </div>
+  {{/each}}
+</script>
+{% endraw %}
+
+<script src="https://unpkg.com/handlebars@4.1.2/dist/handlebars.min.js"></script>
+<script>
+  (function () {
+    var url = "https://api.github.com/repos/deliverybot/deliverybot.github.io/issues?labels=status&state=all";
+
+    fetch(url)
+      .then(function (resp) { return resp.json() })
+      .then(function (issues) {
+        var active = issues
+          .filter(function (issue) {
+            return issue.state !== "closed";
+          });
+        var past = issues
+          .filter(function (issue) {
+            return issue.state === "closed";
+          });
+        var data = {
+          active: active,
+          past: past,
+        };
+        var source = document.getElementById("issues-template").innerHTML;
+        var dest = document.getElementById("issues-root");
+        var template = Handlebars.compile(source);
+        var html = template(data);
+        dest.innerHTML = html;
+      });
+  })();
+</script>
