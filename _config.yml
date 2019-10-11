@@ -22,6 +22,23 @@ support_email: support@deliverybot.dev
 corp_name: Deliverybot
 service_name: Deliverybot
 
+highlights:
+- image: /assets/images/deploy-list.png
+  title: Click to deploy
+  description: |
+   Click the latest commit in the Deliverybot dashboard to deploy your
+   code. It doesn't get any simpler than that.
+- image: /assets/images/deploy-show.png
+  title: Automatic deployments
+  description: |
+    Deploy automatically to multiple clusters and environments given a
+    specific branch.
+- image: /assets/images/pr-deploy.png
+  title: Advanced deployment workflows
+  description: |
+    Orchestrate canary deployments to test code in incremental steps.
+    Push out environments per pull request.
+
 baseurl: ""
 url: https://deliverybot.dev
 markdown: kramdown
