@@ -28,7 +28,7 @@ jobs:
         node-version: 8.x
 
     - name: 'Deployment pending'
-      uses: 'deliverybot/status@master'
+      uses: 'deliverybot/deployment-status@master'
       with:
         state: 'pending'
         token: '${{ github.token }}'
@@ -44,14 +44,14 @@ jobs:
 
     - name: 'Deployment success'
       if: success()
-      uses: 'deliverybot/status@master'
+      uses: 'deliverybot/deployment-status@master'
       with:
         state: 'success'
         token: '${{ github.token }}'
 
     - name: 'Deployment failure'
       if: failure()
-      uses: 'deliverybot/status@master'
+      uses: 'deliverybot/deployment-status@master'
       with:
         state: 'failure'
         token: '${{ github.token }}'
