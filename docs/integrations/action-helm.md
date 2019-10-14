@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Helm action
-group: Delivering
+group: Integrations
 ---
 
 # Helm action

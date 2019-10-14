@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Delivering
-group: Delivering
+title: Integrations
+group: Integrations
 ---
 
 # Delivering deployments

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Firebase action
-group: Delivering
+group: Integrations
 ---
 
 # Firebase

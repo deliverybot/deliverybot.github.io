@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Buildkit
-group: Delivering
+group: Integrations
 ---
 
 # Buildkite

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: GitOps
-group: Delivering
+group: Integrations
 ---
 
 # GitOps

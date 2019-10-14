@@ -1,0 +1,18 @@
+- name: "Firebase Action"
+  id: "action-firebase"
+  image: "/assets/images/integrations/firebase.svg"
+  description: "Deploy sites to Firebase using GitHub actions."
+  labels: ["ACTION"]
+
+- name: "Helm Action"
+  id: "action-helm"
+  image: "/assets/images/integrations/k8s.svg"
+  description: "Deploy sites to Kubernetes using GitHub actions."
+  labels: ["ACTION"]
+
+- name: "Buildkite"
+  id: "buildkite"
+  image: "/assets/images/integrations/buildkite.svg"
+  description: "Handle deployment events using Buildkite."
+  labels: ["DEPLOY"]
+
