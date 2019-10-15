@@ -5,13 +5,12 @@ long_description: >-
   Deploy your code using GitHub API's. Automatic deployments, PR deployments
   and integrations for any service. Powered by open source.
 
-
 deliverybot_url: https://app.deliverybot.dev
 github_app_url: https://github.com/apps/deliverybot
 github_install_url: https://github.com/apps/deliverybot/installations/new
 github_org_url: https://github.com/deliverybot
 spectrum_url: https://spectrum.chat/deliverybot/general
-start_url: https://app.deliverybot.dev
+start_url: https://github.com/apps/deliverybot/installations/new
 pricing_url: https://github.com/marketplace/deliverybot#marketplace-plans-container
 
 terms_url: /terms/terms
@@ -21,32 +20,6 @@ privacy_email: privacy@deliverybot.dev
 support_email: support@deliverybot.dev
 corp_name: Deliverybot
 service_name: Deliverybot
-
-highlights:
-- image: /assets/images/deploy-list.png
-  title: Click to deploy
-  description: |
-   Click the latest commit in the Deliverybot dashboard to deploy your
-   code. It doesn't get any simpler than that.
-  link:
-    text: Read about how it works.
-    href: /docs/how-it-works/
-- image: /assets/images/deploy-show.png
-  title: Automatic deployments
-  description: |
-    Deploy automatically to multiple clusters and environments given a
-    specific branch.
-  link:
-    text: Read our deploy to master recipe.
-    href: /docs/recipes/1-on-master/
-- image: /assets/images/pr-deploy.png
-  title: Advanced deployment workflows
-  description: |
-    Orchestrate canary deployments to test code in incremental steps.
-    Push out environments per pull request.
-  link:
-    text: Read our pr deploy recipe.
-    href: /docs/recipes/2-pr-environments/
 
 baseurl: ""
 url: https://deliverybot.dev
