@@ -30,7 +30,7 @@ Deploying code looks like the following slash command:
 
 That's it! All your current integrations with Deliverybot will work just the
 same. Just call `/deliverybot help` if you have any questions.
-[Install the Slack app to get started]({{slack_url}}).
+[Install the Slack app to get started]({{site.slack_url}}).
 
 *If you haven't yet started with Deliverybot, [start here](/docs/).*
 
