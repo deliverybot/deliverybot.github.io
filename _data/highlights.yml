@@ -22,3 +22,11 @@
   link:
     text: Read our pr deploy recipe.
     href: /docs/recipes/2-pr-environments/
+- image: /assets/images/deploy-slack.png
+  title: Deploy using slack
+  description: |
+    Trigger deployments using Slack. Don't leave your teams workflow tool
+    to manage your deploys.
+  link:
+    text: Deploy to slack
+    href: https://app.deliverybot.dev/slack/install
