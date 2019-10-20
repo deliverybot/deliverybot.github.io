@@ -1,0 +1,8 @@
+- image: /assets/images/integrations/flux.svg
+  title: GitOps integration
+  description: |
+    GitOps integration provides a production ready enterprise grade way of
+    shipping your code.
+  link:
+    text: Read about how it works.
+    href: /docs/integrations/gitops/

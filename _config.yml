@@ -1,16 +1,22 @@
 title: Deliverybot
 description: >-
-  Simple GitHub Deployment Automation
+  Simple GitHub Continuous Delivery
 long_description: >-
   Deploy your code using GitHub API's. Automatic deployments, PR deployments
   and integrations for any service. Powered by open source.
+
+kubernetes_description: >-
+  Continuous Delivery for Kubernetes
+kubernetes_long_description: >-
+  Deploy your code to Kubernetes using GitHub API's. Automatic deployments,
+  PR deployments and more. Powered by open source.
 
 deliverybot_url: https://app.deliverybot.dev
 github_app_url: https://github.com/apps/deliverybot
 github_install_url: https://github.com/apps/deliverybot/installations/new
 github_org_url: https://github.com/deliverybot
 spectrum_url: https://spectrum.chat/deliverybot/general
-start_url: https://github.com/apps/deliverybot/installations/new
+start_url: https://github.com/marketplace/deliverybot#marketplace-plans-container
 slack_url: https://app.deliverybot.dev/slack/install
 pricing_url: https://github.com/marketplace/deliverybot#marketplace-plans-container
 

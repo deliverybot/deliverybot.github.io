@@ -6,6 +6,7 @@
   link:
     text: Read about how it works.
     href: /docs/how-it-works/
+
 - image: /assets/images/deploy-show.png
   title: Automatic deployments
   description: |

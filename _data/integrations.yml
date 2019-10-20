@@ -10,9 +10,13 @@
   description: "Deploy sites to Kubernetes using GitHub actions."
   labels: ["ACTION"]
 
+- name: "Kubernetes GitOps"
+  id: "gitops"
+  image: "/assets/images/integrations/k8s.svg"
+  description: "Deploy sites to Kubernetes using Flux GitOps."
+  labels: ["ACTION"]
+
 - name: "Buildkite"
   id: "buildkite"
   image: "/assets/images/integrations/buildkite.svg"
   description: "Handle deployment events using Buildkite."
-  labels: ["DEPLOY"]
-
