@@ -12,8 +12,10 @@ GitHub actions aren't the only way to deliver deployments, but they are the
 fastest to get you up and running. View action workflows below or read further
 about actions.
 
-- [Helm action](helm-action)
-- [Firebase action](firebase-action)
+- [Helm action](action-helm)
+- [Firebase action](action-firebase)
+- [GitOps](gitops)
+- [Buildkite](buildkite)
 
 ## GitHub actions
 
@@ -85,7 +87,7 @@ jobs:
 
 Check out examples for specific actions:
 
-- [Helm](helm)
-- [Firebase](firebase)
+- [Helm](action-helm)
+- [Firebase](action-firebase)
 
 Read more about actions from [GitHub](https://github.com/features/actions).

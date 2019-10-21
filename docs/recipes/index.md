@@ -8,10 +8,11 @@ group: Recipes
 
 Recipes for deploy configuration with Deliverybot are found here:
 
-- [Deploy on master](deploy-on-master)
-- [Deploy a PR environment](deploy-pr-environments)
-- [Build promotion](build-promotion)
-- [Canary deployments](canary-deployments)
+- [Deploy on master](1-on-master)
+- [Deploy a PR environment](2-pr-environments)
+- [Canary deployments](3-canary)
+- [Pipelines](4-pipelines)
+- [Slack deployments](5-slack)
 
 
 Example repositories are also a great way of getting familiar with

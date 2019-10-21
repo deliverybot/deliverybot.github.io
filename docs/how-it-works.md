@@ -46,7 +46,7 @@ able to work with these actions effectively.
 
 [1]: https://developer.github.com/v3/repos/deployments/
 [2]: /docs/configuration
-[3]: /docs/delivering
+[3]: /docs/integrations
 
 ## Deployment events
 

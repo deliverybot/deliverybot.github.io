@@ -35,4 +35,4 @@ An example of what a pr environment deploy looks like:
 
 ## Next
 
-[Learn about actually delivering your deployments.](/docs/actions)
+[Learn about actually delivering your deployments.](/docs/integrations)

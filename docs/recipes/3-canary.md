@@ -27,5 +27,5 @@ production:
 
 ## Canary deployments with Helm
 
-Check out the [Helm documentation](/docs/delivering/helm-action/) to see how
+Check out the [Helm documentation](/docs/integrations/action-helm) to see how
 the Helm action allows for canary deployments.

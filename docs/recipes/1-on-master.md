@@ -28,7 +28,7 @@ there is a new push event on master.
 
 Alternatively, you may want to leave out the `auto_deploy_on` configuration and
 kick off deployment from the deliverybot ui pictured below. This can be found at
-<{{site.deliverybot_url}}deploy/my-username/my-repo>.
+<{{site.deliverybot_url}}/deploy/my-username/my-repo>.
 
 ![On master deploy](/assets/images/deploy-list.png)
 
@@ -49,4 +49,4 @@ production:
 
 ## Next
 
-[Learn about actually delivering your deployments.](/docs/workflows)
+[Learn about actually delivering your deployments.](/docs/integrations)

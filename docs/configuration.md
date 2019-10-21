@@ -20,7 +20,7 @@ production:
 - [`<target>.transient_environment`](#targettransient_environment)
 - [`<target>.production_environment`](#targetproduction_environment)
 - [`<target>.required_contexts`](#targetrequired_contexts)
-- [`<target>.environment`](#targetdeploymentsenvironment)
+- [`<target>.environment`](#targetenvironment)
 - [`<target>.task`](#targettask)
 - [`<target>.auto_merge`](#targetauto_merge)
 - [`<target>.payload`](#targetpayload)
@@ -91,8 +91,8 @@ when evaluating deployment targets:
 - `target`: Current target name.
 - `owner`: Owner name.
 - `repo`: Repo name.
-- `pull_request`: [GitHub pull request object.](pr)
-- `commit`: [GitHub commit object.](commit)
+- `pull_request`: [GitHub pull request object.][pr]
+- `commit`: [GitHub commit object.][commit]
 
 An example usage of this:
 
