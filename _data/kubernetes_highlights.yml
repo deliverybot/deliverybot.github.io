@@ -6,3 +6,12 @@
   link:
     text: Read about how it works.
     href: /docs/integrations/gitops/
+
+- image: /assets/images/helm-action.png
+  title: Helm integration
+  description: |
+    Helm action integration provides a simpler way of deploying to Kubernetes
+    using GitHub actions and connecting to your Kubernetes cluster directly.
+  link:
+    text: Read about how it works.
+    href: /docs/integrations/action-helm/
