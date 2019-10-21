@@ -1,6 +1,6 @@
 ---
 layout: default
-title: How to automatically deploy from GitHub
+title: Deploy from GitHub
 help: true
 ---
 
@@ -26,6 +26,9 @@ help: true
       actions and GitHub webhooks to deploy your code. Deliverybot relies on
       the GitHub deployments API to ship your code wherever you need it.
     </p>
+    <a href="/docs/" role="button" class="btn btn-outline btn-large">
+      Follow the getting started guide
+    </a>
   </section>
 
   <section class="mt-5 text-center content-lg">
@@ -42,11 +45,19 @@ help: true
           <p>
             {{highlight.description}}
           </p>
-          <p><a href="{{highlight.link.href}}">{{highlight.link.text}}</a></p>
+          {% if highlight.link %}
+            <p><a href="{{highlight.link.href}}">{{highlight.link.text}}</a></p>
+          {% endif %}
         </div>
       </div>
     </div>
     {% endfor %}
+  </section>
+
+  <section class="text-center mt-5">
+    <a href="/docs/" role="button" class="btn btn-outline btn-large">
+      Follow the getting started guide
+    </a>
   </section>
 </main>
 

@@ -3,16 +3,9 @@
   description: |
     Deploy automatically to multiple clusters and environments given a
     specific branch.
-  link:
-    text: Read our deploy to master recipe.
-    href: /docs/recipes/1-on-master/
 
 - image: /assets/images/deploy-list.png
   title: Click to deploy
   description: |
    Click the latest commit in the Deliverybot dashboard to deploy your
    code. It doesn't get any simpler than that.
-  link:
-    text: Read about how it works.
-    href: /docs/how-it-works/
-
