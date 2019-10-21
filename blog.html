@@ -1,19 +1,29 @@
 ---
 layout: default
+title: Deliverybot Blog
+light: true
 ---
+
 <main class="content marketing">
-  <div class="text-center mt-3 text-gray-light">
-    <h1>Deliverybot Blog</h1>
+  <div class="text-center mt-3">
+    <h1 class="f1-light h00-mktg">Deliverybot Blog</h1>
+    <p>
+      Deploying, Kubernetes, GitHub and some other technical things. Liked
+      a post? <a href="https://twitter.com/deliverybotdev">Tweet us!</a>
+    </p>
   </div>
 
   <div class="mt-8">
     {% for post in site.posts %}
-    <div class="border mt-5 p-4 bg-white box-shadow">
+    <div class="mt-5 p-4 border-bottom">
       <div class="flex-auto">
-        <h2 class="h2-mktg"><a href="{{post.url}}" class="text-gray-dark">{{post.title}}</a></h2>
+        <h2 class="f1-light"><a href="{{post.url}}" class="text-gray-dark">{{post.title}}</a></h2>
         <p class="text-small text-gray-light">{{post.date|date_to_string}}</p>
         <p class="text-gray-light mt-3">
           {{post.description}}
+        </p>
+        <p class="text-right">
+          <a href="{{post.url}}">Read more ></a>
         </p>
       </div>
     </div>

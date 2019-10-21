@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="/assets/main.css">
 </head>
 
-<body class="height-full bg-gray-light">
+<body class="height-full {% if page.light %}bg-white{% else %}bg-gray-light{% endif %}">
   <nav class="box-shadow navbar d-flex flex-justify-between bg-white">
     <a class="text-gray-dark" href="/">
       <h3>{{site.title}}</h3>
