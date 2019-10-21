@@ -1,8 +1,23 @@
 <script>
-  var showHelp = false;
-  window.addEventListener('scroll', function() {
-    if (!showHelp) {
-      document.getElementById("help").style = "";
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var showHelp = false;
+    window.addEventListener('scroll', function() {
+      if (!showHelp) {
+        if (localStorage.getItem('help-closed')) {
+          return;
+        }
+        document.getElementById("help").style = "";
+        showHelp = true;
+      }
+    });
+
+    var close = document.getElementById('help-close');
+    if (!close) {
+      return;
     }
+    close.addEventListener('click', function() {
+      localStorage.setItem('help-closed', '1');
+      document.getElementById('help').remove();
+    });
   });
 </script>
