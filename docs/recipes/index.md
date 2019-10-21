@@ -6,7 +6,8 @@ group: Recipes
 
 # Recipes
 
-Recipes for deploy configuration with Deliverybot are found here:
+Recipes for deploy configuration with Deliverybot are below. Get drop in yaml to
+complete complex workflows and features.
 
 - [Deploy on master](1-on-master)
 - [Deploy a PR environment](2-pr-environments)
@@ -18,5 +19,7 @@ Recipes for deploy configuration with Deliverybot are found here:
 Example repositories are also a great way of getting familiar with
 configuration:
 
-- [Helm example](https://github.com/deliverybot/example-helm)
-- [Bare example](https://github.com/deliverybot/example)
+- [Basic example: github.com/deliverybot/example](https://github.com/deliverybot/example)
+- [GitOps example: github.com/deliverybot/example-gitops](https://github.com/deliverybot/example-gitops)
+- [Helm example: github.com/deliverybot/example-helm](https://github.com/deliverybot/example-helm)
+

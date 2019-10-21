@@ -7,12 +7,21 @@ title: How it works
 
 Deliverybot uses the GitHub [deployments api][1] to trigger deployments via
 GitHub. Your code responds to events from GitHub and runs the actual deployment.
-The diagram below details the steps involved:
+The diagram below details the steps involved.
+
+Deliverybot kicks off deployments using configuration found in the
+`.github/deploy.yml` file. GitHub Actions or other CI services then listen for
+the `deployment` event from GitHub. This is where your code takes over, doing
+the work to run the actual deployment to your servers.
+
+This is a decoupled architectures that supports any deployment target and a wide
+variety of tooling. Since it's all based around GitHub events, your tools to
+listen to events and webhooks will all work with your new deployment system.
 
 ```
-+-------------+         +--------+            +-----------+        +-------------+
-| Deliverybot |         | GitHub |            | 3rd Party |        | Your Server |
-+-------------+         +--------+            +-----------+        +-------------+
++-------------+         +--------+         +----------------+        +-------------+
+| Deliverybot |         | GitHub |         | GitHub Actions |        | Your Server |
++-------------+         +--------+         +----------------+        +-------------+
      |                      |                       |                     |
      |  Create Deployment   |                       |                     |
      |--------------------->|                       |                     |
@@ -36,17 +45,11 @@ The diagram below details the steps involved:
      |                      |                       |                     |
 ```
 
-Your code is expected to respond to `deployment` events that GitHub will deliver
-to you to trigger deployments. Deliverybot controls when these events fire based
-on configuration in the [`.github/deploy.yml`][2].
-
-The simplest way of responding to these deployment events is by using GitHub
-actions. [Deliverybot maintains a set of actions and recipes][3] for your to be
-able to work with these actions effectively.
+Read more about what [integrations](/docs/integrations) are available to deploy
+your code or read [recipes](/docs/recipes) to control how your deployments are
+rolled out.
 
 [1]: https://developer.github.com/v3/repos/deployments/
-[2]: /docs/configuration
-[3]: /docs/integrations
 
 ## Deployment events
 
