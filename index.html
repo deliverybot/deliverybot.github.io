@@ -37,5 +37,33 @@ help: true
     {% endfor %}
   </section>
 
-  {% include landing-integrations.html %}
+  <section class="content mt-5 text-center">
+    <h2 class="h2-mktg"><a href="/solutions/integrations/">Integrates with any service</a></h2>
+    <p>
+      Using GitHub actions or the power of GitHub events, integrate with a wide
+      group of deployment options.
+    </p>
+
+    <div class="d-flex flex-justify-center flex-wrap">
+      <div class="text-center p-3">
+        <img src="/assets/images/integrations/k8s.svg" width="64px" height="64px">
+        <h4 class="h4-mktg">Kubernetes</h4>
+      </div>
+      <div class="text-center p-3">
+        <img src="/assets/images/integrations/github.svg" width="64px" height="64px">
+        <h4 class="h4-mktg">GitHub Actions</h4>
+      </div>
+      <div class="text-center p-3">
+        <img src="/assets/images/integrations/firebase.svg" width="64px" height="64px">
+        <h4 class="h4-mktg">Firebase</h4>
+      </div>
+      <div class="text-center p-3">
+        <img src="/assets/images/integrations/aws.svg" width="64px" height="64px">
+        <h4 class="h4-mktg">AWS</h4>
+      </div>
+    </div>
+
+    {% include start.html %}
+  </section>
+
 </main>
