@@ -1,9 +1,20 @@
-title: Deliverybot
+title: deliverybot
 description: >-
-  Simple GitHub Continuous Delivery
+  Simple Continuous Delivery for GitHub
 long_description: >-
   Deploy your code using GitHub API's. Automatic deployments, PR deployments
   and integrations for any service. Powered by open source.
+
+twitter:
+  username: deliverybotdev
+  card: summary
+logo: /assets/logo.png
+author:
+  twitter: deliverybotdev
+social:
+  name: Deliverybot
+  links:
+    - https://twitter.com/deliverybotdev
 
 deliverybot_url: https://app.deliverybot.dev
 github_app_url: https://github.com/apps/deliverybot
