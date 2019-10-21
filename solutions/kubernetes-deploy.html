@@ -1,0 +1,60 @@
+---
+layout: default
+title: Continuous Delivery for Kubernetes
+help: true
+---
+
+<header class="bg-white pb-6 box-shadow">
+  <div class="content-lg  text-center">
+    <h1 class="h00-mktg text-gray-dark">
+      Continuous Delivery for Kubernetes
+    </h1>
+    <p class="lead text-gray-dark">
+      Deploy your code to Kubernetes using GitHub API's. Automatic deployments,
+      PR deployments and more. Powered by open source.
+    </p>
+    {% include start.html %}
+  </div>
+</header>
+
+<main class="marketing">
+  <section class="mt-5 text-center content">
+    <img src="/assets/images/integrations/k8s.svg" width="64px" height="64px">
+    <h1 class="h1-mktg">Succeed with your Kubernetes deployments</h1>
+    <p>
+      Kubernetes deployments are complex. Setting up the correct pipeline is
+      time consuming and if you get it wrong can seriously impact the success of
+      your development team.
+    </p>
+    <a href="/docs/" role="button" class="btn btn-outline btn-large">
+      Follow the getting started guide
+    </a>
+  </section>
+
+  <section class="mt-5 text-center content-lg">
+    {% for highlight in site.data.kubernetes_highlights %}
+    <div class="clearfix mt-5 container-lg">
+      <div class="p-3 float-left col-md-7 col-sm-12">
+        <div class="Box border mb-3 box-shadow-large" style="height: 250px; overflow-y: hidden;">
+          <img src="{{highlight.image}}" width="100%">
+        </div>
+      </div>
+      <div class="p-3 d-flex float-left col-md-5 col-sm-12">
+        <div class="flex-self-center">
+          <h3 class="h2-mktg">{{highlight.title}}</h3>
+          <p>
+            {{highlight.description}}
+          </p>
+          <p><a href="{{highlight.link.href}}">{{highlight.link.text}}</a></p>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </section>
+
+  <section class="text-center mt-5">
+    <a href="/docs/" role="button" class="btn btn-outline btn-large">
+      Follow the getting started guide
+    </a>
+  </section>
+</main>

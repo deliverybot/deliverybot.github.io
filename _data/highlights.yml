@@ -26,10 +26,10 @@
     href: /docs/recipes/2-pr-environments/
 
 - image: /assets/images/deploy-slack.png
-  title: Deploy using slack
+  title: Deploy using Slack
   description: |
     Trigger deployments using Slack. Don't leave your teams workflow tool
     to manage your deploys.
   link:
-    text: Install Slack app
-    href: https://app.deliverybot.dev/slack/install
+    text: Read about our Slack integration.
+    href: /docs/recipes/5-slack/
