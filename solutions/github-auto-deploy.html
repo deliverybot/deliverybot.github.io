@@ -1,0 +1,52 @@
+---
+layout: default
+title: How to automatically deploy from GitHub
+help: true
+---
+
+<header class="bg-white pb-6 box-shadow">
+  <div class="content-lg  text-center">
+    <h1 class="h00-mktg text-gray-dark">
+      {{ site.description }}
+    </h1>
+
+    <p class="lead text-gray-dark">
+      {{ site.long_description }}
+    </p>
+    {% include start.html %}
+  </div>
+</header>
+
+<main class="marketing">
+  <section class="mt-5 text-center content">
+    <img src="/assets/images/integrations/github.svg" width="64px" height="64px">
+    <h1 class="h1-mktg">Automatically deploy your code from GitHub</h1>
+    <p>
+      Don't setup server hooks or complex workflows, use modern tools like
+      actions and GitHub webhooks to deploy your code. Deliverybot relies on
+      the GitHub deployments API to ship your code wherever you need it.
+    </p>
+  </section>
+
+  <section class="mt-5 text-center content-lg">
+    {% for highlight in site.data.auto_highlights %}
+    <div class="clearfix mt-5 container-lg">
+      <div class="p-3 float-left col-md-7 col-sm-12">
+        <div class="Box border mb-3 box-shadow-large" style="height: 250px; overflow-y: hidden;">
+          <img src="{{highlight.image}}" width="100%">
+        </div>
+      </div>
+      <div class="p-3 d-flex float-left col-md-5 col-sm-12">
+        <div class="flex-self-center">
+          <h3 class="h2-mktg">{{highlight.title}}</h3>
+          <p>
+            {{highlight.description}}
+          </p>
+          <p><a href="{{highlight.link.href}}">{{highlight.link.text}}</a></p>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </section>
+</main>
+

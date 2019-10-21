@@ -15,6 +15,7 @@
   link:
     text: Read our deploy to master recipe.
     href: /docs/recipes/1-on-master/
+
 - image: /assets/images/pr-deploy.png
   title: Advanced deployment workflows
   description: |
@@ -23,6 +24,7 @@
   link:
     text: Read our pr deploy recipe.
     href: /docs/recipes/2-pr-environments/
+
 - image: /assets/images/deploy-slack.png
   title: Deploy using slack
   description: |
