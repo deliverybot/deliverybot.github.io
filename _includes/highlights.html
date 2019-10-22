@@ -1,0 +1,19 @@
+<section class="mt-5 text-center content-lg">
+  {% for highlight in site.data.highlights[include.kind] %}
+  <div class="clearfix mt-5 container-lg">
+    <div class="p-3 float-left col-md-7 col-sm-12">
+      <div class="Box border mb-3 box-shadow-large" style="height: 250px; overflow-y: hidden;">
+        <img src="{{highlight.image}}" width="100%">
+      </div>
+    </div>
+    <div class="p-3 d-flex float-left col-md-5 col-sm-12">
+      <div class="flex-self-center">
+        <h3 class="h2-mktg">{{highlight.title}}</h3>
+        <p>
+          {{highlight.description}}
+        </p>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</section>

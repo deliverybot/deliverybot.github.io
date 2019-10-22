@@ -1,20 +1,9 @@
 ---
-layout: default
+layout: landing
 title: Slack Friendly Continuous Delivery
+description: Slack Friendly Continuous Delivery
 help: true
 ---
-
-<header class="bg-white pb-6 box-shadow">
-  <div class="content-lg  text-center">
-    <h1 class="f1-light h00-mktg text-gray-dark">
-      Slack Friendly Continuous Delivery
-    </h1>
-    <p class="lead text-gray-dark">
-      {{ site.long_description }}
-    </p>
-    {% include start.html %}
-  </div>
-</header>
 
 <main class="marketing">
   <section class="mt-5 text-center content">
@@ -25,35 +14,8 @@ help: true
       Deliverybot let's your team stay inside of it's two most important
       workspaces.
     </p>
-    <a href="https://slack.com/oauth/authorize?client_id=761732924261.765903727079&scope=commands"><img alt="Add to Slack" height="40" width="139" src="https://platform.slack-edge.com/img/add_to_slack.png" srcset="https://platform.slack-edge.com/img/add_to_slack.png 1x, https://platform.slack-edge.com/img/add_to_slack@2x.png 2x"></a>
   </section>
 
-  <section class="mt-5 text-center content-lg">
-    {% for highlight in site.data.slack_highlights %}
-    <div class="clearfix mt-5 container-lg">
-      <div class="p-3 float-left col-md-7 col-sm-12">
-        <div class="Box border mb-3 box-shadow-large" style="height: 250px; overflow-y: hidden;">
-          <img src="{{highlight.image}}" width="100%">
-        </div>
-      </div>
-      <div class="p-3 d-flex float-left col-md-5 col-sm-12">
-        <div class="flex-self-center">
-          <h3 class="h2-mktg">{{highlight.title}}</h3>
-          <p>
-            {{highlight.description}}
-          </p>
-          {% if highlight.link %}
-            <p><a href="{{highlight.link.href}}">{{highlight.link.text}}</a></p>
-          {% endif %}
-        </div>
-      </div>
-    </div>
-    {% endfor %}
-  </section>
-
-  <section class="text-center mt-5">
-    <a href="/docs/" role="button" class="btn btn-outline btn-large">
-      Follow the getting started guide
-    </a>
-  </section>
+  {% include highlights.html kind="slack" %}
+  {% include start.html %}
 </main>

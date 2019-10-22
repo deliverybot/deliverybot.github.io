@@ -1,0 +1,18 @@
+---
+layout: default
+---
+
+<header class="bg-white pb-6 box-shadow">
+  <div class="content-lg  text-center">
+    <h1 class="f1-light h00-mktg text-gray-dark">
+      {{ page.description | default: site.description }}
+    </h1>
+
+    <p class="lead text-gray-dark">
+      {{ page.long_description | default: site.long_description }}
+    </p>
+    {% include start.html %}
+  </div>
+</header>
+
+{{ content }}

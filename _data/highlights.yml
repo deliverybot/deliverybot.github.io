@@ -1,35 +1,57 @@
+main:
 - image: /assets/images/deploy-list.png
   title: Click to deploy
   description: |
    Click the latest commit in the Deliverybot dashboard to deploy your
    code. It doesn't get any simpler than that.
-  link:
-    text: Read about how it works.
-    href: /docs/how-it-works/
 
 - image: /assets/images/deploy-show.png
   title: Automatic deployments
   description: |
     Deploy automatically to multiple clusters and environments given a
     specific branch.
-  link:
-    text: Read our deploy to master recipe.
-    href: /docs/recipes/1-on-master/
 
 - image: /assets/images/pr-deploy.png
   title: Advanced deployment workflows
   description: |
     Orchestrate canary deployments to test code in incremental steps.
     Push out environments per pull request.
-  link:
-    text: Read our pr deploy recipe.
-    href: /docs/recipes/2-pr-environments/
 
 - image: /assets/images/deploy-slack.png
   title: Deploy using Slack
   description: |
     Trigger deployments using Slack. Don't leave your teams workflow tool
     to manage your deploys.
-  link:
-    text: Read about our Slack integration.
-    href: /docs/recipes/5-slack/
+
+kubernetes:
+- image: /assets/images/integrations/flux.svg
+  title: GitOps integration
+  description: |
+    GitOps integration provides a production ready enterprise grade way of
+    shipping your code.
+
+- image: /assets/images/helm-action.png
+  title: Helm integration
+  description: |
+    Helm action integration provides a simpler way of deploying to Kubernetes
+    using GitHub actions and connecting to your Kubernetes cluster directly.
+
+slack:
+- image: /assets/images/deploy-slack.png
+  title: Deploy using Slack
+  description: |
+    Trigger deployments using Slack. Don't leave your teams workflow tool
+    to manage your deploys.
+
+auto:
+- image: /assets/images/deploy-show.png
+  title: Automatic deployments
+  description: |
+    Deploy automatically to multiple clusters and environments given a
+    specific branch.
+
+- image: /assets/images/deploy-list.png
+  title: Click to deploy
+  description: |
+   Click the latest commit in the Deliverybot dashboard to deploy your
+   code. It doesn't get any simpler than that.
