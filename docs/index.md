@@ -26,6 +26,11 @@ repository.
 
 Go to your repository and push a commit.
 
+### 4. [Install integrations][integrations]{:target="_blank"}
+
+Install integrations like Slack or Helm to build a workflow for your team. Visit
+our [integrations page][integrations]{:target="_blank"} for more information.
+
 <hr>
 
 Once you have a working example you can read more [recipes][recipes] to get you
@@ -40,3 +45,4 @@ a specific platform, look at [our guides.][guides]
 [example]: https://github.com/deliverybot/example
 [example-helm]: https://github.com/deliverybot/example-helm
 [example-gitops]: https://github.com/deliverybot/example-gitops
+[integrations]: /integrations
