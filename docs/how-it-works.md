@@ -79,10 +79,3 @@ looks like the event below.
   "production_environment": true
 }
 ```
-
-### Removal deployments
-
-The `task` parameter is changed to `remove` when a pull request is closed and a
-deployment is marked with the `transient_environment` parameter. This means that
-the environment needs to be shut down. Code should handle this to delete the
-necessary resources.

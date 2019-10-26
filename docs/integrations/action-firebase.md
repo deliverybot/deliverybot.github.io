@@ -6,9 +6,7 @@ group: Integrations
 
 # Firebase
 
-Example firebase workflow that handles deploying a repository to Firebase. Doesn't
-handle 'removal' deployments or dynamic environment names as this is tricky with
-firebase.
+Example firebase workflow that handles deploying a repository to Firebase.
 
 ```yaml {% raw %}
 name: Deploy

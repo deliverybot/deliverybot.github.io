@@ -42,8 +42,7 @@ Specifies if the given environment is specific to the deployment and will no
 longer exist at some point in the future. Default: false
 
 If this value is `true` all deployments triggered on a pr will be marked
-inactive and a removal deployment will be fired to clean up all unique
-environments.
+inactive.
 
 ##### `<target>.production_environment`
 
@@ -64,11 +63,6 @@ Default: none
 
 The name of the task for the deployment (e.g., deploy or deploy:migrations).
 Default: none
-
-Removal deployments are a special type of deployment that is fired by
-deliverybot when a PR is closed and resources need to be cleaned up. This type
-of deployment can be detected because task will equal `remove` in this case.
-Use this as a hook to clean up resources not needed anymore.
 
 ##### `<target>.auto_merge`
 
