@@ -4,6 +4,12 @@
   description: "Deploy sites to Firebase using GitHub actions."
   labels: ["ACTION"]
 
+- name: "Slack ChatOps"
+  id: "chatops"
+  image: "/assets/images/integrations/slack.svg"
+  description: "Deploy using Slack commands with the Deliverybot slackbot."
+  labels: ["DEPLOY"]
+
 - name: "Helm Action"
   id: "action-helm"
   image: "/assets/images/integrations/k8s.svg"
