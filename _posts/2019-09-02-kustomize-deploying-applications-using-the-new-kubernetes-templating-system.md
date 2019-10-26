@@ -2,6 +2,7 @@
 layout: post
 title:  "Kustomize: Deploying applications using the new Kubernetes templating system"
 description: Kustomize is a new way of templating in Kubernetes. It's not strictly a templating system — a better way to describe it is “customization for your Kubernetes yaml files” — but achieves the same goal for most of us. This post explores this new system.
+light: true
 ---
 
 # Kustomize: Deploying applications using the new Kubernetes templating system

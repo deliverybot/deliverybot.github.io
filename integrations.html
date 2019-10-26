@@ -3,45 +3,41 @@ layout: default
 title: Integrations
 ---
 
-<h1 class="text-center f1-light h00-mktg mt-8">Integrations</h1>
-<p class="lead text-center mb-0">
-  List of easily installable integrations for use with Deliverybot.
-</p>
-<p class="text-center">
-  <a href="https://github.com/deliverybot/deliverybot.github.io">Add an integration to this list</a>
-</p>
+<div class="content-lg text-center ">
+  <h1 class="f1-light h00-mktg mt-8">Integrations</h1>
+  <p class="lead mb-0">
+    List of easily installable integrations for use with Deliverybot.
+  </p>
+</div>
 
-
-<div class="mt-8">
-  <div class="content p-0" style="position: relative;">
-    <div class="main-body overflow-x-hidden">
-      <div class="container-lg clearfix shadow">
-        {% for integration in site.data.integrations %}
-        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 float-left p-2">
-          <div class="Box border box-shadow-medium hover-grow">
-            <a target="_blank" class="text-gray-light" style="text-decoration: none;"
-              href="/docs/integrations/{{integration.id}}">
-              <div class="Box-body">
-                <h3 class="Box-title f2-light mb-3">
-                  {{ integration.name }}
-                </h3>
-                <div class="text-center p-4">
-                  <img src="{{integration.image}}" width="90px" height="90px">
-                </div>
-                <div>
-                  <p>{{integration.description}}</p>
-                </div>
-                <div>
-                  {% for label in integration.labels %}
-                  <span class="Label Label--gray">{{label}}</span>
-                  {% endfor %}
-                </div>
+<div class="mt-3">
+  <div class="content-lg">
+    <div class="clearfix container-lg shadow">
+      {% for integration in site.data.integrations %}
+      <div class="col-sm-12 col-md-4 col-lg-4 float-left mt-3">
+        <div class="Box border box-shadow-medium hover-grow">
+          <a target="_blank" class="text-gray-light" style="text-decoration: none;"
+            href="/docs/integrations/{{integration.id}}">
+            <div class="Box-body">
+              <h3 class="Box-title f2-light mb-3">
+                {{ integration.name }}
+              </h3>
+              <div class="text-center p-4">
+                <img src="{{integration.image}}" width="90px" height="90px">
               </div>
-            </a>
-          </div>
+              <div>
+                <p>{{integration.description}}</p>
+              </div>
+              <div>
+                {% for label in integration.labels %}
+                <span class="Label Label--gray">{{label}}</span>
+                {% endfor %}
+              </div>
+            </div>
+          </a>
         </div>
-        {% endfor %}
       </div>
+      {% endfor %}
     </div>
   </div>
 

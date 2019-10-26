@@ -2,6 +2,7 @@
 layout: post
 title:  What is the GitHub deployments API?
 description: A year or so ago I came across this interesting feature in GitHub called the deployments api. It seemed like a bit of a lost section in the GitHub docs, disconnected from other component and unlike pretty much everything else in GitHub I really hadn’t used this. I’ve spent some time investigating the deployments API over the last month or so and wanted to explain this for those of you who have hit this and wondered, what is this thing?
+light: true
 ---
 
 # What is the GitHub deployments API?

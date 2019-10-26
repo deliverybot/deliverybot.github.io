@@ -2,6 +2,7 @@
 layout: post
 title:  "Best practices for deploying to Kubernetes using Helm"
 description: This post discusses one of the most common deployment tools for Kubernetes. Helm is the “package manager for Kubernetes” and therefore has become one of the most common tools for managing application deployments.
+light: true
 ---
 
 # Best practices for deploying to Kubernetes using Helm

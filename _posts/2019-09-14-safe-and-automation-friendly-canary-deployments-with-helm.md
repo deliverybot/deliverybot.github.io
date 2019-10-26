@@ -2,6 +2,7 @@
 layout: post
 title:  "Safe and automation friendly canary deployments with Helm"
 description: Canary deployments are a very effective way of testing new code on a subset of a user base. They significantly reduces the blast radius of a deployment that may be tricky to roll out by only exposing it to a subset of traffic. This post will dive into how to achieve this within Kubernetes but also in a deployment automation friendly way
+light: true
 ---
 
 # Safe and automation friendly canary deployments with Helm

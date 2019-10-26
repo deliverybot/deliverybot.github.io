@@ -2,6 +2,7 @@
 layout: post
 title:  Deploying to Kubernetes with Helm and GitHub Actions
 description: This tutorial will go through the basics of GitHub actions as well as deploying to Kubernetes using a pre-built Helm action
+light: true
 ---
 
 # Deploying to Kubernetes with Helm and GitHub Actions

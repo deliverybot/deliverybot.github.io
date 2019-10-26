@@ -3,6 +3,7 @@ layout: post
 title: ChatOps deployments with Deliverybot
 description: Deploy your code on GitHub right from Slack. Involves your team in the conversation and keeps a living breathing view of documentation. Deliverybot has a slack integration that takes just a few seconds to install!
 image: https://deliverybot.dev/assets/images/deploy-slack.png
+light: true
 ---
 
 # ChatOps deployments with Deliverybot

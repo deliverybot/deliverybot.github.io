@@ -16,12 +16,29 @@
     <a class="text-gray-dark text-mono" href="/">
       <h3>{{site.title}}</h3>
     </a>
-    <div>
+    <div class="hide-sm">
       <a class="text-gray-dark mr-2" href="/docs/">Docs</a>
       <a class="text-gray-dark mr-2" href="/blog/">Blog</a>
       <a target="_blank" class="text-gray-dark mr-2" href="{{site.pricing_url}}">Pricing</a>
       <a target="_blank" class="text-gray-dark mr-2" href="{{site.deliverybot_url}}">Login</a>
       <a target="_blank" class="btn btn-sm btn-primary" href="{{site.start_url}}">Signup</a>
+    </div>
+    <div class="hide-md hide-lg hide-xl">
+      <a target="_blank" class="btn btn-sm btn-primary" href="{{site.start_url}}">Signup</a>
+      <details class="dropdown details-reset details-overlay d-inline-block">
+        <summary class="text-gray p-2 d-inline" aria-haspopup="true">
+          <svg fill="currentColor" width="16" height="16" class="octicon octicon-three-bars" viewBox="0 0 12 16" version="1.1" aria-hidden="true"><path fill-rule="evenodd" d="M11.41 9H.59C0 9 0 8.59 0 8c0-.59 0-1 .59-1H11.4c.59 0 .59.41.59 1 0 .59 0 1-.59 1h.01zm0-4H.59C0 5 0 4.59 0 4c0-.59 0-1 .59-1H11.4c.59 0 .59.41.59 1 0 .59 0 1-.59 1h.01zM.59 11H11.4c.59 0 .59.41.59 1 0 .59 0 1-.59 1H.59C0 13 0 12.59 0 12c0-.59 0-1 .59-1z"></path></svg>
+          <div class="dropdown-caret"></div>
+        </summary>
+
+        <nav class="menu position-absolute right-0 mr-2 mt-2 box-shadow-medium" style="z-index: 1000; width: 200px;">
+          <a class="menu-item" href="/docs/">Docs</a>
+          <a class="menu-item" href="/blog/">Blog</a>
+          <a target="_blank" class="menu-item" href="{{site.pricing_url}}">Pricing</a>
+          <a target="_blank" class="menu-item" href="{{site.deliverybot_url}}">Login</a>
+          <a target="_blank" class="menu-item" href="{{site.start_url}}">Signup</a>
+        </nav>
+      </details>
     </div>
   </nav>
 
