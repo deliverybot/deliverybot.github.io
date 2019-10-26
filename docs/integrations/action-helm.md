@@ -62,7 +62,7 @@ The following syntax allows variables to be used in value files:
 
 ## Example
 
-```yaml
+```yaml {% raw %}
 # .github/workflows/deploy.yml
 name: Deploy
 on: ['deployment']
@@ -83,7 +83,7 @@ jobs:
         values: |
           name: foobar
       env:
-        KUBECONFIG_FILE: '${{ secrets.KUBECONFIG }}'
+        KUBECONFIG_FILE: '${{ secrets.KUBECONFIG }}' {% endraw %}
 ```
 
 ## Example canary
@@ -98,7 +98,7 @@ in a few ways:
 Not enabling the service or ingress allows the stable ingress and service
 resources to pick up the canary pods and route traffic to them.
 
-```yaml
+```yaml {% raw %}
 # .github/workflows/deploy.yml
 name: Deploy
 on: ['deployment']
@@ -120,7 +120,7 @@ jobs:
         values: |
           name: foobar
       env:
-        KUBECONFIG_FILE: '${{ secrets.KUBECONFIG }}'
+        KUBECONFIG_FILE: '${{ secrets.KUBECONFIG }}' {% endraw %}
 ```
 
 ## Example pr cleanup
@@ -130,7 +130,7 @@ issue where pull request environments like `pr123` sit around in your cluster.
 By using GitHub actions we can clean those up by listening for pull request
 close events.
 
-```yaml
+```yaml {% raw %}
 # .github/workflows/pr-cleanup.yml
 name: PRCleanup
 on:
@@ -153,6 +153,5 @@ jobs:
         namespace: 'example-helm'
         token: '${{ github.token }}'
       env:
-        KUBECONFIG_FILE: '${{ secrets.KUBECONFIG }}'
+        KUBECONFIG_FILE: '${{ secrets.KUBECONFIG }}' {% endraw %}
 ```
-
