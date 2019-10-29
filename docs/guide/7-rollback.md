@@ -8,10 +8,9 @@ group: Guide
 
 Rolling back should be fast and safe so that you know that your code can be
 quickly reverted and to improve metrics like mean time to recovery. Deliverybot
-makes rolling back much faster than other options like revert commits or things
-like that. Since the build pipeline doesn't need to be run again we simply
-issue deployment at an earlier commit sha and trigger just the deployment
-workflow.
+makes rolling back much faster than a revert commits. Since the build pipeline
+doesn't need to be run again we simply issue deployment at an earlier commit sha
+and trigger just the deployment workflow.
 
 Rolling back is as simple as selecting the safest commit to deploy from the
 list below:

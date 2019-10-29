@@ -1,0 +1,6 @@
+- name: GitOps
+  url: https://github.com/deliverybot/example-gitops
+- name: Helm
+  url: https://github.com/deliverybot/example-helm
+- name: Basic
+  url: https://github.com/deliverybot/example

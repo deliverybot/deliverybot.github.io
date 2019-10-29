@@ -15,7 +15,7 @@ commit as ready to move on to our next stage of the pipeline.
 Simply click the "promote" button on the commit that QA needs to check off
 shown in the image below.
 
-![Show promote button](/assets/images/deploy-show.png)
+![Show promote button](/assets/images/promote-button.png)
 
 We can then apply to our production deployment a requirement that the promoted
 context is checked.
@@ -27,6 +27,13 @@ production:
   required_contexts: ["ci", "deliverybot/promoted"]
   environment: production
 ```
+
+This stops anyone from deploying to production unless all checks are passing
+including CI and promotion. We also have audit logging since promotion events
+are logged in GitHub with the username who checked them off we can trace this
+throughout the history of the repository.
+
+![Promoted check](/assets/images/promoted-check.png)
 
 {% endraw %}
 

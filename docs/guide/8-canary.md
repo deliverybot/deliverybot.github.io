@@ -17,7 +17,6 @@ the percentage of traffic we would like to shift over.
 ```yaml
 # .github/deploy.yml
 canary:
-  auto_deploy_on: refs/heads/master
   environment: production
   description: Deploy to production with %15 traffic.
   payload:
@@ -26,15 +25,19 @@ production:
   environment: production
 ```
 
+In this case we use the payload parameter to allow specifying custom variables
+that can be used in our deployment actions. This allows us to specify high level
+parameters and push them throughout the deployment pipeline.
+
 {% endraw %}
 
 ## Compatible integrations
 
-Follow the guides in these integrations below for implementing real
+Follow the guides in these integrations below for implementing canary
 deployments.
 
-{% for integration in site.data.integrations %}
-{% if integration.labels contains "CANARY"%}
+{%- for integration in site.data.integrations %}
+{%- if integration.labels contains "CANARY"%}
 - [{{ integration.name }}](/docs/integrations/{{integration.id}})
-{% endif %}
-{% endfor %}
+{%- endif %}
+{%- endfor %}

@@ -40,7 +40,7 @@ we'll use to ensure that this check is passed before merging into master.
 Add this check to your required contexts when merging into master. This will
 prevent merges into master without your CI pipeline passing.
 
-https://help.github.com/en/github/administering-a-repository/about-required-status-checks
+<https://help.github.com/en/github/administering-a-repository/about-required-status-checks>
 
 [starter-actions]: https://github.com/actions/starter-workflows
 

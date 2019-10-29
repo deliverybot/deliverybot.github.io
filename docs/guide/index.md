@@ -28,9 +28,12 @@ We'll be setting up a pipeline that deploys code using the following workflow:
   √ Build                √ Deploy              √ Deploy
   √ Test                 √ Approve             √ Rollback
   √ Lint                                       √ Canary
-  √ Deploy
+  √ PR Deploy
   √ Approve
 ```
+
+At the end of this we'll have a repository that looks like this example
+<https://github.com/deliverybot/example> if you want to jump ahead.
 
 This is a typical and safe workflow for most organizations to follow. When a
 developer spins up a pull request we'll do the typical CI workflows with

@@ -66,14 +66,14 @@ jobs:
 
 ## Compatible integrations
 
-Follow the guides in these integrations below for implementing real
+Follow the guides in these integrations below for implementing pull request
 deployments.
 
-{% for integration in site.data.integrations %}
-{% if integration.labels contains "PR"%}
+{%- for integration in site.data.integrations %}
+{%- if integration.labels contains "PR"%}
 - [{{ integration.name }}](/docs/integrations/{{integration.id}})
-{% endif %}
-{% endfor %}
+{%- endif %}
+{%- endfor %}
 
 ## Next
 

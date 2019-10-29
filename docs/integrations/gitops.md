@@ -34,7 +34,7 @@ Requires `cfssl` to be installed along with `helm` and `kubectl`.
 1. Copy the https://github.com/deliverybot/example-gitops repository into your
    organization.
 
-2. Run the [`./install.sh`](install.sh) script to setup FluxCD or follow this
+2. Run the [`./install.sh`][install] script to setup FluxCD or follow this
    guide [here][flux-guide]. This will add the Flux operator along with the Flux
    Helm operator to deploy your manifests from the example repository.
 
@@ -56,3 +56,4 @@ GIT_REPO=git@github.com:myrepo/example-gitops.git GIT_PATH=deploy NAMESPACE=kube
 [flux-guide]: https://docs.fluxcd.io/projects/helm-operator/en/latest/tutorials/get-started.html
 [flux-key]: https://docs.fluxcd.io/projects/flux/en/latest/tutorials/get-started.html#giving-write-access
 [deliverybot]: https://github.com/apps/deliverybot/installations/new
+[install]: https://github.com/deliverybot/example-gitops/blob/master/install.sh

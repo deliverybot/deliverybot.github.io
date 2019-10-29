@@ -9,8 +9,8 @@ group: Guide
 {% raw %}
 
 Deliverybot works by triggering deployments via GitHub api's. To actually
-trigger those deployments your code responds to the deployment event and reads
-the provided parameters and ships your code off to wherever it needs to go.
+ship those deployments your code responds to the deployment event and reads
+the provided parameters and deploys your code off to wherever it needs to go.
 
 ```
 +-------------+         +--------+         +----------------+        +-------------+
@@ -93,11 +93,11 @@ jobs:
 Follow the guides in these integrations below for implementing real
 deployments.
 
-{% for integration in site.data.integrations %}
-{% if integration.labels contains "ACTION"%}
+{%- for integration in site.data.integrations %}
+{%- if integration.labels contains "ACTION"%}
 - [{{ integration.name }}](/docs/integrations/{{integration.id}})
-{% endif %}
-{% endfor %}
+{%- endif %}
+{%- endfor %}
 
 ## Next
 
