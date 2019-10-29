@@ -1,9 +1,9 @@
 ---
 layout: page
-title: Documentation
+title: Quickstart
 ---
 
-# Getting started
+# Quickstart
 
 Deliverybot is a GitHub app, to get started with deployments we need a
 repository and to install the Deliverybot app onto that repo. The below guide
@@ -31,18 +31,14 @@ Go to your repository and push a commit.
 Install integrations like Slack or Helm to build a workflow for your team. Visit
 our [integrations page][integrations]{:target="_blank"} for more information.
 
-<hr>
+## Next
 
-Once you have a working example you can read more [recipes][recipes] to get you
-started. Read about [how it works][how] for a more in depth perspective on how
-Deliverybot deploys your code. If you are trying to get deployments running for
-a specific platform, look at [our guides.][guides]
+Once you have a working example read through the [guide](/docs/guide/) for more
+information on how to setup complex workflows.
 
 [app]: {{site.start_url}}
-[how]: /docs/how-it-works
-[recipes]: /docs/recipes
-[guides]: /docs/integrations
+[how]: /docs/how-it-works/
 [example]: https://github.com/deliverybot/example
 [example-helm]: https://github.com/deliverybot/example-helm
 [example-gitops]: https://github.com/deliverybot/example-gitops
-[integrations]: /integrations
+[integrations]: /integrations/
