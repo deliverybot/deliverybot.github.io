@@ -2,8 +2,7 @@ title: deliverybot
 description: >-
   Simple Continuous Delivery for GitHub
 long_description: >-
-  Deploy your code using GitHub API's. Automatic deployments, PR deployments
-  and integrations for any service. Powered by open source.
+  Fast, safe and secure Continous Delivery pipelines you can setup in minutes.
 
 twitter:
   username: deliverybotdev

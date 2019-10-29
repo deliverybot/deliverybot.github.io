@@ -14,7 +14,7 @@
   id: "action-helm"
   image: "/assets/images/integrations/k8s.svg"
   description: "Deploy sites to Kubernetes using GitHub actions."
-  labels: ["ACTION"]
+  labels: ["ACTION", "CANARY", "PR"]
 
 - name: "Kubernetes GitOps"
   id: "gitops"

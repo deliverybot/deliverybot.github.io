@@ -1,6 +1,7 @@
 main:
 - image: /assets/images/deploy-list.png
   title: Click to deploy
+  left: true
   description: |
    Click the latest commit in the Deliverybot dashboard to deploy your
    code. It doesn't get any simpler than that.
@@ -9,16 +10,19 @@ main:
   title: Automatic deployments
   description: |
     Deploy automatically to multiple clusters and environments given a
-    specific branch.
+    specific branch. Waits for required status checks, manual approval and more
+    to allow for complex pipeline workflows.
 
 - image: /assets/images/pr-deploy.png
   title: Advanced deployment workflows
+  left: true
   description: |
-    Orchestrate canary deployments to test code in incremental steps.
-    Push out environments per pull request.
+    Orchestrate canary deployments to test code in incremental steps or
+    push out environments per pull request. Deliverybot is great at managing
+    complex workflows.
 
 - image: /assets/images/deploy-slack.png
-  title: Deploy using Slack
+  title: ChatOps
   description: |
     Trigger deployments using Slack. Don't leave your teams workflow tool
     to manage your deploys.
