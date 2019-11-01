@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="/assets/images/probot-head.png">
+  <link rel="icon" href="/assets/logo.png">
   {%- seo -%}
   <link rel="stylesheet" href="/assets/primer.css">
   <link rel="stylesheet" href="/assets/main.css">
@@ -13,9 +13,8 @@
 
 <body class="height-full {% if page.light %}bg-white{% else %}bg-gray-light{% endif %}">
   <nav class="box-shadow navbar d-flex flex-justify-between bg-white">
-    <a class="text-gray-dark text-mono" href="/">
-      <h3>{{site.title}}</h3>
-    </a>
+    {% include logo.html %}
+
     <div class="hide-sm">
       <a class="text-gray-dark mr-2" href="/docs/">Docs</a>
       <a class="text-gray-dark mr-2" href="/blog/">Blog</a>
