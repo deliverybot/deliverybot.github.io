@@ -3,11 +3,13 @@ description: >-
   Simple Continuous Delivery for GitHub
 long_description: >-
   Fast, safe and secure Continous Delivery pipelines you can setup in minutes.
+  Powered by open source.
 
 twitter:
   username: deliverybotdev
   card: summary
 logo: /assets/logo.png
+image: /assets/logo.png
 author:
   twitter: deliverybotdev
 social:
