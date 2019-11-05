@@ -41,3 +41,7 @@ deployments.
 - [{{ integration.name }}](/docs/integrations/{{integration.id}})
 {%- endif %}
 {%- endfor %}
+
+## Next
+
+[Deployment analytics >>](/docs/guide/9-analytics/)
