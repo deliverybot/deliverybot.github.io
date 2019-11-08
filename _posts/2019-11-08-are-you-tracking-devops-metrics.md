@@ -18,15 +18,15 @@ We all want our teams to be elite performers. How do we track this? The team beh
 
 * **Deployment frequency:** For the primary application or service you work on, how often does your organization deploy code?
 
-* **Lead time for changes: **For the primary application or service you work on, what is your lead time for changes (i.e., how long does it take to go from code commit to code successfully running in production)?
+* **Lead time for changes:** For the primary application or service you work on, what is your lead time for changes (i.e., how long does it take to go from code commit to code successfully running in production)?
 
-* **Time to restore service: **For the primary application or service you work on, how long does it generally take to restore service when a service incident occurs (e.g., unplanned outage, service impairment)?
+* **Time to restore service:** For the primary application or service you work on, how long does it generally take to restore service when a service incident occurs (e.g., unplanned outage, service impairment)?
 
-* **Change failure rate: **For the primary application or service you work on, what percentage of changes results either in degraded service or subsequently requires remediation (e.g., leads to service impairment, service outage, requires a hotfix, rollback, fix forward, patch)?
+* **Change failure rate:** For the primary application or service you work on, what percentage of changes results either in degraded service or subsequently requires remediation (e.g., leads to service impairment, service outage, requires a hotfix, rollback, fix forward, patch)?
 
 These four metrics determine the tier that your organization can be categorized in. Is your lead time to deploy code to production over an hour? You are likely not an elite performer. Is your time to restore service also greater than an hour? Again, you are likely not an elite performer.
 
-![Source — [https://cloudplatformonline.com/rs/248-TPC-286/images/DORA-State%20of%20DevOps.pdf](https://cloudplatformonline.com/rs/248-TPC-286/images/DORA-State%20of%20DevOps.pdf)](https://cdn-images-1.medium.com/max/6768/1*qjH6sxLhD75VvvB_pqLlqw.png)*Source — [https://cloudplatformonline.com/rs/248-TPC-286/images/DORA-State%20of%20DevOps.pdf](https://cloudplatformonline.com/rs/248-TPC-286/images/DORA-State%20of%20DevOps.pdf)*
+![Source](https://cloudplatformonline.com/rs/248-TPC-286/images/DORA-State%20of%20DevOps.pdf)*
 
 What tier do you think your organization is in? Are you tracking these metrics? Even if you don’t have the detailed numbers it’s important to be able to estimate roughly these metrics as they are things that you can aim to optimize.
 
