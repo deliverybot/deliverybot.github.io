@@ -23,4 +23,4 @@ useful to know immediately so you can rollback as quickly as possible.
 
 ## Next
 
-[Canary deployments >>](/docs/guide/8-canary/)
+[Locking deployments >>](/docs/guide/8-locking/)

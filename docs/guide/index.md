@@ -27,8 +27,8 @@ We'll be setting up a pipeline that deploys code using the following workflow:
 
   √ Build                √ Deploy              √ Deploy
   √ Test                 √ Approve             √ Rollback
-  √ Lint                                       √ Canary
-  √ PR Deploy
+  √ Lint                                       √ Locking
+  √ PR Deploy                                  √ Canary
   √ Approve
 ```
 

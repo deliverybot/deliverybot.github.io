@@ -44,4 +44,4 @@ deployments.
 
 ## Next
 
-[Deployment analytics >>](/docs/guide/9-analytics/)
+[Deployment analytics >>](/docs/guide/10-analytics/)
