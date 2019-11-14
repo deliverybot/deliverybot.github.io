@@ -10,7 +10,7 @@ Any significant updates to this document will be communicated via email.
 ## Reporting security issues
 
 If you discover a security issue in Deliverybot, please report it by sending an
-email to [{{site.support_email}}](mailto:{{site.support_email}}).
+email to [{{site.security_email}}](mailto:{{site.security_email}}).
 
 This will allow us to assess the risk, and make a fix available before we add a
 public bug report or CVE. We will notify users via email of any critical
