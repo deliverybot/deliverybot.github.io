@@ -1,8 +1,13 @@
 ---
 layout: basic
+title: Privacy
 ---
 
 # Privacy Policy
+
+## The short version
+
+We only store the minimum amount of information needed to process deployments across your account.
 
 Updated September 12, 2018
 

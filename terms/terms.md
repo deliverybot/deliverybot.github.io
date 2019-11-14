@@ -1,5 +1,6 @@
 ---
 layout: basic
+title: Terms
 ---
 
 # Terms of Service
