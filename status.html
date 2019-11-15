@@ -80,7 +80,7 @@ title: Deliverybot | Status
   (function () {
     var url = "https://api.github.com/repos/deliverybot/deliverybot.github.io/issues?labels=status&state=all";
 
-    fetch(url)
+    fetch(url, { cache: "no-cache" })
       .then(function (resp) { return resp.json() })
       .then(function (issues) {
         var active = issues
