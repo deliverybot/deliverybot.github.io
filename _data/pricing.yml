@@ -14,7 +14,7 @@ plans:
   users: 20
 
 - name: 'Professional'
-  price: 200
+  price: 210
   users: 50
 
 bullets:
