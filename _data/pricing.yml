@@ -1,0 +1,27 @@
+plans:
+- name: Personal
+  price: 0
+  blue: true
+  users: 5
+  desc: "Personal accounts only."
+
+- name: 'Basic'
+  price: 30
+  users: 5
+
+- name: 'Standard'
+  price: 90
+  users: 20
+
+- name: 'Professional'
+  price: 200
+  users: 50
+
+bullets:
+  - 'Click to deploy'
+  - 'Automatic deployments'
+  - 'Deploy commands'
+  - 'Environment locking'
+  - 'Email and chat support'
+  - 'Slack integration'
+  - 'DevOps analytics'

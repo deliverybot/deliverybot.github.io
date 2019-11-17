@@ -1,0 +1,64 @@
+---
+layout: default
+title: Pricing
+---
+
+<div class="container mt-5">
+  <div class="flash text-center">
+    <svg fill="currentColor" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-alert mr-2" aria-hidden="true">
+      <path fill-rule="evenodd"
+        d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z" />
+    </svg>
+    Pricing rolls out January 2020.<br>
+    Until then, Deliverybot is free as a beta trial. Have feedback on pricing? Let us know.
+  </div>
+</div>
+
+<div class="content-lg text-center">
+  <h1 class="f1-light h00-mktg mt-3">Simple, all-inclusive pricing</h1>
+  <p class="lead mb-0">
+    Get all features included in all plans. Free plans available for individuals.
+  </p>
+</div>
+
+<div class="container">
+  <div class="text-center">
+    <ul class="list-style-none f5 flex-auto">
+      {% for bullet in site.data.pricing.bullets %}
+      <li class="mb-1 pl-4 f4">
+        <img src="https://github.githubassets.com/images/modules/site/icons/checkmark.svg" alt="∞"
+          class="d-inline-block ml-n4 mr-2">
+        {{bullet}}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+
+<div class="container bg-white border mt-5">
+  <div class="d-flex flex-justify-between">
+    {% for plan in site.data.pricing.plans %}
+    <div class="p-5 col-3 {% if plan.blue %}bg-blue-light{%endif%}">
+      <h3 class="f3-light mb-4 text-center">{{plan.name}}</h3>
+      <h3 class="h000-mktg lh-condensed-ultra my-2 mx-0 text-center">
+        <sup class="pricing-dollar-sign">$</sup>{{plan.price}}</h3>
+      <h4 class="f4-light mb-3 text-center">Up to {{plan.users}} users</h3>
+        <div class="text-center">
+          <a class="btn btn-primary" href="{{site.start_url}}">Get started</a>
+          {%if plan.desc%}
+          <p class="mt-3">{{plan.desc}}</p>
+          {%endif%}
+        </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<div class="mt-5 p-3 container">
+  <div class="text-center">
+    <h2 class="f1-light mb-2">Enterprise</h2>
+    <p>
+      Need more than 50 users? Need self hosting? <a href="mailto:support@deliverybot.dev">Contact us.</a>
+    </p>
+  </div>
+</div>
