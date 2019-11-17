@@ -3,7 +3,7 @@ layout: default
 title: Pricing
 ---
 
-<div class="container mt-5">
+<div class="container-lg mt-5">
   <div class="flash text-center">
     <svg fill="currentColor" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-alert mr-2" aria-hidden="true">
       <path fill-rule="evenodd"
@@ -21,7 +21,7 @@ title: Pricing
   </p>
 </div>
 
-<div class="container">
+<div class="container-lg">
   <div class="text-center">
     <ul class="list-style-none f5 flex-auto">
       {% for bullet in site.data.pricing.bullets %}
@@ -35,10 +35,10 @@ title: Pricing
   </div>
 </div>
 
-<div class="container bg-white border mt-5">
-  <div class="d-flex flex-justify-between">
+<div class="container-lg bg-white border mt-5">
+  <div class="clearfix">
     {% for plan in site.data.pricing.plans %}
-    <div class="p-5 col-3 {% if plan.blue %}bg-blue-light{%endif%}">
+    <div class="p-5 col-12 col-md-3 col-lg-3 float-left {% if plan.blue %}bg-blue-light{%endif%}">
       <h3 class="f3-light mb-4 text-center">{{plan.name}}</h3>
       <h3 class="h000-mktg lh-condensed-ultra my-2 mx-0 text-center">
         <sup class="pricing-dollar-sign">$</sup>{{plan.price}}</h3>
@@ -54,7 +54,7 @@ title: Pricing
   </div>
 </div>
 
-<div class="mt-5 p-3 container">
+<div class="mt-5 p-3 container-lg">
   <div class="text-center">
     <h2 class="f1-light mb-2">Enterprise</h2>
     <p>
