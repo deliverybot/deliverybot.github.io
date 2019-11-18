@@ -1,19 +1,22 @@
 plans:
 - name: Personal
   price: 0
-  blue: true
+  color: bg-gray-light
   users: 5
   desc: "Personal accounts only."
 
 - name: 'Basic'
+  trial: true
   price: 30
   users: 5
 
 - name: 'Standard'
+  trial: true
   price: 90
   users: 20
 
 - name: 'Professional'
+  trial: true
   price: 210
   users: 50
 
