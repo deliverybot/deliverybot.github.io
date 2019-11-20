@@ -2,22 +2,21 @@ plans:
 - name: Personal
   price: 0
   color: bg-gray-light
-  users: 5
-  desc: "Personal accounts only."
+  users: 1
 
 - name: 'Basic'
   trial: true
-  price: 30
+  price: 35
   users: 5
 
 - name: 'Standard'
   trial: true
-  price: 90
+  price: 120
   users: 20
 
 - name: 'Professional'
   trial: true
-  price: 210
+  price: 250
   users: 50
 
 bullets:
@@ -28,3 +27,20 @@ bullets:
   - 'Email and chat support'
   - 'Slack integration'
   - 'DevOps analytics'
+
+questions:
+- q: Have more than 50 users?
+  a: <a href="mailto:support@deliverybot.dev" class="ic-open">Contact us.</a>
+
+- q: Do you have yearly billing?
+  a: Yes we are able to accept subscriptions for one year.
+
+- q: Can we cancel at any time?
+  a: Yes, your subscription will continue up until the date that you have paid for.
+
+- q: Does deliverybot store my code?
+  a: No we don't. Unfortunately, we do need read access to code to listen for push events to trigger automatic deployments but we don't store your repository code. Read our <a href="/terms/security/">security guide</a> for more information.
+
+- q: Have any other questions?
+  a: Happy to <a href="mailto:support@deliverybot.dev" class="ic-open">answer them</a>.
+

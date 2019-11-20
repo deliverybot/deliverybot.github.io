@@ -47,6 +47,22 @@ deploying to staging. This is a key tool we'll use throughout the guide to make
 sure that your deployments are always safe by describing required steps
 needed to ship a deployment.
 
+### Some more details
+
+Even though deploying on master seems like a simple task, Deliverybot has some
+logic to keep you safe in different scenarios that occur. We follow a few rules
+to keep your auto deployments sane.
+
+If an auto deployment is pending but the sha that this refers to is stale,
+meaning there is a new commit on that ref, then we do not deploy this sha.
+Instead we'll wait for the new auto deployment for the latest ref to come
+through. This protects unexpected code from landing on master. Most of the time,
+you will always expect the latest ref to be the one that is in process of being
+auto deployed.
+
+This process may fall down if you have very slow CI. This should be configurable
+in the future. Reach out if this is causing a problem.
+
 {% endraw %}
 
 ## Next

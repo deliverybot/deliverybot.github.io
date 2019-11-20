@@ -46,7 +46,11 @@ title: Pricing
       <h3 class="h000-mktg lh-condensed-ultra mt-2 mx-0 text-center">
         <sup class="pricing-dollar-sign">$</sup>{{plan.price}}</h3>
       <p class="mb-3 text-center text-gray-light">Monthly (USD)</p>
+      {% if plan.users == 1 %}
+      <p class="f4 mb-3 text-center">Personal account</p>
+      {% else %}
       <p class="f4 mb-3 text-center">Up to {{plan.users}} users</p>
+      {% endif %}
       <div class="text-center">
         {% if plan.trial %}
         <a class="btn btn-primary" href="{{site.start_url}}">Try for 14 days</a>
@@ -57,13 +61,24 @@ title: Pricing
     </div>
     {% endfor %}
   </div>
+
 </div>
 
-<div class="mt-5 p-3 container-lg">
-  <div class="text-center">
-    <h2 class="f1-light mb-2">Enterprise</h2>
-    <p>
-      Need more than 50 users? Need self hosting? <a href="mailto:{{site.support_email}}" class="ic-open">Contact us.</a>
-    </p>
+<div class="container-lg mt-10">
+  <div class="Subhead">
+    <div class="Subhead-heading">Common questions</div>
   </div>
+
+  {% for q in site.data.pricing.questions %}
+  <div class="mt-4">
+    <h4 class="h4-mktg">{{q.q}}</h4>
+    <p>{{q.a}}</p>
+  </div>
+  {% endfor %}
+</div>
+
+<div class="text-center mt-2">
+  <a class="text-gray-light" href="{{site.terms_url}}">Terms</a> |
+  <a class="text-gray-light" href="{{site.privacy_url}}">Privacy</a> |
+  <a class="text-gray-light" href="{{site.security_url}}">Security</a>
 </div>
