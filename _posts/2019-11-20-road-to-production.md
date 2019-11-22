@@ -4,6 +4,7 @@ title: The road to a production release
 description: Over the last few months hundreds of users have used Deliverybot to deploy code to a variety of platforms. From Kubernetes, Firebase to Heroku. I’ve seen the value of Deliverybot go up as GitHub actions becomes a tool that more and more organizations are jumping into to test their code.
 light: true
 ---
+
 # The road to a production release
 
 Over the last few months hundreds of users have used Deliverybot to deploy code to a variety of platforms. From Kubernetes, Firebase to Heroku. I’ve seen the value of Deliverybot go up as GitHub actions becomes a tool that more and more organizations are jumping into to test their code.
@@ -30,10 +31,13 @@ Investing in Deliverybot means relying on us to deliver a key part of your infra
 
 1. First of all, the core featureset in Deliverybot is (and always will be) open source at [https://github.com/deliverybot/deliverybot](https://github.com/deliverybot/deliverybot). Your team can run this if they need to build this on their own.
 
-1. Going forwards I want to invest in building a self-hosted version for organizations that want to use the code in on-premises environments. Stay tuned for this.
+1. Deliverybot is built for scale. Using serverless technologies I'm confident that we can scale Deliverybot to handle deployments for any organization on GitHub.
 
-1. Deliverybot is hosted using Serverless technologies on Google Cloud. The service stores very little state which allows us to scale infinitely to more and more traffic as it comes on.
+Do you have any more questions about this? Reach out! Also, check out our new [security documentation](https://deliverybot.dev/terms/security/) which may be of interest.
 
-Do you have any more questions about this? Reach out, I’m happy to discuss this in more detail. Also, I’ve recently released some new [security documentation](https://deliverybot.dev/terms/security/) which may be of interest.
+### Roadmap
+
+During the beta period we received a lot of feedback about features required to move to production and to begin using Deliverybot for deployments on a day to day basis. This resulted in a new [public roadmap](https://github.com/orgs/deliverybot/projects/3) that you can keep tabs on if you are curious when your new favourite feature is going to land.
+
 
 Thanks for reading :) I hope you join Deliverybot and continue to track our progress going forwards. If you want to reach out, contact us at support@deliverybot.dev.
