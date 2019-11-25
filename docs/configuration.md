@@ -36,7 +36,7 @@ production:
   auto_deploy_on: refs/heads/master
 ```
 
-__Recently addded!__:
+__Recently added!__:
 
 This configuration option also supports a `*` character to match any subsequent
 characters after it. This allows us to deploy on any tag (`refs/tags/*`) or to
