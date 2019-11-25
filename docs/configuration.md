@@ -30,10 +30,23 @@ production:
 Controls auto deployment behaviour given a ref. If any new push events are
 detected on this event, the deployment will be triggered.
 
-```yaml {% raw %}
+```yaml
 # .github/deploy.yml
 production:
-  auto_deploy_on: refs/heads/master {% endraw %}
+  auto_deploy_on: refs/heads/master
+```
+
+__Recently addded!__:
+
+This configuration option also supports a `*` character to match any subsequent
+characters after it. This allows us to deploy on any tag (`refs/tags/*`) or to
+match any branch for deployments (`refs/heads/*`).
+
+Deploying on any tag is probably one of the most commonly used features for
+deliverybot:
+
+```yaml
+  auto_deploy_on: refs/tags/*
 ```
 
 ##### `<target>.transient_environment`
