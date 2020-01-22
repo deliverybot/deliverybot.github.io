@@ -24,7 +24,7 @@ context is checked.
 # .github/deploy.yml
 production:
   production_environment: true
-  required_contexts: ["ci", "deliverybot/promoted"]
+  required_contexts: ["ci", "deliverybot/promotion"]
   environment: production
 ```
 
