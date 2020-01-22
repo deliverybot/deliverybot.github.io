@@ -6,6 +6,11 @@ group: Guide
 
 # Deploy a PR environment
 
+<div class="flash mb-4">
+  <p>New! Automatic deployments to a pull request now available. Configured by adding:</p>
+  <p><code>auto_deploy_on: pr</code></p>
+</div>
+
 {% raw %}
 
 Deploying our code in a pull request is a great way of quickly giving
@@ -34,9 +39,23 @@ below command into the pull request comments.
 
     /deploy review
 
+Or, optionally, to trigger automatic deploys when a pull request is opened or
+synchronized you can add the following to the configuration file:
+
+```yaml
+# .github/deploy.yml
+review:
+  transient_environment: true
+  production_environment: false
+  environment: pr${{ pr }}
+  auto_deploy_on: pr
+```
+
 An example of what a pr environment deploy looks like:
 
 ![Deploy on pr environments](/assets/images/pr-deploy.png)
+
+### Cleanup
 
 One thing we'll also want to include at this point is configuration to delete
 our dynamic pull request environment when the pull request is closed. We listen
