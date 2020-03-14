@@ -7,20 +7,20 @@ title: Quickstart
 
 Deliverybot is a GitHub app, to get started with deployments we need a
 repository and to install the Deliverybot app onto that repo. The below guide
-will walk you through getting an example repository setup.
+will walk you through deploying deliverybot and getting an example repository
+setup.
 
-### 1. [Fork the example repository][example]{:target="_blank"}
+### 1. [Deploy the Deliverybot GitHub app][app]
+
+Deploy the Deliverybot GitHub application to an infrastructure of your choice.
+
+### 2. [Fork the example repository][example]{:target="_blank"}
 
 Visit one of the example repositories and create a new fork:
 
 - [Basic example that doesn't actually deploy][example]{:target="_blank"}.
 - [GitOps example with FluxCD][example-gitops]{:target="_blank"}.
 - [Helm example with actions and pr environments][example-helm]{:target="_blank"}.
-
-### 2. [Install the Deliverybot GitHub app][app]{:target="_blank"}
-
-Sign up and connect the application to your GitHub
-repository.
 
 ### 3. Push a commit to watch the workflows kick off!
 
@@ -36,7 +36,7 @@ our [integrations page][integrations]{:target="_blank"} for more information.
 Once you have a working example read through the [guide](/docs/guide/) for more
 information on how to setup complex workflows.
 
-[app]: {{site.start_url}}
+[app]: /docs/deploying/
 [how]: /docs/how-it-works/
 [example]: https://github.com/deliverybot/example
 [example-helm]: https://github.com/deliverybot/example-helm

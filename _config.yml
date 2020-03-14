@@ -19,10 +19,9 @@ social:
 
 deliverybot_url: https://app.deliverybot.dev
 github_app_url: https://github.com/apps/deliverybot
-github_install_url: https://github.com/apps/deliverybot/installations/new
 github_org_url: https://github.com/deliverybot
 spectrum_url: https://spectrum.chat/deliverybot/general
-start_url: https://github.com/marketplace/deliverybot#pricing-and-setup
+start_url: /docs/quickstart/
 slack_url: https://app.deliverybot.dev/slack/install
 pricing_url: /pricing
 twitter_url: https://twitter.com/deliverybotdev

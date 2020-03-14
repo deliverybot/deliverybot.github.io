@@ -258,6 +258,3 @@ DEPENDENCIES
   html-proofer
   jekyll-seo-tag
   rouge
-
-BUNDLED WITH
-   1.17.2
