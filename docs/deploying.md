@@ -56,7 +56,7 @@ a new app for providing additional functionality.
 
 
 [firebase]: https://github.com/deliverybot/deliverybot/tree/master/packages/firebase
-[kubernetes]: https://github.com/deliverybot/deliverybot/tree/master/packages/firebase
+[kubernetes]: https://github.com/deliverybot/deliverybot/tree/master/packages/kubernetes
 [run]: https://github.com/deliverybot/deliverybot/tree/master/packages/run
 [core]: https://github.com/deliverybot/deliverybot/tree/master/packages/core
 [services]: https://github.com/deliverybot/deliverybot/blob/master/packages/core/src/services.ts
