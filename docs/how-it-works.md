@@ -34,7 +34,7 @@ The diagram below details what a deployment looks like:
      |                      |<----------------------|                     |
      |                      |                       |                     |
      |                      |                       |   Deploy Completed  |
-     |                      |                       |>--------------------|
+     |                      |                       |<--------------------|
      |                      |                       |                     |
      |                      |   Deployment Status   |                     |
      |                      |<----------------------|                     |
