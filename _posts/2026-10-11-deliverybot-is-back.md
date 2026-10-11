@@ -19,9 +19,8 @@ back at [app.deliverybot.dev]({{ site.deliverybot_url }}).
 The [codebase]({{ site.source_url }}) has been brought up to date:
 
 - It runs on Node.js 22 and the latest Probot.
-- Data, sessions and background jobs now live in PostgreSQL instead of
-  Firebase, and sessions are stored server-side with the GitHub token
-  encrypted.
+- Data, sessions and background jobs live in PostgreSQL, and sessions are
+  stored server-side with the GitHub token encrypted.
 - It ships as a container image with Kubernetes manifests, so it is easy to
   [run yourself](/docs/deploying/) too.
 
