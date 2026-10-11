@@ -18,12 +18,11 @@
     <div class="hide-sm">
       <a class="text-gray-dark mr-2" href="/docs/">Docs</a>
       <a class="text-gray-dark mr-2" href="/blog/">Blog</a>
-      <!-- <a target="_blank" class="text-gray-dark mr-2" href="{{site.pricing_url}}">Pricing</a> -->
       <a target="_blank" class="text-gray-dark mr-2" href="{{site.deliverybot_url}}">Login</a>
       <a target="_blank" class="text-gray-dark" href="{{site.start_url}}">Get started</a>
     </div>
     <div class="hide-md hide-lg hide-xl">
-      <a target="_blank" class="btn btn-sm btn-primary" href="{{site.start_url}}">Signup</a>
+      <a target="_blank" class="btn btn-sm btn-primary" href="{{site.start_url}}">Get started</a>
       <details class="dropdown details-reset details-overlay d-inline-block">
         <summary class="text-gray p-2 d-inline" aria-haspopup="true">
           <svg fill="currentColor" width="16" height="16" class="octicon octicon-three-bars" viewBox="0 0 12 16"
@@ -38,7 +37,6 @@
         <nav class="menu position-absolute right-0 mr-2 mt-2 box-shadow-medium" style="z-index: 1000; width: 200px;">
           <a class="menu-item" href="/docs/">Docs</a>
           <a class="menu-item" href="/blog/">Blog</a>
-          <!-- <a target="_blank" class="menu-item" href="{{site.pricing_url}}">Pricing</a> -->
           <a target="_blank" class="menu-item" href="{{site.deliverybot_url}}">Login</a>
           <a target="_blank" class="menu-item" href="{{site.start_url}}">Get started</a>
         </nav>
@@ -50,16 +48,5 @@
 
   {% include footer.html %}
 
-  {% if jekyll.environment == "production" %}
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-146941343-2"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'UA-146941343-2');
-  </script>
-  {% endif %}
 </body>
 </html>

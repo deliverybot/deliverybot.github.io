@@ -12,8 +12,8 @@
     <div class="p-3">
       <ul class="list-style-none">
         <li><a class="text-gray-light" href="{{site.deliverybot_url}}">Login</a></li>
-        <li><a class="text-gray-light" href="{{site.start_url}}">Signup</a></li>
-        <li><a class="text-gray-light" href="{{site.spectrum_url}}">Community</a></li>
+        <li><a class="text-gray-light" href="{{site.install_url}}">Install</a></li>
+        <li><a class="text-gray-light" href="{{site.community_url}}">Community</a></li>
         <li><a class="text-gray-light" href="/status/">Status</a></li>
       </ul>
     </div>
@@ -21,7 +21,6 @@
     <div class="p-3">
       <ul class="list-style-none">
         <li><a class="text-gray-light" href="/docs/">Docs</a></li>
-        <li><a class="text-gray-light" href="{{site.pricing_url}}">Pricing</a></li>
         <li><a class="text-gray-light" href="/blog/">Blog</a></li>
         <li><a class="text-gray-light" href="{{site.github_org_url}}">GitHub</a></li>
       </ul>
@@ -30,7 +29,7 @@
     <div class="p-3 text-gray-light">
       <ul class="list-style-none">
         <li>
-          Created by <a target="_blank" class="text-gray-light" href="{{site.twitter_url}}">@deliverybot</a>
+          Open source on <a target="_blank" class="text-gray-light" href="{{site.source_url}}">GitHub</a>
         </li>
         <li><a class="text-gray-light" href="mailto:{{site.support_email}}">{{site.support_email}}</a></li>
       </ul>
@@ -41,7 +40,7 @@
           <a class="text-gray-light" href="{{site.privacy_url}}">Privacy</a> |
           <a class="text-gray-light" href="{{site.security_url}}">Security</a>
         </li>
-        <li class="text-gray-light text-sm">Copyright © 2019 Deliverybot</li>
+        <li class="text-gray-light text-sm">Copyright © 2019–{{ site.time | date: "%Y" }} Deliverybot</li>
       </ul>
     </div>
   </div>
