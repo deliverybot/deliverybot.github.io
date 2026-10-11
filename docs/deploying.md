@@ -33,7 +33,7 @@ Every commit to the main branch builds an image from the repository's
 | `SESSION_SECRET` | A long random string used to sign and encrypt sessions. |
 | `DATABASE_URL` | Postgres connection string. |
 | `BASE_URL` | The public URL the app is served from. |
-| `SLACK_CLIENT_ID`, `SLACK_CLIENT_SECRET`, `SLACK_LOGIN_URL` | Optional, for the [Slack integration](/docs/integrations/chatops/). |
+| `SLACK_CLIENT_ID`, `SLACK_CLIENT_SECRET`, `SLACK_SIGNING_SECRET` | Optional, for the [Slack integration](/docs/integrations/chatops/). Create the Slack app from `packages/slackbot/manifest.yml`. |
 
 Then run the database migrations once, and start both processes:
 

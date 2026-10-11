@@ -20,6 +20,8 @@ source_url: https://github.com/deliverybot/deliverybot
 community_url: https://github.com/deliverybot/deliverybot/issues
 start_url: /docs/quickstart/
 slack_url: https://app.deliverybot.dev/slack/install
+# Lets Slack suggest the app when deliverybot.dev links are shared.
+slack_app_id: A0C7YD4S0DD
 
 terms_url: /terms/terms
 privacy_url: /terms/privacy

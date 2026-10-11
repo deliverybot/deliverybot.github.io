@@ -23,8 +23,10 @@ moves it into Slack.
 Deploying code looks like the following slash command:
 
 ```
-/deliverybot deploy deliverybot/example@heads/master production
+/deliverybot deploy deliverybot/example@master production
 ```
+
+The part after `@` can be a branch, a tag or a commit SHA.
 
 ![slack-app](/assets/images/deploy-slack.png)
 
@@ -33,6 +35,8 @@ same. Just call `/deliverybot help` if you have any questions.
 
 ## Install
 
-Install using the link below:
+Add Deliverybot to your Slack workspace with the button below. Then run
+`/deliverybot login` once to connect your GitHub account. Deploys you start
+from Slack run as that GitHub account.
 
 <a href="{{ site.slack_url }}"><img alt="Add to Slack" height="40" width="139" src="https://platform.slack-edge.com/img/add_to_slack.png" srcset="https://platform.slack-edge.com/img/add_to_slack.png 1x, https://platform.slack-edge.com/img/add_to_slack@2x.png 2x"></a>

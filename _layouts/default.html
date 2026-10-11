@@ -6,6 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="/assets/logo.png">
+  {%- if site.slack_app_id %}
+  <meta name="slack-app-id" content="{{ site.slack_app_id }}">
+  {%- endif %}
   {%- seo -%}
   <link rel="stylesheet" href="/assets/primer.css">
   <link rel="stylesheet" href="/assets/main.css">
