@@ -1,9 +1,3 @@
-- name: "Firebase Action"
-  id: "action-firebase"
-  image: "/assets/images/integrations/firebase.svg"
-  description: "Deploy sites to Firebase using GitHub actions."
-  labels: ["ACTION"]
-
 - name: "Slack ChatOps"
   id: "chatops"
   image: "/assets/images/integrations/slack.svg"
