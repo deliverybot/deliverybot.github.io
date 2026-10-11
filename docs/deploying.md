@@ -1,62 +1,66 @@
 ---
 layout: page
-title: Deploying
+title: Self-hosting
 ---
 
-# Deploying
+# Self-hosting
+
+The hosted app at [app.deliverybot.dev]({{ site.deliverybot_url }}) is the
+quickest way to get started, but Deliverybot is open source and you can run it
+on your own infrastructure too.
 
 Deliverybot is a [Probot](https://probot.github.io){:target="_blank"}
 application that responds to events from GitHub and triggers deployments based
-on actions in the application and check status events from GitHub.
+on actions in the dashboard and check status events from GitHub. It needs:
 
-It requires storage providers to be implemented as well as deployment
-infrastructure to deploy the code. The following deployment targets are
-implemented already to get you started quickly:
+- Your own [GitHub App][create-app]. The [`app.yml`][app-yml] manifest in the
+  repository lists the permissions and events it uses.
+- PostgreSQL for storage, sessions and the job queue.
+- Two processes from the same image: `web`, which serves the dashboard and
+  receives webhooks, and `worker`, which runs background jobs.
 
-## Deployment targets
+## Running the container
 
-- [Firebase][firebase]
-- [Kubernetes][kubernetes]
+Every commit to the main branch builds an image from the repository's
+[`Dockerfile`][dockerfile]. Configure it with environment variables:
 
-## Building A deployment target
+| Variable | Description |
+| --- | --- |
+| `APP_ID` | The GitHub App's ID. |
+| `PRIVATE_KEY` | The GitHub App's private key. |
+| `WEBHOOK_SECRET` | The GitHub App's webhook secret. |
+| `CLIENT_ID`, `CLIENT_SECRET` | The GitHub App's OAuth credentials, used to sign in to the dashboard. |
+| `SESSION_SECRET` | A long random string used to sign and encrypt sessions. |
+| `DATABASE_URL` | Postgres connection string. |
+| `BASE_URL` | The public URL the app is served from. |
+| `SLACK_CLIENT_ID`, `SLACK_CLIENT_SECRET`, `SLACK_LOGIN_URL` | Optional, for the [Slack integration](/docs/integrations/chatops/). |
 
-Building a deployment target requires implementing a set of services defined in
-[`@deliverybot/core`][core] and then providing an HTTP server implementation
-that allows Deliverybot to receive HTTP traffic.
+Then run the database migrations once, and start both processes:
 
-The [`@deliverybot/run`][run] package provides a local implementation for
-spinning up services and the HTTP interface for local development. Use this
-package as a starting point.
-
-The `load` function exported from [`@deliverybot/core`][core] takes the services
-you implement along with the apps which provide the main functionality to give
-back a probot and express object to wire up to your infrastructure. A basic
-example of booting Deliverybot:
-
-```javascript
-import { load, Options, localServices } from "@deliverybot/core";
-import { apps } from "@deliverybot/app";
-
-const options: Options = { ... };
-load(localServices(), apps, options);
+```sh
+node packages/postgres/lib/cli.js   # migrations
+node packages/run/lib/server.js     # web, listens on port 3000
+node packages/run/lib/worker.js     # worker
 ```
 
-The main thing that you will need to replace when deploying the application is
-the services implementation. The [services][services] file provides the
-interfaces required by Deliverybot for your infrastructure.
+Set the GitHub App's webhook URL to `https://<your host>/api/github/webhooks`
+and its callback URL to `https://<your host>/login/cb`.
 
-### Extending functionality
+## Kubernetes
 
-As mentioned the `apps` argument is where all of the functionality is wired up.
-You can easily extend Deliverybot with your own implementations and services
-by adding an app into the load array.
+The repository ships [Kustomize manifests][kubernetes] with a base and
+staging/production overlays, which run Postgres in the cluster through
+[CloudNativePG](https://cloudnative-pg.io){:target="_blank"}. Their README
+covers the one-time cluster setup.
 
-[`@deliverybot/core`][core] provides information and documentation on wiring up
-a new app for providing additional functionality.
+## Local development
 
+See the repository's [README][source] to run Deliverybot locally with
+`docker compose` for Postgres and [smee.io](https://smee.io){:target="_blank"}
+to forward webhooks.
 
-[firebase]: https://github.com/deliverybot/deliverybot/tree/master/packages/firebase
-[kubernetes]: https://github.com/deliverybot/deliverybot/tree/master/packages/firebase
-[run]: https://github.com/deliverybot/deliverybot/tree/master/packages/run
-[core]: https://github.com/deliverybot/deliverybot/tree/master/packages/core
-[services]: https://github.com/deliverybot/deliverybot/blob/master/packages/core/src/services.ts
+[create-app]: https://docs.github.com/en/apps/creating-github-apps/registering-a-github-app/registering-a-github-app
+[app-yml]: https://github.com/deliverybot/deliverybot/blob/master/app.yml
+[dockerfile]: https://github.com/deliverybot/deliverybot/blob/master/Dockerfile
+[kubernetes]: https://github.com/deliverybot/deliverybot/tree/master/deploy/kubernetes
+[source]: https://github.com/deliverybot/deliverybot

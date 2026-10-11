@@ -2,29 +2,24 @@ title: deliverybot
 description: >-
   Simple Continuous Delivery for GitHub
 long_description: >-
-  Fast, safe and secure Continous Delivery pipelines you can setup in minutes.
-  Powered by open source.
+  Fast, safe and secure Continuous Delivery pipelines you can set up in minutes.
+  Hosted for you, or run it yourself. Powered by open source.
 
-twitter:
-  username: deliverybotdev
-  card: summary
 logo: /assets/logo.png
 image: /assets/logo.png
-author:
-  twitter: deliverybotdev
 social:
   name: Deliverybot
   links:
-    - https://twitter.com/deliverybotdev
+    - https://github.com/deliverybot/deliverybot
 
 deliverybot_url: https://app.deliverybot.dev
 github_app_url: https://github.com/apps/deliverybot
+install_url: https://github.com/apps/deliverybot/installations/new
 github_org_url: https://github.com/deliverybot
-spectrum_url: https://spectrum.chat/deliverybot/general
+source_url: https://github.com/deliverybot/deliverybot
+community_url: https://github.com/deliverybot/deliverybot/issues
 start_url: /docs/quickstart/
 slack_url: https://app.deliverybot.dev/slack/install
-pricing_url: /pricing
-twitter_url: https://twitter.com/deliverybotdev
 
 terms_url: /terms/terms
 privacy_url: /terms/privacy
@@ -47,8 +42,13 @@ highlighter: rouge
 
 plugins:
   - jekyll-seo-tag
+  - jekyll-sitemap
 
 exclude:
   - Gemfile
   - Gemfile.lock
+  - Makefile
+  - README.md
+  - LICENSE
   - node_modules
+  - vendor

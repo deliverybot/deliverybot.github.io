@@ -18,14 +18,14 @@ security vulnerabilities that may affect them.
 
 ## Patch management
 
-Deliverybot runs on higher level Google Cloud infrastructure. As such we do not
-patch server level constraints. Patches for security issues with dependencies
-will be patched as soon as is reasonably possible. For critical issues we will
-issue a patch within 24 hours.
+Deliverybot runs as containers on a managed Kubernetes service, so the
+underlying servers are patched by the provider. Security issues in
+Deliverybot's dependencies will be patched as soon as is reasonably possible.
+For critical issues we will issue a patch within 24 hours.
 
 ## Access management
 
-Deliverybot operates under a principle of least priviledge and aims to read the
+Deliverybot operates under a principle of least privilege and aims to read the
 least amount from your GitHub repository as possible. Deliverybot is focused
 primarily on triggering GitHub events and therefore does *not* require code
 access to your repository (except for `.github/*` files).
@@ -56,8 +56,9 @@ information required to process deployments across your repositories.
 
 ## Sessions
 
-Sessions are managed at `app.deliverybot.dev` using an encrypted cookie which
-associates a users oauth token which expires within 24 hours.
+Sessions at `app.deliverybot.dev` are stored on the server and expire within
+24 hours. The browser cookie only holds a signed session id. The session data,
+including your GitHub OAuth token, is encrypted before it is stored.
 
 ## Access control
 

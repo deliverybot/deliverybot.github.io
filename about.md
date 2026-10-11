@@ -10,8 +10,10 @@ from GitHub. We have some fantastic API's and capabilities built in to GitHub
 with the deployments api but the open source tooling around this is lacking.
 Deliverybot is aiming to fill that gap.
 
-The project is open core with most of the functionality living in the core repo
-as a GitHub app.
+The project is fully open source, with all of the functionality living in the
+[core repo]({{ site.source_url }}) as a GitHub app. You can use the hosted
+version at [app.deliverybot.dev]({{ site.deliverybot_url }}) or
+[run it yourself](/docs/deploying/).
 
 ### Project goals
 

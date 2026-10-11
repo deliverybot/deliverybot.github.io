@@ -55,5 +55,5 @@ GIT_REPO=git@github.com:myrepo/example-gitops.git GIT_PATH=deploy NAMESPACE=kube
 [flux]: https://fluxcd.io
 [flux-guide]: https://docs.fluxcd.io/projects/helm-operator/en/latest/tutorials/get-started.html
 [flux-key]: https://docs.fluxcd.io/projects/flux/en/latest/tutorials/get-started.html#giving-write-access
-[deliverybot]: https://github.com/apps/deliverybot/installations/new
+[deliverybot]: {{ site.install_url }}
 [install]: https://github.com/deliverybot/example-gitops/blob/master/install.sh
