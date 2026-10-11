@@ -5,8 +5,8 @@ long_description: >-
   Fast, safe and secure Continuous Delivery pipelines you can set up in minutes.
   Hosted for you, or run it yourself. Powered by open source.
 
-logo: /assets/logo.png
-image: /assets/logo.png
+logo: /assets/logos/logo-512.png
+image: /assets/logos/logo-512.png
 social:
   name: Deliverybot
   links:
