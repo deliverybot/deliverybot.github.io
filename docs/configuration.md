@@ -28,6 +28,7 @@ production:
 - [`<target>.task`](#targettask)
 - [`<target>.auto_merge`](#targetauto_merge)
 - [`<target>.payload`](#targetpayload)
+- [`<target>.max_in_flight`](#targetmax_in_flight)
 
 ##### `<target>.auto_deploy_on`
 
@@ -103,6 +104,29 @@ it's behind the default branch. Default: false
 Payload with extra information about the deployment. It can use
 [variables](#variables). Deliverybot always adds a `target` field with the
 target's name. Default: {}
+
+##### `<target>.max_in_flight`
+
+How many deployments to the target's environment may be in progress at once.
+Default: no limit.
+
+A deployment counts as in progress until its latest status is `success`,
+`failure`, `error` or `inactive`, so your deployer has to report statuses for
+this to work. Deployments older than an hour are ignored, so one that never
+reports back can't block the environment forever.
+
+```yaml
+# .github/deploy.yml
+production:
+  auto_deploy_on: refs/heads/master
+  environment: production
+  max_in_flight: 1
+```
+
+An automatic deployment that hits the limit waits and goes out once a running
+deployment finishes. A `/deploy` comment or a dashboard deploy is refused with
+a message saying the environment is busy; the dashboard's Force option deploys
+anyway.
 
 ## Variables
 
