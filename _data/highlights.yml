@@ -44,8 +44,8 @@ kubernetes:
 - image: /assets/images/helm-action.png
   title: Helm integration
   description: |
-    Helm action integration provides a simpler way of deploying to Kubernetes
-    using GitHub actions and connecting to your Kubernetes cluster directly.
+    Deploy Helm charts straight from a GitHub Actions workflow that connects
+    to your Kubernetes cluster.
 
 slack:
 - image: /assets/images/deploy-slack.png
