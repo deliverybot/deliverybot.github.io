@@ -31,6 +31,8 @@ privacy_email: privacy@deliverybot.dev
 support_email: support@deliverybot.dev
 security_email: security@deliverybot.dev
 corp_name: Deliverybot
+# Whose law governs the terms of service.
+jurisdiction: the Netherlands
 service_name: Deliverybot
 
 baseurl: ""
