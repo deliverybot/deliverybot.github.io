@@ -14,7 +14,7 @@ developers want to click a button (or message in Slack) manually to issue a
 deployment to production.
 
 For this we'll add a target `production` that requires CI to be deployed. Add
-the below key to your `.gtihub/deploy.yml` file.
+the below key to your `.github/deploy.yml` file.
 
 ```yaml
 # .github/deploy.yml
