@@ -39,6 +39,14 @@ below command into the pull request comments.
 
     /deploy review
 
+Deliverybot reacts with a 👍 when it picks up the command, and the deployment
+then shows up in the pull request timeline. If the deployment can't be created,
+for example because the target doesn't exist or the environment is locked,
+Deliverybot replies with the reason. A bare `/deploy` lists the available
+targets. Only the first line of the comment is read, so you can explain the
+deploy on the lines below it. You need write access to the repository to
+deploy.
+
 Or, optionally, to trigger automatic deploys when a pull request is opened or
 synchronized you can add the following to the configuration file:
 

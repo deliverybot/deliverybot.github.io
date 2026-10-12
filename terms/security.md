@@ -27,8 +27,9 @@ For critical issues we will issue a patch within 24 hours.
 
 Deliverybot operates under a principle of least privilege and aims to read the
 least amount from your GitHub repository as possible. Deliverybot is focused
-primarily on triggering GitHub events and therefore does *not* require code
-access to your repository (except for `.github/*` files).
+primarily on triggering GitHub events. GitHub only offers read access to
+repository contents as a whole, but the only file Deliverybot reads is
+`.github/deploy.yml`.
 
 There are two access modes to Deliverybot:
 
@@ -83,11 +84,11 @@ automatic deployment workflows.
 
 https://developer.github.com/v3/apps/permissions/#permission-on-contents
 
-Deliverybot must know when push events and release events occur to trigger
-automatic deployments.
+Deliverybot must know when push events occur to trigger automatic deployments,
+and reads `.github/deploy.yml` and commit details to create them.
 
 Note: We do not store your code. Unfortunately this is the only way we can
-get access to push, commit and release events.
+get access to push and commit events.
 
 #### Deployments `write`
 
@@ -99,18 +100,20 @@ Deliverybot triggers deployments :)
 
 https://developer.github.com/v3/apps/permissions/#permission-on-issues
 
-Deliverybot writes deployment failures on a pull request to the comments.
+Deliverybot reacts to `/deploy` comments and replies when a deployment fails.
 
 #### Metadata `read`
 
 https://developer.github.com/v3/apps/permissions/#metadata-permissions
 
 
-#### Pull requests `read`
+#### Pull requests `write`
 
 https://developer.github.com/v3/apps/permissions/#permission-on-pull-requests
 
-Deliverybot reads pull request comments for /deploy * commands.
+Deliverybot reads pull requests to deploy them with `/deploy` commands, and
+reacts and replies to those commands. GitHub requires this permission for
+replies and reactions on pull requests in repositories with issues turned off.
 
 #### Commit statuses `write`
 
