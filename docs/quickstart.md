@@ -11,12 +11,10 @@ hosted app at [app.deliverybot.dev]({{ site.deliverybot_url }}) and one of the
 example repositories. Prefer to run it yourself? See
 [self-hosting](/docs/deploying/).
 
-### 1. [Fork an example repository][example]{:target="_blank"}
+### 1. [Fork the example repository][example]{:target="_blank"}
 
-Visit one of the example repositories and create a new fork:
-
-- [Basic example that doesn't actually deploy][example]{:target="_blank"}.
-- [GitOps example with FluxCD][example-gitops]{:target="_blank"}.
+Fork the [example repository][example]{:target="_blank"}. Its deployments
+don't go anywhere, but it shows the whole flow.
 
 ### 2. [Install the Deliverybot GitHub App][install]{:target="_blank"}
 
@@ -43,5 +41,4 @@ information on how to setup complex workflows.
 [install]: {{ site.install_url }}
 [how]: /docs/how-it-works/
 [example]: https://github.com/deliverybot/example
-[example-gitops]: https://github.com/deliverybot/example-gitops
 [integrations]: /integrations/

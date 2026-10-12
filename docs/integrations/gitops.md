@@ -6,54 +6,166 @@ group: Integrations
 
 # GitOps
 
-GitOps is a pattern for deploying to Kubernetes through a GitHub repository as
-an intermediary. This works well with a system like Deliverybot. Instead of
-running the actual deployment inside GitHub actions, we can run a script to edit
-our Kubernetes manifests. This implements the "push" GitOps workflow. There's
-an extra layer of security to this model since our Kubernetes cluster is pulling
-from a protected GitHub repository which removes certain types of attacks by
-ensuring that our CI system doesn't have access to Kubernetes.
+{% raw %}
+
+GitOps keeps the desired state of your cluster in a Git repository. A GitOps
+operator such as [Flux](https://fluxcd.io){:target="_blank"} or
+[Argo CD](https://argo-cd.readthedocs.io){:target="_blank"} runs in the
+cluster, watches that repository and applies what's in it. Your CI system
+never needs access to the cluster: deploying means committing to the
+repository.
 
 ![Flux diagram](/assets/images/integrations/flux.svg)
 
-This example sets up a GitHub repository as a source of truth for [Flux][flux]
-to read and to apply manifests into your Kubernetes cluster. It also has a
-corresponding GitHub action which can push manifests to this repository to
-deploy your code.
+Deliverybot fits in front of this. It decides when a deployment happens, and a
+GitHub Actions workflow on the `deployment` event commits the new version to
+the config repository. This page uses Flux and Kustomize; the workflow works
+the same way for Argo CD.
 
-This brings the benefits of GitOps together with the ease of managing deployment
-automation with Deliverybot. Click a button and watch manifests be updated and
-deployed to your Kubernetes cluster!
+## Setup
 
-**This is currently in beta and the API around this may change.**
+1. Set up Flux on your cluster with a config repository, following the
+   [Flux getting started guide](https://fluxcd.io/flux/get-started/){:target="_blank"}.
+   This guide assumes the repository holds a Kustomize overlay per
+   environment, such as `apps/myapp/staging/kustomization.yaml`, and a Flux
+   `Kustomization` for each.
+2. Give the app repository write access to the config repository: add a
+   [deploy key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/managing-deploy-keys#deploy-keys){:target="_blank"}
+   with write access to the config repository, and its private key as a
+   `CONFIG_REPO_KEY` secret in the app repository.
+3. Put the overlay path in each target's payload in `.github/deploy.yml`:
 
-## Getting started
+```yaml
+# .github/deploy.yml
+staging:
+  auto_deploy_on: refs/heads/master
+  required_contexts: ["build"]
+  environment: staging
+  payload:
+    path: apps/myapp/staging
 
-Requires `cfssl` to be installed along with `helm` and `kubectl`.
-
-1. Copy the https://github.com/deliverybot/example-gitops repository into your
-   organization.
-
-2. Run the [`./install.sh`][install] script to setup FluxCD or follow this
-   guide [here][flux-guide]. This will add the Flux operator along with the Flux
-   Helm operator to deploy your manifests from the example repository.
-
-```bash
-GIT_REPO=git@github.com:myrepo/example-gitops.git GIT_PATH=deploy NAMESPACE=kube-system ./install.sh
+production:
+  production_environment: true
+  required_contexts: ["build"]
+  environment: production
+  payload:
+    path: apps/myapp/production
 ```
 
-3. You will then have to follow the [Flux guide][flux-key] for adding a deploy
-   key to your example repository.
+4. Add a workflow that sets the image tag in that overlay and pushes it to the
+   config repository. It assumes your CI pushes an image tagged with the
+   commit sha:
 
-4. Create a new repository to emulate an application that you want to deploy to
-   Kubernetes and install the GitOps action https://github.com/deliverybot/gitops
+```yaml
+# .github/workflows/deploy.yml
+name: Deploy
+on: [deployment]
 
-5. [Install the repository][deliverybot] on Deliverybot.
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      deployments: write
+    concurrency:
+      group: deploy-${{ github.event.deployment.environment }}
+    env:
+      OVERLAY: ${{ github.event.deployment.payload.path }}
+      IMAGE: ghcr.io/${{ github.repository }}:${{ github.event.deployment.sha }}
+    steps:
+      - uses: deliverybot/deployment-status@v2
+        with:
+          state: in_progress
 
-6. Trigger a deployment and watch the action push a change to your flux repo!
+      - uses: actions/checkout@v7
+        with:
+          repository: acme/config
+          ssh-key: ${{ secrets.CONFIG_REPO_KEY }}
 
-[flux]: https://fluxcd.io
-[flux-guide]: https://docs.fluxcd.io/projects/helm-operator/en/latest/tutorials/get-started.html
-[flux-key]: https://docs.fluxcd.io/projects/flux/en/latest/tutorials/get-started.html#giving-write-access
-[deliverybot]: {{ site.install_url }}
-[install]: https://github.com/deliverybot/example-gitops/blob/master/install.sh
+      - name: Commit the new image
+        run: |
+          cd "$OVERLAY"
+          kustomize edit set image "ghcr.io/${{ github.repository }}=$IMAGE"
+          cd "$GITHUB_WORKSPACE"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -am "Deploy $IMAGE to ${{ github.event.deployment.environment }}"
+          git pull --rebase
+          git push
+
+      - if: failure()
+        uses: deliverybot/deployment-status@v2
+        with:
+          state: failure
+```
+
+Replace `acme/config` with your config repository. The deployment stays
+`in_progress` after the push, because Flux hasn't applied the change yet. The
+next section marks it successful once Flux has. If you'd rather not set that up,
+add a step that sets the state to `success` after the push instead.
+
+## Report when Flux has applied the change
+
+Flux's notification controller can send a
+[`repository_dispatch` event](https://fluxcd.io/flux/components/notification/providers/#github-dispatch){:target="_blank"}
+to the app repository when a `Kustomization` has been applied. Create a
+`githubdispatch` provider pointing at the app repository, and an alert per
+environment:
+
+```yaml
+apiVersion: notification.toolkit.fluxcd.io/v1beta3
+kind: Provider
+metadata:
+  name: myapp
+  namespace: flux-system
+spec:
+  type: githubdispatch
+  address: https://github.com/acme/myapp
+  secretRef:
+    name: myapp-github-token # a token that can create repository dispatches
+---
+apiVersion: notification.toolkit.fluxcd.io/v1beta3
+kind: Alert
+metadata:
+  name: myapp-staging
+  namespace: flux-system
+spec:
+  providerRef:
+    name: myapp
+  eventSeverity: info
+  eventMetadata:
+    env: staging
+  eventSources:
+    - kind: Kustomization
+      name: myapp-staging
+```
+
+Then mark the latest deployment to that environment as successful:
+
+```yaml
+# .github/workflows/deployed.yml
+name: Deployed
+on:
+  repository_dispatch:
+    types: [Kustomization/myapp-staging.flux-system]
+
+jobs:
+  deployed:
+    runs-on: ubuntu-latest
+    permissions:
+      deployments: write
+    steps:
+      - id: latest
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ENVIRONMENT: ${{ github.event.client_payload.metadata.env }}
+        run: |
+          id=$(gh api "repos/$GITHUB_REPOSITORY/deployments?environment=$ENVIRONMENT&per_page=1" --jq '.[0].id')
+          echo "id=$id" >> "$GITHUB_OUTPUT"
+
+      - uses: deliverybot/deployment-status@v2
+        with:
+          deployment-id: ${{ steps.latest.outputs.id }}
+          state: success
+```
+
+{% endraw %}

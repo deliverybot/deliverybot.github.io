@@ -13,5 +13,5 @@
 - name: "Kubernetes GitOps"
   id: "gitops"
   image: "/assets/images/integrations/k8s.svg"
-  description: "Deploy sites to Kubernetes using Flux GitOps."
+  description: "Deploy to Kubernetes by committing to a Flux or Argo CD repository."
   labels: ["ACTION"]
