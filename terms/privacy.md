@@ -7,70 +7,104 @@ title: Privacy
 
 ## The short version
 
-We only store the minimum amount of information needed to process deployments across your account.
+We store only what we need to run deployments for the repositories you give
+{{ site.service_name }} access to. We don't sell your data, we don't show ads
+and we don't use tracking or analytics cookies.
 
-Updated September 12, 2018
+Updated October 12, 2026
 
-__Overview__
+__Who we are__
 
-{{ site.corp_name }} Inc. (“{{ site.corp_name }}”, “we”, “us” or “our”) is committed to protecting the privacy of personal information (i.e. any information relating to an identified or identifiable natural person) who visit any websites owned by {{ site.corp_name }} (the “Site”) and use the services available thereon (the “Services”). Amendments to this Privacy Policy will be posted to the Site and/or Services and will be effective when posted. Your continued use of the Site and/or Services following the posting of any amendment to this Privacy Policy shall constitute your acceptance of such amendment.
+This policy covers the hosted {{ site.service_name }} service at
+[{{ site.deliverybot_url }}]({{ site.deliverybot_url }}), the
+{{ site.service_name }} GitHub App and Slack app, and this website
+(together, the “Service”), operated by {{ site.corp_name }} (“we”, “us” or
+“our”). {{ site.service_name }} is also open source; if you run it yourself,
+this policy doesn't apply to your installation, and you are responsible for
+the data it processes.
 
-__Consent and Information Collection and Use__
+__What we collect__
 
-When you register as a user of our Site and Services, we ask for personal information that will be used to activate your account, provide the Services to you, communicate with you about the status of your account, and for other purposes set out in this Privacy Policy. Your name, company name, address, telephone number, email address, credit card information and certain other information about you may be required by us to provide the Services or be disclosed by you during your use of the Services. You may also be asked to create a user name and/or private password, which will become part of your account information.
-By providing personal information to us and by retaining us to provide you with the Services, you voluntarily consent to the collection, use and disclosure of such personal information as specified in this Privacy Policy. The legal bases for our processing of personal information are primarily that the processing is necessary for providing the Services and that the processing is carried out in our legitimate interests, which are further explained below. Without limiting the foregoing, we may on occasion ask you to consent when we collect, use, or disclose your personal information in specific circumstances.
-We take steps designed to ensure that only those employees who need access to your personal information to fulfil their employment duties needed to provide the Services will have access to it. We may use and disclose your personal or account information for the following purposes:
+- **GitHub account details.** When you sign in with GitHub we store your
+  GitHub user id and username. GitHub sends us an access token so we can act
+  on your behalf (for example, to start a deployment you asked for). That token
+  is kept in your session, encrypted, and the session expires after a day.
+- **Installation details.** When you install the GitHub App we store the
+  installation id, the account it was installed on, which repositories it can
+  access and whether the installation is suspended.
+- **Repository data.** To run deployments we read the repositories you give
+  the app access to, including the deployment configuration file, commits,
+  pull requests, comments that mention {{ site.service_name }} and deployment
+  statuses. We store the repository name and id, the last event we received
+  for it, and the deployment state we need between events, such as locks and
+  pending jobs. We don't copy your source code.
+- **Slack details.** If you connect Slack, we store your Slack user id linked
+  to your GitHub account and the GitHub token used to run your Slack commands.
+- **Logs.** Our servers keep short-lived technical logs (such as request
+  paths, IP addresses and errors) to operate and secure the Service.
 
-To provide the Site and Services to you and to other users of the Site and Services; To improve the quality of the Site and Services through polls, surveys and other similar feedback gathering activities conducted by {{ site.corp_name }} and/or third parties; To create, manage and control your account information, and to verify access rights to the Site and Services; To bill your account; To communicate with you (subject to your opt-out rights set forth in this Privacy Policy), including without limitation for the purpose of providing you with information about the Services, or informing you of changes or additions to the Services or of the availability of any other services or features we provide; To assess service levels, monitor traffic patterns and gauge popularity of different features and service options of the Site and/or Services; To enforce this Privacy Policy or our Terms of Service; To protect against fraud or error, and to respond to claims of any violation of our rights or those of any third parties; To respond to your requests for customer service; To protect the rights, property or personal safety of you, us, our users and the public; and As required to comply with applicable laws or as authorized by applicable laws. For the purposes of billing your account (if you have a paid account) and in order to process payments, {{ site.corp_name }} utilizes third party payment gateways who will utilize your credit card and other payment information in accordance with their respective privacy policies. {{ site.corp_name }} shall not be liable to you or any other person for any damages that might result from unauthorized use, publication, disclosure or any other misuse of such payment information, including credit card information.
+We don't ask for your name, address or payment details. If we later offer
+paid plans through GitHub Marketplace, GitHub handles the payment and shares
+only the plan you chose with us; we'll update this policy before that
+happens.
 
-When we disclose your personal information to third parties, we take reasonable measures to ensure that the rules set forth in this Privacy Policy are complied with and these third parties provide sufficient guarantees to implement appropriate technical and organizational measures.
+__How we use it__
 
-Your personal information may be stored and processed in any country where we have facilities or in which we engage third party service providers. By using the Services, you consent to the transfer of information to countries outside your country of residence, which may have different data protection rules than in your country. While such information is outside of Canada, it is subject to the laws of the country in which it is held, and may be subject to disclosure to the governments, courts or law enforcement or regulatory agencies of such other country, pursuant to the laws of such country. However, our practices regarding your personal information will at all times continue to be governed by this Privacy Policy and, when applicable, we will comply with the General Data Protection Regulation (“GDPR”) requirements providing adequate protection for the transfer of personal information from the EU/EEA to third country.
+We use this information only to provide, secure and support the Service:
+running the deployments you or your configuration ask for, showing you your
+repositories and deployments, answering your support requests, and
+preventing abuse. The legal basis is that the processing is necessary to
+provide the Service you asked for, and our legitimate interest in keeping it
+secure and working.
 
-We may occasionally communicate with you regarding our products, services, news and events. You have the option to not receive this information. We provide an opt-out function within all email communications of this nature, or will cease to communicate with you for this purpose if you contact us and tell us not to communicate this information to you. The only kind of these communications that you may not “opt-out” of are those required to communicate announcements related to the Services, including information specific to your Account, planned Services suspensions and outages. We will attempt to minimize this type of communication to you.
+__Cookies__
 
-__Age of Consent__
+We set one cookie, `deliverybot.sid`, which keeps you signed in. It holds
+only a signed session id. We don't use advertising, analytics or tracking
+cookies, on the Service or on this website.
 
-We do not knowingly provide the Services to, and will not knowingly collect the personal information from anyone under the age of consent. If you live in a country in the EU/EEA, you must be at least 16 years old to use our Services or such greater age required in your country to register for or use our Services. If you live in any other country except those in the EU/EEA, you must be at least 13 years old to use our Services or such greater age required in your country to register for or use our Services. In addition to being of the minimum required age to use our Services under applicable law, if you are not old enough to have authority to agree to our Privacy Policy in your country, your parent or guardian must agree to our Privacy Policy on your behalf. If you have any concerns about your child’s personal information, please contact us at {{ site.privacy_email }}.
+__Who we share it with__
 
-Neither the Site nor the Services are intended for children under 13 years of age, and no one under age 13 may provide any personal information to, on or through the Site or Services. We do not knowingly collect personal information from children under 13. If you are under 13, do not use or provide any information to, on or through the Site or Services, make any purchases through the Site or Services, use any of the interactive or public comment features, or provide any information about yourself to us, including your name, address, telephone number, email address, or any screen name or user name you may use. If we learn we have collected or received personal information from a child under 13 without verification of parental consent, we will delete that information. If you believe we might have any information from or about a child under 13, please contact us at the email address provided in the paragraph above.
+We don't sell or rent your information. We share it only with:
 
-__Rights to Your Information__
+- **GitHub** and, if you connect it, **Slack**, because the Service works by
+  calling their APIs on your behalf. Their own privacy policies apply to the
+  data they hold.
+- **Our hosting provider**, DigitalOcean, which runs our servers and database
+  in the European Union.
+- **Authorities**, when the law requires it.
 
-You have the right to access and edit your information at any time through the web interface provided as part of the Services. On written request and subject to proof of identity, you may access the personal information that we hold, used or communicated and ask that any necessary corrections be made, where applicable, as authorized or required by law. However, to make sure that the personal information we maintain about you is accurate and up to date, please inform us immediately of any change in your personal information by mail or e-mail.
+__How long we keep it__
 
-Under the GDPR, you may be entitled to additional rights, including: (i) the right to withdraw consent to processing where consent is the basis of processing; (ii) the right to access your personal information and certain other supplementary information, under certain conditions; (iii) the right to object to unlawful data processing, under certain conditions; (iv) the right to erasure of personal information about you, under certain conditions; (v) the right to demand that we restrict processing of your personal information, under certain conditions, if you believe we have exceeded the legitimate basis for processing, processing is no longer necessary, are processing, or believe your personal information is inaccurate; (vi) the right to data portability of personal information concerning you that you provided us in a structured, commonly used, and machine-readable format, under certain conditions; (vii) the right object to decisions being taken by automated means which produce legal effects concerning you or similarly significantly affect you, under certain conditions; (viii) the right to lodge a complaint with data protection authorities. If you want to learn more about your rights under the GDPR, you can visit the European Commission’s page on Data Protection.
+Session data is deleted when the session expires. When you uninstall the
+GitHub App, we delete the installation and the stored data for its
+repositories; removing a repository from the installation deletes that
+repository's data. Account details
+are kept while you use the Service; ask us and we'll delete them.
 
-__Aggregated Data__
+__Your rights__
 
-We may also use your personal information to generate Aggregated Data for internal use and for sharing with others on a selective basis. “Aggregated Data” means records which have been stripped of information potentially identifying users, and which have been manipulated or combined to provide generalized, anonymous information. Your identity and personal information will be kept anonymous in Aggregated Data.
+You can ask us for a copy of your data, to correct it, to delete it or to stop
+processing it, and, if you are in the EU/EEA or UK, you can complain to your
+data protection authority. Uninstalling the GitHub App and revoking its
+access in your GitHub settings stops all processing for those repositories.
 
-__Links__
+__Children__
 
-The Site and/or Services may contain links to other sites and we are not responsible for the privacy practices or the content of such sites. We encourage you to read the privacy policy of linked sites. Their privacy policies and practices differ from our policies and practices.
+The Service is not intended for anyone under 16, and we don't knowingly
+collect their information.
 
-__Cookies and Log Files__
+__Security__
 
-We use cookies and log files to track user information. Cookies are small amounts of data that are transferred to your web browser by a web server and are stored on your computer’s hard drive. We use cookies to track which page variant a visitor has seen, to track if a visitor has clicked on a page variant, to monitor traffic patterns and to gauge popularity of service options. We will use this information to deliver relevant content and services to you.
+Data is encrypted in transit, and sessions are encrypted at rest. If you find
+a security problem, please follow our [security policy]({{ site.security_url }}).
 
-__Third Parties’ & Interest-Based Ads__
+__Changes__
 
-We do not control third parties’ collection or use of your information to serve interest-based advertising. However, these third parties may provide you with ways to choose not to have your information collected or used in this way. You can opt out of receiving targeted ads from members of the Network Advertising Initiative (“NAI”) on the NAI’s website.
+If we change this policy, we'll post the new version here and update the date
+above. For significant changes we'll also announce them on this website.
 
-__Security and Retention__
+__Contact__
 
-We will strive to prevent unauthorized access to your personal information, however, no data transmission over the Internet, by wireless device or over the air is guaranteed to be 100% secure. We have implemented and maintain reasonable security procedures and practices (based on the nature of the information we collect) to protect that information from unauthorized disclosure. We will continue to enhance security procedures as new technologies and procedures become available.
-
-We strongly recommend that you do not disclose your password to anyone.
-
-Please remember that you control what personal information you provide while using the Site and Services. Ultimately, you are responsible for maintaining the secrecy of your identification, passwords and/or any personal information in your possession for the use of the Site and/or Services. Always be careful and responsible regarding your personal information. We are not responsible for, and cannot control, the use by others of any information which you provide to them and you should use caution in selecting the personal information you provide to others through the Site or Services. Similarly, we cannot assume any responsibility for the content of any personal information or other information which you receive from other users through the Site or Services, and you release us from any and all liability in connection with the contents of any personal information or other information which you may receive using the Site or Services. We cannot guarantee, or assume any responsibility for verifying, the accuracy of the personal information or other information provided by any third party. You release us from any and all liability in connection with the use of such personal information or other information of others.
-
-We will maintain your personal information for as long as they are needed, or as required by applicable laws, regulations, or government orders.
-
-__Changes to this Policy__
-
-We may update this Privacy Policy from time to time. If we do so, we will send notification via email. If the change materially effects the treatment of your personal data, and we have your email but you have chosen to opt-out of email communication, we will send you an email. (You are responsible for ensuring that we have an up-to-date email for this purpose.)
-
-__Contact Us__
-
-If you have any questions or comments about this Privacy Policy or your personal information, to make an access or correction request, to exercise any applicable rights, to make a complaint, or to obtain information about our policies and practices with respect to any service providers outside Canada, our Privacy Officer (or Data Protection Officer) can be reached by email at {{ site.privacy_email }}.
+Questions or requests about your data can go to
+[{{ site.privacy_email }}](mailto:{{ site.privacy_email }}).
