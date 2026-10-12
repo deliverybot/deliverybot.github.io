@@ -17,7 +17,6 @@ Visit one of the example repositories and create a new fork:
 
 - [Basic example that doesn't actually deploy][example]{:target="_blank"}.
 - [GitOps example with FluxCD][example-gitops]{:target="_blank"}.
-- [Helm example with actions and pr environments][example-helm]{:target="_blank"}.
 
 ### 2. [Install the Deliverybot GitHub App][install]{:target="_blank"}
 
@@ -44,6 +43,5 @@ information on how to setup complex workflows.
 [install]: {{ site.install_url }}
 [how]: /docs/how-it-works/
 [example]: https://github.com/deliverybot/example
-[example-helm]: https://github.com/deliverybot/example-helm
 [example-gitops]: https://github.com/deliverybot/example-gitops
 [integrations]: /integrations/

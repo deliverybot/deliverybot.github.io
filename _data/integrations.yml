@@ -4,10 +4,10 @@
   description: "Deploy using Slack commands with the Deliverybot slackbot."
   labels: ["DEPLOY"]
 
-- name: "Helm Action"
+- name: "Helm"
   id: "action-helm"
   image: "/assets/images/integrations/k8s.svg"
-  description: "Deploy sites to Kubernetes using GitHub actions."
+  description: "Deploy Helm charts to Kubernetes from GitHub Actions."
   labels: ["ACTION", "CANARY", "PR"]
 
 - name: "Kubernetes GitOps"
