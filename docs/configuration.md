@@ -43,7 +43,7 @@ production:
 ```
 
 The ref is matched as a glob. A `*` matches any characters, `?` matches a
-single character and `[0-9]` matches one character from a set (`[!0-9]` one
+single character and `[0-9]` matches one character from a set (`[^0-9]` one
 character outside it). So `refs/tags/*` deploys every tag, `refs/heads/*`
 deploys every branch and `refs/tags/v*-rc*` deploys release candidate tags such
 as `v1.2.0-rc1`:
