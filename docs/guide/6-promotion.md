@@ -2,6 +2,7 @@
 layout: page
 title: Promote a commit
 group: Guide
+description: Promote a commit that passed QA on staging to the next stage of your deployment pipeline with Deliverybot.
 ---
 
 # Promote a commit

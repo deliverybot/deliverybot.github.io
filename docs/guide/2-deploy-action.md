@@ -2,6 +2,7 @@
 layout: page
 title: Delivering deployments
 group: Guide
+description: Write a GitHub Actions workflow that responds to deployment events from Deliverybot and ships your code.
 ---
 
 # Delivering deployments

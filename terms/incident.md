@@ -1,6 +1,7 @@
 ---
 layout: basic
 title: Incidents
+description: How incidents on the hosted Deliverybot service are handled and communicated.
 ---
 
 # Incidents

@@ -2,6 +2,7 @@
 layout: page
 title: GitOps
 group: Integrations
+description: "Use Deliverybot with GitOps and Flux: commit new image tags to a config repository on each deployment and report back when Flux applies them."
 ---
 
 # GitOps

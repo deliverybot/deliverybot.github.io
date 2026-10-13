@@ -1,6 +1,7 @@
 ---
 layout: page
 title: How it works
+description: How Deliverybot uses the GitHub Deployments API to decide when to deploy, while your own workflow does the actual deploy.
 ---
 
 # How it works

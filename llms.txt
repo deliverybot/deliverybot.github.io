@@ -1,0 +1,45 @@
+---
+layout: null
+sitemap: false
+---
+# {{ site.service_name }}
+
+> {{ site.description }}
+
+{{ site.service_name }} is a GitHub App that decides when to deploy and creates
+deployments through the GitHub Deployments API. Your own workflow (for example
+GitHub Actions running Helm, kubectl or a GitOps commit) picks up the
+`deployment` event and does the actual deploy. Behaviour is configured per
+repository in `.github/deploy.yml`.
+
+- Hosted service: {{ site.deliverybot_url }} (free)
+- Install the GitHub App: {{ site.install_url }}
+- Source code (MIT licensed, self-hostable): {{ site.source_url }}
+- Issues and support: {{ site.community_url }} or {{ site.support_email }}
+
+## Docs
+{% for doc in site.data.llms_docs %}{% unless doc.group %}
+- [{{ doc.title }}]({{ doc.url | absolute_url }}): {{ doc.description }}
+{%- endunless %}{% endfor %}
+
+## Guide
+{% for doc in site.data.llms_docs %}{% if doc.group == "Guide" %}
+- [{{ doc.title }}]({{ doc.url | absolute_url }}): {{ doc.description }}
+{%- endif %}{% endfor %}
+
+## Integrations
+{% for doc in site.data.llms_docs %}{% if doc.group == "Integrations" %}
+- [{{ doc.title }}]({{ doc.url | absolute_url }}): {{ doc.description }}
+{%- endif %}{% endfor %}
+
+## Optional
+
+- [All docs in one file]({{ "/llms-full.txt" | absolute_url }}): every page above, concatenated
+- [About]({{ "/about/" | absolute_url }}): {{ site.pages | where: "url", "/about/" | map: "description" | first }}
+- [Terms of Service]({{ site.terms_url | append: "/" | absolute_url }})
+- [Privacy Policy]({{ site.privacy_url | append: "/" | absolute_url }})
+- [Security]({{ site.security_url | append: "/" | absolute_url }})
+{%- for post in site.posts %}
+{%- assign year = post.date | date: "%Y" | plus: 0 %}
+- [{{ post.title }}]({{ post.url | absolute_url }}) ({{ year }}{% if year < 2026 %}, from the original service and may be outdated{% endif %})
+{%- endfor %}

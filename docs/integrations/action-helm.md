@@ -2,6 +2,7 @@
 layout: page
 title: Helm
 group: Integrations
+description: Deploy a Helm chart to Kubernetes from GitHub Actions on Deliverybot deployment events, and report the status back to GitHub.
 ---
 
 # Helm

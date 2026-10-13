@@ -1,6 +1,7 @@
 ---
 layout: basic
-title: Privacy
+title: Privacy Policy
+description: What data the hosted Deliverybot service stores, why, and how to have it removed.
 ---
 
 # Privacy Policy

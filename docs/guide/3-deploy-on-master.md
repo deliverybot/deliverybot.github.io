@@ -2,6 +2,7 @@
 layout: page
 title: Deploy on master
 group: Guide
+description: Configure Deliverybot to deploy to staging automatically whenever CI passes on the default branch.
 ---
 
 # Deploy on master

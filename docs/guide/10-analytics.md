@@ -2,6 +2,7 @@
 layout: page
 title: Deployment analytics
 group: Guide
+description: Track deployment frequency, lead time and other DevOps metrics for your repository in the Deliverybot dashboard.
 ---
 
 # Deployment analytics

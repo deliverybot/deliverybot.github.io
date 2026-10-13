@@ -12,6 +12,15 @@
   <meta name="slack-app-id" content="{{ site.slack_app_id }}">
   {%- endif %}
   {%- seo -%}
+  {%- if page.url == "/" %}
+  {% include structured-data.html %}
+  {%- endif %}
+  {%- if page.noindex %}
+  <meta name="robots" content="noindex">
+  {%- endif %}
+  {%- if page.markdown_url %}
+  <link rel="alternate" type="text/markdown" href="{{ page.markdown_url }}">
+  {%- endif %}
   <link rel="stylesheet" href="/assets/primer.css">
   <link rel="stylesheet" href="/assets/main.css">
 </head>

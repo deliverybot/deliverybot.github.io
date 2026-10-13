@@ -1,6 +1,7 @@
 ---
 layout: basic
-title: Terms
+title: Terms of Service
+description: Terms of Service for the hosted Deliverybot service.
 ---
 
 # Terms of Service

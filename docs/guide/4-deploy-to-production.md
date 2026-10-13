@@ -2,6 +2,7 @@
 layout: page
 title: Deploy to production
 group: Guide
+description: Add a production environment that you deploy manually from the Deliverybot dashboard or Slack once CI passes.
 ---
 
 # Deploy to production

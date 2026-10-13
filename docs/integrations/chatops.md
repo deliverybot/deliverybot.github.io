@@ -2,6 +2,7 @@
 layout: page
 title: ChatOps
 group: Integrations
+description: "Deploy from Slack with Deliverybot: add the Slack app, connect your GitHub account and start deployments from chat."
 ---
 
 # ChatOps

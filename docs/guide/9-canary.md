@@ -2,6 +2,7 @@
 layout: page
 title: Canary deployments
 group: Guide
+description: Run canary deployments with Deliverybot by sending deployment parameters that shift a percentage of traffic.
 ---
 
 # Canary deployments
