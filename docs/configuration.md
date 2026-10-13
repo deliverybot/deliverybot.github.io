@@ -42,12 +42,29 @@ production:
   auto_deploy_on: refs/heads/master
 ```
 
-A `*` matches any characters after it, so `refs/tags/*` deploys every tag and
-`refs/heads/*` deploys every branch:
+The ref is matched as a glob. A `*` matches any characters, `?` matches a
+single character and `[0-9]` matches one character from a set (`[^0-9]` one
+character outside it). So `refs/tags/*` deploys every tag, `refs/heads/*`
+deploys every branch and `refs/tags/v*-rc*` deploys release candidate tags such
+as `v1.2.0-rc1`:
 
 ```yaml
-  auto_deploy_on: refs/tags/*
+  auto_deploy_on: refs/tags/v*-rc*
 ```
+
+It also takes a list of patterns. A ref deploys when it matches any pattern,
+unless it matches a pattern starting with `!`. This deploys every version tag
+except release candidates:
+
+```yaml
+  auto_deploy_on:
+    - refs/tags/v*
+    - "!refs/tags/v*-rc*"
+```
+
+To deploy when a release is published, match its tag. Publishing a release
+with a new tag pushes that tag, so `refs/tags/*` (or a narrower pattern) deploys
+it.
 
 Set it to `pr` to deploy automatically when a pull request is opened and on
 every push to it.
