@@ -2,6 +2,7 @@
 layout: page
 title: Guide
 group: Guide
+description: A step by step guide to building a production grade deployment pipeline with Deliverybot and GitHub Actions.
 ---
 
 # Guide

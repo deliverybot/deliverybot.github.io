@@ -2,6 +2,7 @@
 layout: page
 title: Locking deployments
 group: Guide
+description: Lock an environment in Deliverybot to stop automatic and manual deployments while you handle an incident.
 ---
 
 # Locking deployments

@@ -1,6 +1,7 @@
 ---
 layout: page
 title: deploy.yml
+description: Reference for .github/deploy.yml, the file that tells Deliverybot which environments to deploy to, when, and with which checks and payloads.
 ---
 
 # Configuration (`.github/deploy.yml`)

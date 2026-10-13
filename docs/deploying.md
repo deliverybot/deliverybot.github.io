@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Self-hosting
+description: "Run Deliverybot on your own infrastructure: create a GitHub App, configure the environment and run the open source app with Postgres."
 ---
 
 # Self-hosting

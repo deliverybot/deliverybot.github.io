@@ -2,6 +2,7 @@
 layout: page
 title: Rolling back
 group: Guide
+description: Roll back fast by redeploying an earlier commit with Deliverybot, without reverting code or rerunning the build.
 ---
 
 # Rolling back

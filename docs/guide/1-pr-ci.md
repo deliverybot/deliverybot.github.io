@@ -2,6 +2,7 @@
 layout: page
 title: Pull request setup
 group: Guide
+description: Set up continuous integration checks on pull requests so Deliverybot knows when a commit is safe to deploy.
 ---
 
 # Pull request setup

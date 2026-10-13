@@ -1,0 +1,39 @@
+{%- comment -%}
+  Describes the product to search engines and AI assistants. jekyll-seo-tag
+  already describes the page itself.
+{%- endcomment -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": {{ site.service_name | jsonify }},
+  "description": {{ site.description | jsonify }},
+  "url": {{ site.url | jsonify }},
+  "image": {{ site.logo | absolute_url | jsonify }},
+  "applicationCategory": "DeveloperApplication",
+  "applicationSubCategory": "Continuous delivery",
+  "operatingSystem": "Web",
+  "installUrl": {{ site.install_url | jsonify }},
+  "softwareHelp": {{ "/docs/" | absolute_url | jsonify }},
+  "license": "https://opensource.org/licenses/MIT",
+  "isAccessibleForFree": true,
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "featureList": [
+    "Automatic deployments when CI passes",
+    "Click to deploy from a dashboard",
+    "Pull request preview environments",
+    "Deploy from Slack (ChatOps)",
+    "Promotion, rollback and environment locking",
+    "Canary deployments",
+    "Deployment analytics"
+  ],
+  "sameAs": [{{ site.github_app_url | jsonify }}, {{ site.source_url | jsonify }}],
+  "publisher": {
+    "@type": "Organization",
+    "name": {{ site.corp_name | jsonify }},
+    "url": {{ site.url | jsonify }},
+    "logo": {{ site.logo | absolute_url | jsonify }},
+    "sameAs": [{{ site.github_org_url | jsonify }}]
+  }
+}
+</script>

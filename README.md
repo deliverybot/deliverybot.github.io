@@ -21,3 +21,10 @@ to GitHub Pages.
 
 1. [Add parameters to integrations.yml](_data/integrations.yml).
 1. [Add an install page to /docs/integrations](docs/integrations/).
+
+## Search engines and AI assistants
+
+Give every page a `description` in its front matter; it becomes the meta
+description and the summary in `/llms.txt`. Docs pages under `docs/` also get a
+Markdown copy (`/docs/quickstart.md` for `/docs/quickstart/`) and are bundled
+into `/llms-full.txt` by `_plugins/llms.rb`.

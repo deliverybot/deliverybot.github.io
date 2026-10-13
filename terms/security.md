@@ -1,6 +1,7 @@
 ---
 layout: basic
 title: Security
+description: How to report a security issue in Deliverybot, and how the hosted service handles access, sessions and GitHub permissions.
 ---
 
 # Security

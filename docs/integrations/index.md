@@ -2,6 +2,7 @@
 layout: page
 title: Integrations
 group: Integrations
+description: Integration guides for deploying with Deliverybot and building on top of it.
 ---
 
 # Integrations

@@ -2,6 +2,7 @@
 layout: page
 title: Deploy a PR environment
 group: Guide
+description: Deploy every pull request to its own preview environment with Deliverybot, automatically or on demand.
 ---
 
 # Deploy a PR environment

@@ -1,4 +1,8 @@
+# Everything on this site is public. Search engines and AI crawlers and
+# assistants (GPTBot, ChatGPT-User, OAI-SearchBot, ClaudeBot, Claude-User,
+# Claude-SearchBot, PerplexityBot, Google-Extended, Applebot-Extended, CCBot
+# and others) are all welcome. For an LLM-friendly overview see /llms.txt.
 User-agent: *
-Disallow:
+Allow: /
 
 Sitemap: https://deliverybot.dev/sitemap.xml

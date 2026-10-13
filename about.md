@@ -1,6 +1,7 @@
 ---
 layout: basic
-title: Deliverybot | About
+title: About
+description: "Why Deliverybot exists and what it aims to be: the simplest and safest way to automate deployments from GitHub, fully open source."
 ---
 
 # About

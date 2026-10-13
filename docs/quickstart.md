@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Quickstart
+description: Install the Deliverybot GitHub App, fork an example repository and ship your first deployment in a few minutes.
 ---
 
 # Quickstart

@@ -1,6 +1,10 @@
-title: deliverybot
+title: Deliverybot
+# Headline on the landing pages.
+tagline: Simple Continuous Delivery for GitHub
+# Default meta description for search engines and link previews.
 description: >-
-  Simple Continuous Delivery for GitHub
+  Deliverybot is a free, open source GitHub App for continuous delivery:
+  automatic, pull request and Slack deployments built on GitHub Deployments.
 long_description: >-
   Fast, safe and secure Continuous Delivery pipelines you can set up in minutes.
   Hosted for you, or run it yourself. Powered by open source.
@@ -56,3 +60,14 @@ exclude:
   - LICENSE
   - node_modules
   - vendor
+
+# The logo is square, so keep link previews small rather than cropped.
+twitter:
+  card: summary
+
+defaults:
+  # Link preview image for pages that don't set their own.
+  - scope:
+      path: ""
+    values:
+      image: /assets/logos/logo-512.png
