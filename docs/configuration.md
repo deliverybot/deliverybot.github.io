@@ -73,6 +73,19 @@ An automatic deployment waits for the
 [`required_contexts`](#targetrequired_contexts) to pass. If a newer commit is
 pushed to the ref in the meantime, only the newer commit is deployed.
 
+Automatic deployments use the `deploy.yml` on the repository's default branch,
+both to decide which targets deploy and for the target's settings. A branch that
+adds or changes an automatic target only takes effect once it is merged. Manual
+deployments from the dashboard or a `/deploy` comment use the `deploy.yml` on
+the branch being deployed.
+
+Anyone who can push a branch can also change its `deploy.yml` and deploy it by
+hand, so don't rely on `deploy.yml` alone to protect production. When your
+deployments run in GitHub Actions, give the deploy job its environment and add
+[environment protection rules](https://docs.github.com/en/actions/managing-workflow-runs-and-deployments/managing-deployments/managing-environments-for-deployment#deployment-protection-rules),
+such as required reviewers or allowed deployment branches, to the environments
+that matter.
+
 ##### `<target>.transient_environment`
 
 Specifies if the given environment is specific to the deployment and will no
