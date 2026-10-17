@@ -3,9 +3,9 @@ layout: default
 ---
 
 <div class="mt-8">
-  <div class="content shadow border p-6 bg-white" style="position: relative;">
-    <aside class="border bg-white p-3 docs-menu mb-5">
-      <h5 class="text-gray mb-2 pb-1 border-bottom">Menu</h5>
+  <div class="content shadow border p-6 color-bg-default" style="position: relative;">
+    <aside class="border color-bg-default p-3 docs-menu mb-5">
+      <h5 class="color-fg-muted mb-2 pb-1 border-bottom">Menu</h5>
       <nav class="SideNav">
         {% assign pages = site.pages | sort: "title" %}
         {% assign groups = site.pages | group_by: "group" %}
@@ -38,7 +38,7 @@ layout: default
     </div>
   </div>
 
-  <div class="mt-5 text-center text-light-gray">
+  <div class="mt-5 text-center color-fg-muted">
     Need help? <a href="mailto:{{site.support_email}}">{{site.support_email}}</a>
     <br>
     Or open an issue on <a target="_blank" href="{{site.community_url}}">GitHub</a>

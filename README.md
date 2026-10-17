@@ -7,9 +7,10 @@ built with [Jekyll](https://jekyllrb.com).
 
 ## Development
 
-Install Ruby (see `.ruby-version`), then:
+Install Ruby (see `.ruby-version`) and Node.js, then:
 
     bundle install
+    npm ci        # Primer CSS, bundled from assets/primer.scss
     make start    # serve on http://localhost:3000
     make build    # build into _site
     make test     # check the built site for broken links

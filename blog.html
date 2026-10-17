@@ -17,9 +17,9 @@ description: Posts about Deliverybot and about continuous delivery with GitHub, 
     {% for post in site.posts %}
     <div class="mt-5 p-4 border-bottom">
       <div class="flex-auto">
-        <h2 class="f1-light"><a href="{{post.url}}" class="text-gray-dark">{{post.title}}</a></h2>
-        <p class="text-small text-gray-light">{{post.date|date_to_string}}</p>
-        <p class="text-gray-light mt-3">
+        <h2 class="f1-light"><a href="{{post.url}}" class="color-fg-default">{{post.title}}</a></h2>
+        <p class="text-small color-fg-muted">{{post.date|date_to_string}}</p>
+        <p class="color-fg-muted mt-3">
           {{post.description}}
         </p>
         <p class="text-right">
