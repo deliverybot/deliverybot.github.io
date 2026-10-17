@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-color-mode="auto" data-light-theme="light" data-dark-theme="dark">
 
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
   <link rel="icon" href="/favicon.ico" sizes="48x48">
   <link rel="icon" href="/assets/logos/logo-256.png" type="image/png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -25,20 +26,20 @@
   <link rel="stylesheet" href="/assets/main.css">
 </head>
 
-<body class="height-full {% if page.light %}bg-white{% else %}bg-gray-light{% endif %}">
-  <nav class="box-shadow navbar d-flex flex-justify-between bg-white">
+<body class="height-full {% if page.light %}color-bg-default{% else %}color-bg-subtle{% endif %}">
+  <nav class="color-shadow-small navbar d-flex flex-justify-between color-bg-default">
     {% include logo.html %}
 
     <div class="hide-sm">
-      <a class="text-gray-dark mr-2" href="/docs/">Docs</a>
-      <a class="text-gray-dark mr-2" href="/blog/">Blog</a>
-      <a target="_blank" class="text-gray-dark mr-2" href="{{site.deliverybot_url}}">Login</a>
-      <a target="_blank" class="text-gray-dark" href="{{site.start_url}}">Get started</a>
+      <a class="color-fg-default mr-2" href="/docs/">Docs</a>
+      <a class="color-fg-default mr-2" href="/blog/">Blog</a>
+      <a target="_blank" class="color-fg-default mr-2" href="{{site.deliverybot_url}}">Login</a>
+      <a target="_blank" class="color-fg-default" href="{{site.start_url}}">Get started</a>
     </div>
     <div class="hide-md hide-lg hide-xl">
       <a target="_blank" class="btn btn-sm btn-primary" href="{{site.start_url}}">Get started</a>
       <details class="dropdown details-reset details-overlay d-inline-block">
-        <summary class="text-gray p-2 d-inline" aria-haspopup="true">
+        <summary class="color-fg-muted p-2 d-inline" aria-haspopup="true">
           <svg fill="currentColor" width="16" height="16" class="octicon octicon-three-bars" viewBox="0 0 12 16"
             version="1.1" aria-hidden="true">
             <path fill-rule="evenodd"
@@ -48,7 +49,7 @@
           <div class="dropdown-caret"></div>
         </summary>
 
-        <nav class="menu position-absolute right-0 mr-2 mt-2 box-shadow-medium" style="z-index: 1000; width: 200px;">
+        <nav class="menu position-absolute right-0 mr-2 mt-2 color-shadow-medium" style="z-index: 1000; width: 200px;">
           <a class="menu-item" href="/docs/">Docs</a>
           <a class="menu-item" href="/blog/">Blog</a>
           <a target="_blank" class="menu-item" href="{{site.deliverybot_url}}">Login</a>

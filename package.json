@@ -1,0 +1,9 @@
+{
+  "private": true,
+  "description": "Primer CSS for the site, bundled by Jekyll's Sass converter from assets/primer.scss.",
+  "dependencies": {
+    "@primer/css": "22.3.2",
+    "@primer/primitives": "11.10.0",
+    "@primer/view-components": "0.53.5"
+  }
+}

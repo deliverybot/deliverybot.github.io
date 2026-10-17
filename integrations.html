@@ -16,8 +16,8 @@ description: "Integration guides for deploying with Deliverybot: Helm, GitOps wi
     <div class="clearfix container-lg shadow">
       {% for integration in site.data.integrations %}
       <div class="col-12 col-md-4 col-lg-4 float-left p-2">
-        <div class="Box border box-shadow-medium hover-grow" style="width: 100%;">
-          <a target="_blank" class="text-gray-light" style="text-decoration: none;"
+        <div class="Box border color-shadow-medium hover-grow" style="width: 100%;">
+          <a target="_blank" class="color-fg-muted" style="text-decoration: none;"
             href="/docs/integrations/{{integration.id}}">
             <div class="Box-body">
               <h3 class="Box-title f2-light mb-3">
@@ -31,7 +31,7 @@ description: "Integration guides for deploying with Deliverybot: Helm, GitOps wi
               </div>
               <div>
                 {% for label in integration.labels %}
-                <span class="Label Label--gray">{{label}}</span>
+                <span class="Label Label--secondary">{{label}}</span>
                 {% endfor %}
               </div>
             </div>
@@ -42,7 +42,7 @@ description: "Integration guides for deploying with Deliverybot: Helm, GitOps wi
     </div>
   </div>
 
-  <div class="mt-5 text-center text-light-gray">
+  <div class="mt-5 text-center color-fg-muted">
     Need help? <a href="mailto:{{site.support_email}}">{{site.support_email}}</a>
     <br>
     Or open an issue on <a target="_blank" href="{{site.community_url}}">GitHub</a>

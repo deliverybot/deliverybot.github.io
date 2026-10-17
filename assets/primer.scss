@@ -1,0 +1,12 @@
+---
+---
+// Primer: GitHub's design system, from npm (see package.json). Components
+// that moved out of @primer/css (Box, Label, flash, menus) come from the
+// view-components stylesheet.
+@use "@primer/primitives/dist/css/functional/themes/light";
+@use "@primer/primitives/dist/css/functional/themes/dark";
+@use "@primer/css/dist/primitives";
+@use "@primer/css/dist/core";
+@use "@primer/css/dist/product";
+@use "@primer/css/dist/marketing";
+@use "@primer/view-components/app/assets/styles/primer_view_components";
