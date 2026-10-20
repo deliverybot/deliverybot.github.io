@@ -40,7 +40,7 @@ below command into the pull request comments.
 
     /deploy review
 
-Deliverybot reacts with a 👍 when it picks up the command, and the deployment
+Deliverybot reacts with 👀 when it picks up the command, and the deployment
 then shows up in the pull request timeline. If the deployment can't be created,
 for example because the target doesn't exist or the environment is locked,
 Deliverybot replies with the reason. A bare `/deploy` lists the available
