@@ -1,5 +1,6 @@
 main:
 - image: /assets/images/deploy-list.png
+  dark_image: /assets/images/deploy-list-dark.png
   title: Click to deploy
   left: true
   description: |
@@ -7,6 +8,7 @@ main:
    code. It doesn't get any simpler than that.
 
 - image: /assets/images/deploy-show.png
+  dark_image: /assets/images/deploy-show-dark.png
   title: Automatic deployments
   description: |
     Deploy automatically to multiple clusters and environments given a
@@ -28,6 +30,7 @@ main:
     to manage your deploys.
 
 - image: /assets/images/deploy-analytics.png
+  dark_image: /assets/images/deploy-analytics-dark.png
   title: Analytics
   left: true
   description: |
@@ -56,12 +59,14 @@ slack:
 
 auto:
 - image: /assets/images/deploy-show.png
+  dark_image: /assets/images/deploy-show-dark.png
   title: Automatic deployments
   description: |
     Deploy automatically to multiple clusters and environments given a
     specific branch.
 
 - image: /assets/images/deploy-list.png
+  dark_image: /assets/images/deploy-list-dark.png
   title: Click to deploy
   description: |
    Click the latest commit in the Deliverybot dashboard to deploy your

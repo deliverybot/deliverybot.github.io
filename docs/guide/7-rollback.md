@@ -16,7 +16,10 @@ and trigger just the deployment workflow.
 Rolling back is as simple as selecting the safest commit to deploy from the
 list below:
 
-![On master deploy](/assets/images/deploy-list.png)
+<picture class="screenshot">
+  <source data-theme="dark" srcset="/assets/images/deploy-list-dark.png" media="(prefers-color-scheme: dark)">
+  <img src="/assets/images/deploy-list.png" alt="On master deploy">
+</picture>
 
 A good practice is to have alerts pipe into the Slack channel where your
 deployments are taking place. If errors spike right after a deployment it's
