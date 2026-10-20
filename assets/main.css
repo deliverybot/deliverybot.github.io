@@ -118,3 +118,16 @@ pre {
 .highlight .nv, .highlight .vc, .highlight .vg, .highlight .vi, .highlight .bp {
   color: var(--color-prettylights-syntax-variable);
 }
+
+/* SCREENSHOTS */
+/* The Light / Dark switch that screenshots.js adds above each screenshot. */
+
+.screenshot-switch {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 8px;
+}
+.screenshot-switch .btn[aria-pressed="true"] {
+  background-color: var(--button-default-bgColor-selected);
+  font-weight: 600;
+}

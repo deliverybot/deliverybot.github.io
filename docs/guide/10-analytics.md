@@ -11,4 +11,7 @@ Now that we've wired up deployments we can read analytics about our deployments
 to keep track of our teams performance. Simply open the Metrics tab of your
 repository in the dashboard:
 
-![Deploy analytics](/assets/images/deploy-analytics.png)
+<picture class="screenshot">
+  <source data-theme="dark" srcset="/assets/images/deploy-analytics-dark.png" media="(prefers-color-scheme: dark)">
+  <img src="/assets/images/deploy-analytics.png" alt="Deploy analytics">
+</picture>

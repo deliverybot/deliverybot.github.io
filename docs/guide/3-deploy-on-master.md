@@ -40,7 +40,10 @@ If you view your project in the Deliverybot dashboard you should be able to see
 green checkmarks next to your new commit indicating that a deployment to
 staging was successful. You should see something like the image below:
 
-![On master deploy](/assets/images/deploy-list.png)
+<picture class="screenshot">
+  <source data-theme="dark" srcset="/assets/images/deploy-list-dark.png" media="(prefers-color-scheme: dark)">
+  <img src="/assets/images/deploy-list.png" alt="On master deploy">
+</picture>
 
 Since we specified the `required_contexts` parameter and included in this the
 `ci` key our automatic deployment will wait for the `ci` job to complete before
