@@ -12,7 +12,7 @@ We store only what we need to run deployments for the repositories you give
 {{ site.service_name }} access to. We don't sell your data, we don't show ads
 and we don't use tracking or analytics cookies.
 
-Updated October 12, 2026
+Updated October 21, 2026
 
 __Who we are__
 
@@ -36,9 +36,14 @@ __What we collect__
 - **Repository data.** To run deployments we read the repositories you give
   the app access to, including the deployment configuration file, commits,
   pull requests, comments that mention {{ site.service_name }} and deployment
-  statuses. We store the repository name and id, the last event we received
-  for it, and the deployment state we need between events, such as locks and
-  pending jobs. We don't copy your source code.
+  statuses. We store the repository name and id, whether it has a deployment
+  configuration file, the last event we received for it, and the deployment
+  state we need between events, such as locks and pending jobs. We don't copy
+  your source code.
+- **Deployment history.** For each deployment {{ site.service_name }} creates
+  we store its id, the repository and environment, when it was created and
+  its latest status (such as success or failure). We don't store the
+  deployment payload.
 - **Slack details.** If you connect Slack, we store your Slack user id linked
   to your GitHub account and the GitHub token used to run your Slack commands.
 - **Logs.** Our servers keep short-lived technical logs (such as request
@@ -54,7 +59,10 @@ __How we use it__
 We use this information only to provide, secure and support the Service:
 running the deployments you or your configuration ask for, showing you your
 repositories and deployments, answering your support requests, and
-preventing abuse. The legal basis is that the processing is necessary to
+preventing abuse. The people who operate the Service can see the
+installation, repository and deployment details above, for example to answer
+a support request or to see how much the Service is used and whether
+deployments succeed. The legal basis is that the processing is necessary to
 provide the Service you asked for, and our legitimate interest in keeping it
 secure and working.
 
