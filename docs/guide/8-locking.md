@@ -13,10 +13,14 @@ worsening the issue. Deployment locking helps with this. We have a button that
 blocks deployments from going out to a given environment, giving you time to
 resolve issues as you see fit.
 
-Simply click the "Lock" button in the UI. This will halt automatic deployments
-and manual deployments from going out.
+Open "Environment locks" above the commit list and click "Lock" next to the
+target. This will halt automatic deployments and manual deployments from going
+out. Locked targets show as a red badge next to the button.
 
-![On master deploy](/assets/images/deploy-locked.png)
+<picture class="screenshot">
+  <source data-theme="dark" srcset="/assets/images/deploy-locked-dark.png" media="(prefers-color-scheme: dark)">
+  <img src="/assets/images/deploy-locked.png" alt="Locked production environment">
+</picture>
 
 ## Next
 

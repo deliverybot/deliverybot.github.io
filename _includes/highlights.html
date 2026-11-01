@@ -4,7 +4,10 @@
   <div class="clearfix mt-5 container-lg">
     <div class="p-3 float-left col-md-7 col-sm-12">
       <div class="Box border mb-3 color-shadow-large" style="height: 250px; overflow-y: hidden;">
-        <img src="{{highlight.image}}" alt="{{highlight.title}}" width="100%">
+        <picture{% if highlight.dark_image %} class="screenshot"{% endif %}>
+          {% if highlight.dark_image %}<source srcset="{{highlight.dark_image}}" media="(prefers-color-scheme: dark)" data-theme="dark">{% endif %}
+          <img src="{{highlight.image}}" alt="{{highlight.title}}" width="100%">
+        </picture>
       </div>
     </div>
     <div class="p-3 d-flex float-left col-md-5 col-sm-12">
@@ -28,7 +31,10 @@
     </div>
     <div class="p-3 float-left col-md-7 col-sm-12">
       <div class="Box border mb-3 color-shadow-large" style="height: 300px; overflow-y: hidden;">
-        <img src="{{highlight.image}}" alt="{{highlight.title}}" width="100%">
+        <picture{% if highlight.dark_image %} class="screenshot"{% endif %}>
+          {% if highlight.dark_image %}<source srcset="{{highlight.dark_image}}" media="(prefers-color-scheme: dark)" data-theme="dark">{% endif %}
+          <img src="{{highlight.image}}" alt="{{highlight.title}}" width="100%">
+        </picture>
       </div>
     </div>
   </div>

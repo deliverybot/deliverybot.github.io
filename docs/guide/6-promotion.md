@@ -16,7 +16,10 @@ commit as ready to move on to our next stage of the pipeline.
 Simply click the "promote" button on the commit that QA needs to check off
 shown in the image below.
 
-![Show promote button](/assets/images/promote-button.png)
+<picture class="screenshot">
+  <source data-theme="dark" srcset="/assets/images/promote-button-dark.png" media="(prefers-color-scheme: dark)">
+  <img src="/assets/images/promote-button.png" alt="Show promote button">
+</picture>
 
 We can then apply to our production deployment a requirement that the promoted
 context is checked.
